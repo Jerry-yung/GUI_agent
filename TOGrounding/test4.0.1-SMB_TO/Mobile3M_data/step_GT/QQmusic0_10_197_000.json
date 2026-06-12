@@ -1,0 +1,29 @@
+{
+  "action_type": "click",
+  "gt_action": "click(<p id=\"com.tencent.qqmusic:id/jeu\" package=\"com.tencent.qqmusic\" class=\"android.widget.TextView\" clickable=\"true\"> 绕堤沙 </p>)",
+  "gt_bounds": [
+    104,
+    255,
+    188,
+    293
+  ],
+  "meta": {
+    "task_name": "QQmusic0_10_197",
+    "parent_page": "QQmusic0",
+    "child_page": "QQmusic0_10"
+  },
+  "gt_node_id": 10,
+  "x": 146.0,
+  "y": 274.0,
+  "nearest_5": [
+    {
+      "node_id": 10,
+      "bounds": [
+        104,
+        255,
+        188,
+        293
+      ]
+    }
+  ]
+}

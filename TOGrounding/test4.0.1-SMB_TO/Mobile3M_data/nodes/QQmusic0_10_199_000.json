@@ -1,0 +1,698 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      20,
+      61,
+      132,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      132,
+      61,
+      244,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      244,
+      61,
+      356,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      20,
+      61,
+      688,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "",
+    "text": ""
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      356,
+      61,
+      468,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      468,
+      61,
+      580,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      580,
+      61,
+      688,
+      125
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/tab_item",
+    "text": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      32,
+      154,
+      584,
+      218
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/e6_",
+    "text": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      628,
+      156,
+      688,
+      216
+    ],
+    "text_for_emb": "听歌识曲",
+    "resource-id": "com.tencent.qqmusic:id/h6y",
+    "text": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      40,
+      250,
+      88,
+      298
+    ],
+    "text_for_emb": "绕堤沙",
+    "resource-id": "com.tencent.qqmusic:id/d1e",
+    "text": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      104,
+      255,
+      188,
+      293
+    ],
+    "text_for_emb": "绕堤沙",
+    "resource-id": "com.tencent.qqmusic:id/jeu",
+    "text": "绕堤沙"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      0,
+      250,
+      720,
+      330
+    ],
+    "text_for_emb": "Hi 绕堤沙  今日为你推荐",
+    "resource-id": "com.tencent.qqmusic:id/fap",
+    "text": ""
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      61,
+      361,
+      166,
+      402
+    ],
+    "text_for_emb": "下午茶",
+    "resource-id": "com.tencent.qqmusic:id/eng",
+    "text": "下午茶"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      61,
+      414,
+      166,
+      474
+    ],
+    "text_for_emb": "准备好听点儿什么了吗？",
+    "resource-id": "com.tencent.qqmusic:id/enf",
+    "text": "准备好听点儿什么了吗？"
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      178,
+      360,
+      364,
+      545
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/emw",
+    "text": ""
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      206,
+      360,
+      391,
+      545
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/en3",
+    "text": ""
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      427,
+      330,
+      672,
+      575
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/eid",
+    "text": ""
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      692,
+      330,
+      720,
+      575
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/eid",
+    "text": ""
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      178,
+      359,
+      407,
+      575
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/en8",
+    "text": ""
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      40,
+      330,
+      407,
+      653
+    ],
+    "text_for_emb": "猜你喜欢",
+    "resource-id": "",
+    "text": ""
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      0,
+      330,
+      720,
+      653
+    ],
+    "text_for_emb": "",
+    "resource-id": "",
+    "text": ""
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      427,
+      330,
+      672,
+      653
+    ],
+    "text_for_emb": "每日30首音频. . Someone You Loved-Adriana Vitale. 刚刚更新",
+    "resource-id": "com.tencent.qqmusic:id/efy",
+    "text": ""
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      692,
+      330,
+      720,
+      653
+    ],
+    "text_for_emb": "快听. 淋雨一直走-张韶涵",
+    "resource-id": "com.tencent.qqmusic:id/efy",
+    "text": ""
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      62,
+      486,
+      136,
+      545
+    ],
+    "text_for_emb": "播放猜你喜欢",
+    "resource-id": "com.tencent.qqmusic:id/ena",
+    "text": ""
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      0,
+      138,
+      720,
+      1013
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/ajk",
+    "text": ""
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      40,
+      587,
+      407,
+      620
+    ],
+    "text_for_emb": "玫瑰少年 - 五月天",
+    "resource-id": "com.tencent.qqmusic:id/ekv",
+    "text": "玫瑰少年 - 五月天"
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      427,
+      587,
+      672,
+      620
+    ],
+    "text_for_emb": "Someone You Loved-Adriana Vitale",
+    "resource-id": "com.tencent.qqmusic:id/ekv",
+    "text": "Someone You Loved-Adriana Vitale"
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      692,
+      587,
+      720,
+      620
+    ],
+    "text_for_emb": "淋雨一直走-张韶涵",
+    "resource-id": "com.tencent.qqmusic:id/ekv",
+    "text": "淋雨一直走-张韶涵"
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      40,
+      587,
+      407,
+      653
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/efm",
+    "text": ""
+  },
+  {
+    "node_id": 29,
+    "bounds": [
+      427,
+      587,
+      672,
+      653
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/efm",
+    "text": ""
+  },
+  {
+    "node_id": 30,
+    "bounds": [
+      692,
+      587,
+      720,
+      653
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/efm",
+    "text": ""
+  },
+  {
+    "node_id": 31,
+    "bounds": [
+      40,
+      620,
+      407,
+      653
+    ],
+    "text_for_emb": "猜你喜欢免费听",
+    "resource-id": "com.tencent.qqmusic:id/elk",
+    "text": "猜你喜欢免费听"
+  },
+  {
+    "node_id": 32,
+    "bounds": [
+      427,
+      620,
+      672,
+      653
+    ],
+    "text_for_emb": "每日30首免费听",
+    "resource-id": "com.tencent.qqmusic:id/elk",
+    "text": "每日30首免费听"
+  },
+  {
+    "node_id": 33,
+    "bounds": [
+      692,
+      620,
+      720,
+      653
+    ],
+    "text_for_emb": "快听",
+    "resource-id": "com.tencent.qqmusic:id/elk",
+    "text": "快听"
+  },
+  {
+    "node_id": 34,
+    "bounds": [
+      0,
+      653,
+      720,
+      786
+    ],
+    "text_for_emb": "",
+    "resource-id": "",
+    "text": ""
+  },
+  {
+    "node_id": 35,
+    "bounds": [
+      40,
+      713,
+      220,
+      754
+    ],
+    "text_for_emb": "你的私荐歌单 你的私荐歌单",
+    "resource-id": "com.tencent.qqmusic:id/elk",
+    "text": "你的私荐歌单"
+  },
+  {
+    "node_id": 36,
+    "bounds": [
+      642,
+      713,
+      682,
+      754
+    ],
+    "text_for_emb": "更多",
+    "resource-id": "com.tencent.qqmusic:id/bg9",
+    "text": ""
+  },
+  {
+    "node_id": 37,
+    "bounds": [
+      40,
+      786,
+      285,
+      1013
+    ],
+    "text_for_emb": "抖音最火BGM，根本停不下来音频. . 20.7万人收藏. 收听量, 2.8亿",
+    "resource-id": "com.tencent.qqmusic:id/tf",
+    "text": ""
+  },
+  {
+    "node_id": 38,
+    "bounds": [
+      0,
+      786,
+      720,
+      1013
+    ],
+    "text_for_emb": "",
+    "resource-id": "",
+    "text": ""
+  },
+  {
+    "node_id": 39,
+    "bounds": [
+      305,
+      786,
+      550,
+      1013
+    ],
+    "text_for_emb": "朴彩英live集：温柔的海风吹过你音频. . 大家都在听. 收听量, 463.5万",
+    "resource-id": "com.tencent.qqmusic:id/tf",
+    "text": ""
+  },
+  {
+    "node_id": 40,
+    "bounds": [
+      570,
+      786,
+      720,
+      1013
+    ],
+    "text_for_emb": "拽姐出门必听的Hiphop♥️!!音频. . 5.3万人收藏. 收听量, 1023.9万",
+    "resource-id": "com.tencent.qqmusic:id/tf",
+    "text": ""
+  },
+  {
+    "node_id": 41,
+    "bounds": [
+      40,
+      923,
+      285,
+      1013
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/bn6",
+    "text": ""
+  },
+  {
+    "node_id": 42,
+    "bounds": [
+      305,
+      923,
+      550,
+      1013
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/bn6",
+    "text": ""
+  },
+  {
+    "node_id": 43,
+    "bounds": [
+      570,
+      923,
+      720,
+      1013
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/bn6",
+    "text": ""
+  },
+  {
+    "node_id": 44,
+    "bounds": [
+      188,
+      989,
+      269,
+      1013
+    ],
+    "text_for_emb": "27850.2W",
+    "resource-id": "com.tencent.qqmusic:id/jm1",
+    "text": "27850.2W"
+  },
+  {
+    "node_id": 45,
+    "bounds": [
+      473,
+      989,
+      534,
+      1013
+    ],
+    "text_for_emb": "463.5W",
+    "resource-id": "com.tencent.qqmusic:id/jm1",
+    "text": "463.5W"
+  },
+  {
+    "node_id": 46,
+    "bounds": [
+      52,
+      990,
+      99,
+      1013
+    ],
+    "text_for_emb": "Pop",
+    "resource-id": "com.tencent.qqmusic:id/jm2",
+    "text": "Pop"
+  },
+  {
+    "node_id": 47,
+    "bounds": [
+      582,
+      990,
+      629,
+      1013
+    ],
+    "text_for_emb": "Rap",
+    "resource-id": "com.tencent.qqmusic:id/jm2",
+    "text": "Rap"
+  },
+  {
+    "node_id": 48,
+    "bounds": [
+      60,
+      999,
+      383,
+      1035
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/ebh",
+    "text": ""
+  },
+  {
+    "node_id": 49,
+    "bounds": [
+      180,
+      999,
+      383,
+      1035
+    ],
+    "text_for_emb": "玫瑰少年 - 五月天",
+    "resource-id": "com.tencent.qqmusic:id/ebi",
+    "text": "玫瑰少年 - 五月天"
+  },
+  {
+    "node_id": 50,
+    "bounds": [
+      40,
+      979,
+      504,
+      1057
+    ],
+    "text_for_emb": "",
+    "resource-id": "com.tencent.qqmusic:id/ebf",
+    "text": ""
+  },
+  {
+    "node_id": 51,
+    "bounds": [
+      524,
+      989,
+      582,
+      1047
+    ],
+    "text_for_emb": "播放",
+    "resource-id": "com.tencent.qqmusic:id/ebt",
+    "text": ""
+  },
+  {
+    "node_id": 52,
+    "bounds": [
+      598,
+      989,
+      656,
+      1047
+    ],
+    "text_for_emb": "歌曲队列",
+    "resource-id": "com.tencent.qqmusic:id/ebm",
+    "text": ""
+  },
+  {
+    "node_id": 53,
+    "bounds": [
+      10,
+      1068,
+      150,
+      1184
+    ],
+    "text_for_emb": "首页",
+    "resource-id": "com.tencent.qqmusic:id/gpd",
+    "text": ""
+  },
+  {
+    "node_id": 54,
+    "bounds": [
+      150,
+      1068,
+      290,
+      1184
+    ],
+    "text_for_emb": "直播",
+    "resource-id": "com.tencent.qqmusic:id/gpd",
+    "text": ""
+  },
+  {
+    "node_id": 55,
+    "bounds": [
+      290,
+      1068,
+      430,
+      1184
+    ],
+    "text_for_emb": "雷达",
+    "resource-id": "com.tencent.qqmusic:id/gpd",
+    "text": ""
+  },
+  {
+    "node_id": 56,
+    "bounds": [
+      430,
+      1068,
+      570,
+      1184
+    ],
+    "text_for_emb": "社区",
+    "resource-id": "com.tencent.qqmusic:id/gpd",
+    "text": ""
+  },
+  {
+    "node_id": 57,
+    "bounds": [
+      570,
+      1068,
+      710,
+      1184
+    ],
+    "text_for_emb": "我的",
+    "resource-id": "com.tencent.qqmusic:id/gpd",
+    "text": ""
+  }
+]

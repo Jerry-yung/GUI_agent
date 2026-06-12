@@ -1,0 +1,102 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "关注按钮",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "私信入口",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "分享资料卡",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "私信",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "更多操作",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "关注",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "分享主页",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "返回",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "播放歌单",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "粉丝列表",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "私信图标",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "返回上一页",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 12,
+    "TO_string": "发消息",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 13,
+    "TO_string": "查看歌单",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

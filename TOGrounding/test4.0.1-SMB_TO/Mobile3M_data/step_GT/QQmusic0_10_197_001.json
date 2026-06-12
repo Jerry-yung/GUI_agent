@@ -1,0 +1,30 @@
+{
+  "action_type": "click",
+  "gt_action": "click(<p id=\"com.tencent.qqmusic:id/f_k\" package=\"com.tencent.qqmusic\" class=\"android.widget.TextView\" description=\"绕堤沙\" clickable=\"true\"> 绕堤沙 </p>)",
+  "gt_bounds": [
+    64,
+    564,
+    160,
+    607
+  ],
+  "meta": {
+    "task_name": "QQmusic0_10_197",
+    "parent_page": "QQmusic0_10",
+    "child_page": "QQmusic0_10_197",
+    "bounds_match_tier": "interactive_container"
+  },
+  "gt_node_id": 33,
+  "x": 112.0,
+  "y": 585.5,
+  "nearest_5": [
+    {
+      "node_id": 33,
+      "bounds": [
+        64,
+        564,
+        160,
+        607
+      ]
+    }
+  ]
+}

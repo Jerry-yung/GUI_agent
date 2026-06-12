@@ -1,0 +1,81 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "绕堤沙",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "歌曲名称",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "点击播放",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "歌曲列表项 绕堤沙",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "绕堤沙歌名",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "歌曲《绕堤沙》",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "绕堤沙条目",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "歌曲：绕堤沙",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "播放《绕堤沙》",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "歌曲绕堤沙",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "绕堤沙歌曲条目",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "关注按钮",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "分享图标",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "更多选项",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "用户头像",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "粉丝数量",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "分享用户资料",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "返回",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "关注",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "喜欢",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "更多",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "私信",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "喜欢的歌手",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 12,
+    "TO_string": "用户主页",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 13,
+    "TO_string": "关注的歌手",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 14,
+    "TO_string": "喜欢的音乐人列表",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 15,
+    "TO_string": "用户资料中的歌手标签",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 16,
+    "TO_string": "喜欢的歌手列表项",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 17,
+    "TO_string": "发送私信",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "编辑资料",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "关注按钮",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "分享用户主页",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "作品",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "收藏",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "关注",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "发消息",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "更多",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "歌单",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "动态",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "绕堤沙",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "用户昵称链接",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 12,
+    "TO_string": "用户名文字",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 13,
+    "TO_string": "用户头像",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 14,
+    "TO_string": "个人资料入口",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 15,
+    "TO_string": "用户昵称",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

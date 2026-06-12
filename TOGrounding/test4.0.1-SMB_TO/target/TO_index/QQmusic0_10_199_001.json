@@ -1,0 +1,61 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "关注",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "点击关注按钮",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "用户资料页的关注选项",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "关注按钮",
+    "TO_LLM": [
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "+ 关注",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "点击关注",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "点击关注该用户",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "+关注",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

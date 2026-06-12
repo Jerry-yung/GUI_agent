@@ -1,0 +1,90 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "保存按钮",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "确认修改",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "提交资料",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "头像",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "昵称输入框",
+    "TO_LLM": [
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "保存",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "昵称",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "完成",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "头像修改",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "保存修改按钮",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "个人简介文本域",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "头像编辑",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

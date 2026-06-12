@@ -1,0 +1,85 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "绕堤沙",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "绕堤沙的头像",
+    "TO_LLM": [
+      "qwen3.5-flash"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "用户绕堤沙",
+    "TO_LLM": [
+      "qwen3.5-flash",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "绕堤沙头像",
+    "TO_LLM": [
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "绕堤沙的个人资料入口",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "用户绕堤沙的头像",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "用户绕堤沙的个人头像",
+    "TO_LLM": [
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "推荐列表中绕堤沙的头像图标",
+    "TO_LLM": [
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "用户头像",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "个人资料入口",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "绕堤沙个人头像",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

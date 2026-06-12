@@ -1,0 +1,30 @@
+{
+  "action_type": "click",
+  "gt_action": "click(<p id=\"com.tencent.qqmusic:id/bok\" package=\"com.tencent.qqmusic\" class=\"android.widget.TextView\" clickable=\"true\"> 0 </p>)",
+  "gt_bounds": [
+    64,
+    693,
+    144,
+    734
+  ],
+  "meta": {
+    "task_name": "QQmusic0_10_200",
+    "parent_page": "QQmusic0_10",
+    "child_page": "QQmusic0_10_200",
+    "bounds_match_tier": "interactive_container"
+  },
+  "gt_node_id": 46,
+  "x": 104.0,
+  "y": 713.5,
+  "nearest_5": [
+    {
+      "node_id": 46,
+      "bounds": [
+        64,
+        693,
+        144,
+        734
+      ]
+    }
+  ]
+}

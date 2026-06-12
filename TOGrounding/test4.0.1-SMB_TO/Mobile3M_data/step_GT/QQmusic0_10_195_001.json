@@ -1,0 +1,29 @@
+{
+  "action_type": "click",
+  "gt_action": "click(<img id=\"com.tencent.qqmusic:id/jjp\" package=\"com.tencent.qqmusic\" class=\"android.widget.ImageView\" description=\"头像\" clickable=\"true\">  </img>)",
+  "gt_bounds": [
+    66,
+    368,
+    226,
+    528
+  ],
+  "meta": {
+    "task_name": "QQmusic0_10_195",
+    "parent_page": "QQmusic0_10",
+    "child_page": "QQmusic0_10_195"
+  },
+  "gt_node_id": 19,
+  "x": 146.0,
+  "y": 448.0,
+  "nearest_5": [
+    {
+      "node_id": 19,
+      "bounds": [
+        66,
+        368,
+        226,
+        528
+      ]
+    }
+  ]
+}

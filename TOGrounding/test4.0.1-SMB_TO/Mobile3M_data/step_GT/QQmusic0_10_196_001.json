@@ -1,0 +1,29 @@
+{
+  "action_type": "click",
+  "gt_action": "click(<button id=\"com.tencent.qqmusic:id/gsx\" package=\"com.tencent.qqmusic\" class=\"android.widget.Button\" clickable=\"true\"> 编辑资料 </button>)",
+  "gt_bounds": [
+    476,
+    468,
+    656,
+    528
+  ],
+  "meta": {
+    "task_name": "QQmusic0_10_196",
+    "parent_page": "QQmusic0_10",
+    "child_page": "QQmusic0_10_196"
+  },
+  "gt_node_id": 29,
+  "x": 566.0,
+  "y": 498.0,
+  "nearest_5": [
+    {
+      "node_id": 29,
+      "bounds": [
+        476,
+        468,
+        656,
+        528
+      ]
+    }
+  ]
+}
