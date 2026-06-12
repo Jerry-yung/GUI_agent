@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Strava email",
+        "message from Strava",
+        "Strava notification"
+      ],
+      [
+        "Strava email",
+        "Strava message",
+        "Strava inbox item"
+      ],
+      [
+        "Strava email",
+        "Strava message",
+        "Strava conversation"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "Strava email",
+        "Strava message",
+        "select Strava"
+      ],
+      [
+        "Strava email",
+        "message from Strava",
+        "Strava notification"
+      ],
+      [
+        "Strava",
+        "mail",
+        "email"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Strava email",
+        "Strava mail option",
+        "Select Strava"
+      ],
+      [
+        "Strava email",
+        "Strava inbox message",
+        "Strava notification"
+      ],
+      [
+        "Strava email",
+        "Strava mail option",
+        "Select Strava"
+      ]
+    ]
+  }
+]

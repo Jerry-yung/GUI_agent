@@ -1,0 +1,204 @@
+{
+  "stem": "00000060_001",
+  "gt_node_ids": [
+    1,
+    2,
+    0,
+    4,
+    3
+  ],
+  "total_tos": 14,
+  "hit_tos": 12,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 5,
+      "TO_string": "Search",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.906113,
+      "margin": 0.092743,
+      "gt_max_sim": 0.906113
+    },
+    {
+      "rank": 2,
+      "TO_id": 13,
+      "TO_string": "Search input",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.827023,
+      "margin": 0.060243,
+      "gt_max_sim": 0.827023
+    },
+    {
+      "rank": 3,
+      "TO_id": 4,
+      "TO_string": "search input",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.805632,
+      "margin": 0.050356,
+      "gt_max_sim": 0.805632
+    },
+    {
+      "rank": 4,
+      "TO_id": 8,
+      "TO_string": "Search bar",
+      "TO_LLM": [
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.777297,
+      "margin": 0.033483,
+      "gt_max_sim": 0.777297
+    },
+    {
+      "rank": 5,
+      "TO_id": 10,
+      "TO_string": "search bar",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.775127,
+      "margin": 0.02618,
+      "gt_max_sim": 0.775127
+    },
+    {
+      "rank": 6,
+      "TO_id": 12,
+      "TO_string": "Search input field",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.773343,
+      "margin": 0.03872,
+      "gt_max_sim": 0.773343
+    },
+    {
+      "rank": 7,
+      "TO_id": 0,
+      "TO_string": "search input field",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.77319,
+      "margin": 0.034473,
+      "gt_max_sim": 0.77319
+    },
+    {
+      "rank": 8,
+      "TO_id": 3,
+      "TO_string": "search field",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.772531,
+      "margin": 0.039574,
+      "gt_max_sim": 0.772531
+    },
+    {
+      "rank": 9,
+      "TO_id": 7,
+      "TO_string": "Search field",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.769299,
+      "margin": 0.03507,
+      "gt_max_sim": 0.769299
+    },
+    {
+      "rank": 10,
+      "TO_id": 6,
+      "TO_string": "Search box",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.767912,
+      "margin": 0.027487,
+      "gt_max_sim": 0.767912
+    },
+    {
+      "rank": 11,
+      "TO_id": 1,
+      "TO_string": "search box",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.76689,
+      "margin": 0.028502,
+      "gt_max_sim": 0.76689
+    },
+    {
+      "rank": 12,
+      "TO_id": 9,
+      "TO_string": "Input field",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 1,
+      "pred_score": 0.445104,
+      "margin": 0.033523,
+      "gt_max_sim": 0.445104
+    },
+    {
+      "rank": 13,
+      "TO_id": 2,
+      "TO_string": "find input area",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 12,
+      "pred_score": 0.50251,
+      "margin": 0.016666,
+      "gt_max_sim": 0.485845
+    },
+    {
+      "rank": 14,
+      "TO_id": 11,
+      "TO_string": "input box",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 11,
+      "pred_score": 0.386437,
+      "margin": 0.006153,
+      "gt_max_sim": 0.380283
+    }
+  ]
+}

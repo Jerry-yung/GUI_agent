@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Mark unread button"
+      ],
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Envelope with dot"
+      ],
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Mark as unread button"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "mark as unread",
+        "unread icon",
+        "message options"
+      ],
+      [
+        "Mark as unread",
+        "unread icon",
+        "email menu"
+      ],
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Envelope symbol"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Envelope button"
+      ],
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Envelope button"
+      ],
+      [
+        "Mark as unread",
+        "Unread icon",
+        "Envelope button"
+      ]
+    ]
+  }
+]

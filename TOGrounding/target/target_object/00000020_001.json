@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Mobile",
+        "Mobile category",
+        "Mobile tab"
+      ],
+      [
+        "Mobile",
+        "Mobile Category",
+        "Mobile tab"
+      ],
+      [
+        "Mobile",
+        "Mobile category",
+        "Mobile tab"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "Mobile",
+        "Mobile category",
+        "top left Mobile"
+      ],
+      [
+        "Mobile",
+        "Mobile category",
+        "top left Mobile"
+      ],
+      [
+        "Mobile category",
+        "Mobile tab",
+        "top left Mobile"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Mobile",
+        "Mobile category",
+        "Mobile link"
+      ],
+      [
+        "Mobile",
+        "Mobile category",
+        "Mobile link"
+      ],
+      [
+        "Mobile",
+        "Mobile category",
+        "Category link"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "Share tab",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "Share button",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "Share option",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "Share",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "share",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "sharing button",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "share icon",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "arrow up icon",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "tab share",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "Sharing option",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "Mark as unread",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "Unread icon",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "Mark unread button",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "Envelope with dot",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "Mark as unread button",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "mark as unread",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "unread icon",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "message options",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "email menu",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "Envelope symbol",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "Envelope button",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

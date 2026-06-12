@@ -1,0 +1,87 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "Close button",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "X icon",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "Dismiss popup",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "Close",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "X",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "Dismiss",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "close button",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "x icon",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "dismiss popup",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "close",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "dismiss",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  }
+]

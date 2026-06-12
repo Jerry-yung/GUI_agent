@@ -1,0 +1,96 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "Make available offline",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "Offline toggle",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "Download option",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "Available offline",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "Offline access",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "Offline mode toggle",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "Download for offline",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "make available offline",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "available offline",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "offline option",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "Offline access toggle",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "Enable offline mode",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 12,
+    "TO_string": "Enable offline option",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

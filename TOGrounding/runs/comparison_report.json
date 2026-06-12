@@ -1,0 +1,78 @@
+{
+  "agent_family_order": [
+    "baseline",
+    "m2"
+  ],
+  "models": [
+    "qwen-vl-max",
+    "qwen3-vl-flash"
+  ],
+  "stats": [
+    {
+      "Model": "qwen-vl-max",
+      "SeriesKey": "baseline",
+      "Family": "baseline",
+      "Agent": "Baseline",
+      "Total": 300,
+      "Hit": 241,
+      "Miss": 59,
+      "API_Errors": 0,
+      "Accuracy_%": 80.33
+    },
+    {
+      "Model": "qwen-vl-max",
+      "SeriesKey": "m2_top10_best",
+      "Family": "m2",
+      "Agent": "M2 (top10, best)",
+      "Total": 300,
+      "Hit": 272,
+      "Miss": 28,
+      "API_Errors": 0,
+      "Accuracy_%": 90.67
+    },
+    {
+      "Model": "qwen-vl-max",
+      "SeriesKey": "m2_top10_worst",
+      "Family": "m2",
+      "Agent": "M2 (top10, worst)",
+      "Total": 100,
+      "Hit": 82,
+      "Miss": 18,
+      "API_Errors": 0,
+      "Accuracy_%": 82.0
+    },
+    {
+      "Model": "qwen-vl-max",
+      "SeriesKey": "m2_top3_best",
+      "Family": "m2",
+      "Agent": "M2 (top3, best)",
+      "Total": 300,
+      "Hit": 270,
+      "Miss": 30,
+      "API_Errors": 0,
+      "Accuracy_%": 90.0
+    },
+    {
+      "Model": "qwen-vl-max",
+      "SeriesKey": "m2_top5_best",
+      "Family": "m2",
+      "Agent": "M2 (top5, best)",
+      "Total": 300,
+      "Hit": 273,
+      "Miss": 27,
+      "API_Errors": 0,
+      "Accuracy_%": 91.0
+    },
+    {
+      "Model": "qwen3-vl-flash",
+      "SeriesKey": "baseline",
+      "Family": "baseline",
+      "Agent": "Baseline",
+      "Total": 100,
+      "Hit": 6,
+      "Miss": 94,
+      "API_Errors": 0,
+      "Accuracy_%": 6.0
+    }
+  ]
+}

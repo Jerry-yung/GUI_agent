@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Share tab",
+        "Share button",
+        "Share option"
+      ],
+      [
+        "Share tab",
+        "Share button",
+        "Share option"
+      ],
+      [
+        "Share",
+        "Share tab",
+        "Share option"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "share",
+        "Share tab",
+        "sharing button"
+      ],
+      [
+        "Share button",
+        "share icon",
+        "arrow up icon"
+      ],
+      [
+        "share",
+        "Share tab",
+        "tab share"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Share tab",
+        "Share button",
+        "Share"
+      ],
+      [
+        "Share tab",
+        "Share button",
+        "Sharing option"
+      ],
+      [
+        "Share tab",
+        "Share button",
+        "Share option"
+      ]
+    ]
+  }
+]

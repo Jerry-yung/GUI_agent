@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "more options",
+        "context menu",
+        "three dots"
+      ],
+      [
+        "More options",
+        "Context menu",
+        "Three dots icon"
+      ],
+      [
+        "More options",
+        "Context menu",
+        "Three dots icon"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "more options",
+        "context menu",
+        "overflow menu"
+      ],
+      [
+        "options menu",
+        "more actions",
+        "context menu"
+      ],
+      [
+        "more options",
+        "menu icon",
+        "ellipsis"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "three dots",
+        "more options",
+        "context menu"
+      ],
+      [
+        "three dots",
+        "more options",
+        "context menu"
+      ],
+      [
+        "three dots",
+        "more options",
+        "context menu"
+      ]
+    ]
+  }
+]

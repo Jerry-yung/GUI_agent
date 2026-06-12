@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "More options",
+        "Menu",
+        "Three dots"
+      ],
+      [
+        "More options",
+        "Menu",
+        "Three dots"
+      ],
+      [
+        "More options",
+        "Menu",
+        "Three dots"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "More options",
+        "Three dots",
+        "Overflow menu"
+      ],
+      [
+        "more options",
+        "kebab menu",
+        "three dots"
+      ],
+      [
+        "more options",
+        "three dots",
+        "overflow menu"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "More options",
+        "Three dots menu",
+        "Overflow button"
+      ],
+      [
+        "More options",
+        "Three dots menu",
+        "Overflow menu"
+      ],
+      [
+        "More options",
+        "Three dots menu",
+        "Overflow button"
+      ]
+    ]
+  }
+]

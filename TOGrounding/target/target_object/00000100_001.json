@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Make available offline",
+        "Offline toggle",
+        "Download option"
+      ],
+      [
+        "Make available offline",
+        "Available offline",
+        "Offline access"
+      ],
+      [
+        "Make available offline",
+        "Available offline",
+        "Offline access"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "Make available offline",
+        "Offline mode toggle",
+        "Download for offline"
+      ],
+      [
+        "Make available offline",
+        "Offline access",
+        "Download for offline"
+      ],
+      [
+        "make available offline",
+        "available offline",
+        "offline option"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Make available offline",
+        "Offline access toggle",
+        "Enable offline mode"
+      ],
+      [
+        "Make available offline",
+        "Offline access toggle",
+        "Enable offline option"
+      ],
+      [
+        "Make available offline",
+        "Offline access toggle",
+        "Enable offline mode"
+      ]
+    ]
+  }
+]

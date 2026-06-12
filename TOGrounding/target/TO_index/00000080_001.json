@@ -1,0 +1,99 @@
+[
+  {
+    "TO_id": 0,
+    "TO_string": "Strava email",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 1,
+    "TO_string": "message from Strava",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 2,
+    "TO_string": "Strava notification",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus",
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 3,
+    "TO_string": "Strava message",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro",
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 4,
+    "TO_string": "Strava inbox item",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 5,
+    "TO_string": "Strava conversation",
+    "TO_LLM": [
+      "deepseek-ai/DeepSeek-V4-Pro"
+    ]
+  },
+  {
+    "TO_id": 6,
+    "TO_string": "select Strava",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 7,
+    "TO_string": "Strava",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 8,
+    "TO_string": "mail",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 9,
+    "TO_string": "email",
+    "TO_LLM": [
+      "qwen3.6-plus"
+    ]
+  },
+  {
+    "TO_id": 10,
+    "TO_string": "Strava mail option",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 11,
+    "TO_string": "Select Strava",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  },
+  {
+    "TO_id": 12,
+    "TO_string": "Strava inbox message",
+    "TO_LLM": [
+      "qwen3.7-max"
+    ]
+  }
+]

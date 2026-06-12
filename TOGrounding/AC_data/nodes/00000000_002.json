@@ -1,0 +1,92 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      834,
+      182,
+      923,
+      271
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      949,
+      182,
+      1038,
+      271
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      0,
+      317,
+      360,
+      464
+    ],
+    "text_for_emb": "Upcoming"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      360,
+      317,
+      720,
+      464
+    ],
+    "text_for_emb": "Past"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      0,
+      317,
+      1080,
+      464
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      720,
+      317,
+      1080,
+      464
+    ],
+    "text_for_emb": "Recordings"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      0,
+      464,
+      1080,
+      2190
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      176,
+      2200,
+      544,
+      2326
+    ],
+    "text_for_emb": "JOIN A MEETING"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      586,
+      2200,
+      861,
+      2326
+    ],
+    "text_for_emb": "MEET NOW"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "Close button",
+        "X icon",
+        "Dismiss popup"
+      ],
+      [
+        "Close",
+        "X",
+        "Dismiss"
+      ],
+      [
+        "close button",
+        "x icon",
+        "dismiss popup"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "Close",
+        "X",
+        "Dismiss"
+      ],
+      [
+        "Close button",
+        "X icon",
+        "Dismiss"
+      ],
+      [
+        "close",
+        "X",
+        "dismiss"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Close button",
+        "X icon",
+        "Dismiss popup"
+      ],
+      [
+        "Close button",
+        "X icon",
+        "Dismiss popup"
+      ],
+      [
+        "Close button",
+        "X icon",
+        "Dismiss popup"
+      ]
+    ]
+  }
+]

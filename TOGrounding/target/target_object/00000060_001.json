@@ -1,0 +1,62 @@
+[
+  {
+    "llm": "deepseek-ai/DeepSeek-V4-Pro",
+    "results": [
+      [
+        "search input field",
+        "search box",
+        "find input area"
+      ],
+      [
+        "search box",
+        "search field",
+        "search input"
+      ],
+      [
+        "Search",
+        "Search box",
+        "Search field"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.6-plus",
+    "results": [
+      [
+        "Search",
+        "Search bar",
+        "Input field"
+      ],
+      [
+        "search bar",
+        "search field",
+        "input box"
+      ],
+      [
+        "search bar",
+        "search field",
+        "input box"
+      ]
+    ]
+  },
+  {
+    "llm": "qwen3.7-max",
+    "results": [
+      [
+        "Search bar",
+        "Search input field",
+        "Search box"
+      ],
+      [
+        "Search bar",
+        "Search field",
+        "Search input"
+      ],
+      [
+        "Search bar",
+        "Search input",
+        "Search field"
+      ]
+    ]
+  }
+]
