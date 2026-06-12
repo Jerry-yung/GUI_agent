@@ -98,7 +98,7 @@ flowchart TD
 
 ### 推荐执行顺序（检索）
 
-在项目根目录 `test4.0.0-DPO/` 下：
+在项目根目录 `test4.0.0-AC_TO/` 下：
 
 ```bash
 # 1. 拆分 GT / instructions，筛选 click 四件套
