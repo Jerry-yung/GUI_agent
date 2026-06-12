@@ -159,14 +159,14 @@ python main.py
 
 ```mermaid
 flowchart LR
-    SS[screenshots/{stem}.png]
-    INS[step_instructions/{stem}.txt]
+    SS["screenshots/stem.png"]
+    INS["step_instructions/stem.txt"]
     SS --> Agent[BaselineAgent]
     INS --> Agent
-    Agent -->|VLM| Pred["{x, y} 归一化坐标"]
+    Agent -->|VLM| Pred["归一化坐标 x,y"]
     Pred --> Judge[judge_llm.judge_baseline]
-    GT[step_GT + nearest_5] --> Judge
-    Judge --> Hit[hit: True/False]
+    GT["step_GT + nearest_5"] --> Judge
+    Judge --> Hit["hit: True/False"]
 ```
 
 | 步骤 | 说明 |
@@ -183,26 +183,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    COS[cos_sim/{stem}.npz]
-    TOIdx[TO_index/{stem}.json]
-    NODES[nodes/{stem}.json]
-    SS[screenshots/{stem}.png]
-    INS[step_instructions/{stem}.txt]
-    GT[step_GT/{stem}.json]
-    COS --> RankTo[rank_to 排序]
+    COS["cos_sim/stem.npz"]
+    TOIdx["TO_index/stem.json"]
+    NODES["nodes/stem.json"]
+    SS["screenshots/stem.png"]
+    INS["step_instructions/stem.txt"]
+    GT["step_GT/stem.json"]
+    COS --> RankTo["rank_to 排序"]
     TOIdx --> RankTo
     GT --> RankTo
-    RankTo -->|MODE=best/mid/worst| Annotate[annotate.py]
+    RankTo -->|"MODE: best/mid/worst"| Annotate[annotate.py]
     COS --> Annotate
     NODES --> Annotate
     SS --> Annotate
-    Annotate --> AnnImg["annotated_screenshots/top_{K}_{MODE}/{stem}.png"]
+    Annotate --> AnnImg["annotated_screenshots/top_K_MODE/stem.png"]
     AnnImg --> Agent[M2Agent]
     INS --> Agent
-    Agent -->|VLM| Pred["{click_id: node_id}"]
+    Agent -->|VLM| Pred["click_id → node_id"]
     Pred --> Judge[judge_llm.judge_m2]
     GT --> Judge
-    Judge --> Hit[hit: True/False]
+    Judge --> Hit["hit: True/False"]
 ```
 
 | 步骤 | 说明 |
