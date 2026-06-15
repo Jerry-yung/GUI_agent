@@ -1,0 +1,272 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      679,
+      156,
+      806,
+      282
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      806,
+      156,
+      933,
+      282
+    ],
+    "text_for_emb": "Jump to Today"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      933,
+      156,
+      1080,
+      282
+    ],
+    "text_for_emb": "Signed in as Cerebra Research dbwscratch.test.id3@gmail.com\nAccount and settings."
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      11,
+      146,
+      158,
+      293
+    ],
+    "text_for_emb": "Show Calendar List and Settings drawer"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      159,
+      146,
+      669,
+      293
+    ],
+    "text_for_emb": "July, Show date picker"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      168,
+      346,
+      1038,
+      483
+    ],
+    "text_for_emb": "Below Benchmark, 3:30 PM – 4:30 PM, dbwscratch.test.id3@gmail.com"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      0,
+      341,
+      168,
+      509
+    ],
+    "text_for_emb": "Tuesday 25 July 2023"
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      168,
+      557,
+      1038,
+      641
+    ],
+    "text_for_emb": "Muharram/Ashura, All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      0,
+      552,
+      168,
+      720
+    ],
+    "text_for_emb": "Saturday 29 July 2023"
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      168,
+      725,
+      1080,
+      780
+    ],
+    "text_for_emb": "Jul 30 – Aug 5"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      0,
+      812,
+      1080,
+      1285
+    ],
+    "text_for_emb": "August 2023"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      168,
+      1317,
+      1080,
+      1372
+    ],
+    "text_for_emb": "Aug 6 – 12"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      168,
+      1404,
+      1080,
+      1459
+    ],
+    "text_for_emb": "Aug 13 – 19"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      168,
+      1491,
+      1038,
+      1575
+    ],
+    "text_for_emb": "Independence Day, All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      0,
+      1486,
+      168,
+      1654
+    ],
+    "text_for_emb": "Tuesday 15 August 2023"
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      168,
+      1659,
+      1038,
+      1743
+    ],
+    "text_for_emb": "Parsi New Year, All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      0,
+      1654,
+      168,
+      1822
+    ],
+    "text_for_emb": "Wednesday 16 August 2023"
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      168,
+      1827,
+      1080,
+      1882
+    ],
+    "text_for_emb": "Aug 20 – 26"
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      168,
+      1914,
+      1038,
+      1998
+    ],
+    "text_for_emb": "Vinayaka Chathurthi, All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      0,
+      1909,
+      168,
+      2077
+    ],
+    "text_for_emb": "Sunday 20 August 2023"
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      168,
+      2082,
+      1080,
+      2137
+    ],
+    "text_for_emb": "Aug 27 – Sep 2"
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      168,
+      2169,
+      1038,
+      2253
+    ],
+    "text_for_emb": "Onam, All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      891,
+      2148,
+      1038,
+      2295
+    ],
+    "text_for_emb": "Create new event or other calendar entries"
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      0,
+      2164,
+      168,
+      2332
+    ],
+    "text_for_emb": "Tuesday 29 August 2023"
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      0,
+      2332,
+      168,
+      2400
+    ],
+    "text_for_emb": "Wednesday 30 August 2023"
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      168,
+      2337,
+      1038,
+      2400
+    ],
+    "text_for_emb": "Raksha Bandhan (Rakhi), All day: , dbwscratch.test.id3@gmail.com, Holidays in India"
+  }
+]

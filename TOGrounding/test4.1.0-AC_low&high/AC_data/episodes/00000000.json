@@ -1,0 +1,15 @@
+{
+  "episode_id": "00000000",
+  "goal": "Open the Zoho Meet app , view the scheduled meetings .",
+  "num_steps": 3,
+  "stems": [
+    "00000000_000",
+    "00000000_001",
+    "00000000_002"
+  ],
+  "action_types": [
+    "open_app",
+    "wait",
+    "click"
+  ]
+}

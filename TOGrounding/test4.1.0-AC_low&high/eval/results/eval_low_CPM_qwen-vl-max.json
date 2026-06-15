@@ -1,0 +1,6417 @@
+{
+  "schema_version": "4.1.0-eval",
+  "run_path": "/Users/yangyuntian/Desktop/My doc/华东师范大学各类活动与事情/S4/GUI/GUI_agent/test4.1.0-AC_high/runs/low_CPM_qwen-vl-max.json",
+  "ac_mode": "low",
+  "agent": "CPM",
+  "vlm_model": "qwen-vl-max",
+  "top_k": null,
+  "evaluated_at": "2026-06-15T18:56:27",
+  "total_steps": 257,
+  "type_correct": 240,
+  "step_correct": 218,
+  "type_acc": 0.933852,
+  "step_acc": 0.848249,
+  "retrieval_eligible_steps": 0,
+  "retrieval_correct": 0,
+  "retrieval_hit_rate": 0.0,
+  "by_action_type": {
+    "click": {
+      "count": 167,
+      "type_acc": 1.0,
+      "step_acc": 0.916168
+    },
+    "input_text": {
+      "count": 25,
+      "type_acc": 0.84,
+      "step_acc": 0.84
+    },
+    "long_press": {
+      "count": 1,
+      "type_acc": 1.0,
+      "step_acc": 0.0
+    },
+    "navigate_back": {
+      "count": 13,
+      "type_acc": 1.0,
+      "step_acc": 1.0
+    },
+    "scroll": {
+      "count": 32,
+      "type_acc": 1.0,
+      "step_acc": 0.78125
+    },
+    "wait": {
+      "count": 19,
+      "type_acc": 0.315789,
+      "step_acc": 0.315789
+    }
+  },
+  "steps": [
+    {
+      "episode_id": "00000000",
+      "stem": "00000000_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000000",
+      "stem": "00000000_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.034731,
+        "pixel_x": 507.59999999999997,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 390.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000020",
+      "stem": "00000020_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000020",
+      "stem": "00000020_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.034352,
+        "pixel_x": 129.6,
+        "pixel_y": 576.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 110.0,
+          "y": 506.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000020",
+      "stem": "00000020_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009814,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 978.0,
+          "y": 411.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000020",
+      "stem": "00000020_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000040",
+      "stem": "00000040_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000060",
+      "stem": "00000060_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.0175,
+        "pixel_x": 540.0,
+        "pixel_y": 504.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 462.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000060",
+      "stem": "00000060_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000060",
+      "stem": "00000060_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000060",
+      "stem": "00000060_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Welsh cakes",
+        "gt_text": "Welsh cakes",
+        "pred_text_norm": "welsh cakes",
+        "gt_text_norm": "welsh cakes"
+      }
+    },
+    {
+      "episode_id": "00000060",
+      "stem": "00000060_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000080",
+      "stem": "00000080_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.36481,
+        "pixel_x": 486.0,
+        "pixel_y": 1272.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 94.0,
+          "y": 1184.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000080",
+      "stem": "00000080_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.030141,
+        "pixel_x": 723.6,
+        "pixel_y": 2256.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 756.0,
+          "y": 2263.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000100",
+      "stem": "00000100_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.007951,
+        "pixel_x": 1015.1999999999999,
+        "pixel_y": 1032.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1016.0,
+          "y": 1051.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000100",
+      "stem": "00000100_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.057445,
+        "pixel_x": 540.0,
+        "pixel_y": 1224.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 602.0,
+          "y": 1219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "long_press",
+      "pred_action_type": "long_press",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.577834,
+        "pixel_x": 615.5999999999999,
+        "pixel_y": 1488.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 117.0,
+          "y": 654.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.01295,
+        "pixel_x": 1026.0,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1027.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.250933,
+        "pixel_x": 572.4,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 843.0,
+          "y": 231.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.142666,
+        "pixel_x": 626.4,
+        "pixel_y": 888.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 780.0,
+          "y": 861.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.248403,
+        "pixel_x": 486.0,
+        "pixel_y": 888.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 754.0,
+          "y": 861.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.455606,
+        "pixel_x": 540.0,
+        "pixel_y": 696.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 54.0,
+          "y": 525.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "natalie.larson1998@gmail.com",
+        "gt_text": "natalie.larson1998@gmail.com",
+        "pred_text_norm": "natalie.larson1998@gmail.com",
+        "gt_text_norm": "natalie.larson1998@gmail.com"
+      }
+    },
+    {
+      "episode_id": "00000140",
+      "stem": "00000140_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.023779,
+        "pixel_x": 874.8000000000001,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 890.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.023808,
+        "pixel_x": 86.4,
+        "pixel_y": 2232.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 108.0,
+          "y": 2263.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005069,
+        "pixel_x": 723.6,
+        "pixel_y": 1944.0000000000002,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 729.0,
+          "y": 1946.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.1339,
+        "pixel_x": 399.6,
+        "pixel_y": 983.9999999999999,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 907.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009855,
+        "pixel_x": 140.4,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 133.0,
+          "y": 2119.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "karin.iversen@example.com",
+        "gt_text": "karin.iversen@example.com",
+        "pred_text_norm": "karin.iversen@example.com",
+        "gt_text_norm": "karin.iversen@example.com"
+      }
+    },
+    {
+      "episode_id": "00000160",
+      "stem": "00000160_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.019595,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 890.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000220",
+      "stem": "00000220_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "navigate_home",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000220",
+      "stem": "00000220_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.007061,
+        "pixel_x": 540.0,
+        "pixel_y": 2251.2,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 2268.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000220",
+      "stem": "00000220_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000220",
+      "stem": "00000220_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.069667,
+        "pixel_x": 270.0,
+        "pixel_y": 1464.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 279.0,
+          "y": 1298.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000220",
+      "stem": "00000220_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.027614,
+        "pixel_x": 842.4,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 868.0,
+          "y": 398.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "navigate_home",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.381044,
+        "pixel_x": 540.0,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 504.0,
+          "y": 1655.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.042336,
+        "pixel_x": 810.0,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 855.0,
+          "y": 2118.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000240",
+      "stem": "00000240_009",
+      "step_idx": 9,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000260",
+      "stem": "00000260_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.166042,
+        "pixel_x": 540.0,
+        "pixel_y": 552.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 719.0,
+          "y": 528.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000260",
+      "stem": "00000260_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.030446,
+        "pixel_x": 775.4399999999999,
+        "pixel_y": 2217.6,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 744.0,
+          "y": 2239.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000260",
+      "stem": "00000260_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.017833,
+        "pixel_x": 151.20000000000002,
+        "pixel_y": 1008.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 133.0,
+          "y": 994.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000260",
+      "stem": "00000260_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.043093,
+        "pixel_x": 788.4,
+        "pixel_y": 2208.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 744.0,
+          "y": 2239.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.015078,
+        "pixel_x": 75.60000000000001,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 84.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.025644,
+        "pixel_x": 723.6,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 742.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "birthday event",
+        "gt_text": "birthday",
+        "pred_text_norm": "birthday event",
+        "gt_text_norm": "birthday"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.047734,
+        "pixel_x": 945.0,
+        "pixel_y": 2193.6,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2158.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.188518,
+        "pixel_x": 399.6,
+        "pixel_y": 1080.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 603.0,
+          "y": 1100.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.004028,
+        "pixel_x": 864.0,
+        "pixel_y": 216.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 867.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.13064,
+        "pixel_x": 399.6,
+        "pixel_y": 2016.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1985.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.033823,
+        "pixel_x": 345.6,
+        "pixel_y": 1128.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 348.0,
+          "y": 1047.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000281",
+      "stem": "00000281_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.028789,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1006.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": false,
+        "hit_by_distance": true,
+        "norm_distance": 0.017686,
+        "pixel_x": 842.4,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 859.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.121273,
+        "pixel_x": 345.6,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 475.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Ulm to Deutsches Museum",
+        "gt_text": "Ulm to Deutsches Museum",
+        "pred_text_norm": "ulm to deutsches museum",
+        "gt_text_norm": "ulm to deutsches museum"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.020601,
+        "pixel_x": 1015.1999999999999,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2169.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.020829,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 672.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1003.0,
+          "y": 650.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.007162,
+        "pixel_x": 399.6,
+        "pixel_y": 1800.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 407.0,
+          "y": 1805.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000321",
+      "stem": "00000321_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.553925,
+        "pixel_x": 410.4,
+        "pixel_y": 1776.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 555.0,
+          "y": 486.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000341",
+      "stem": "00000341_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013148,
+        "pixel_x": 1036.8,
+        "pixel_y": 408.00000000000006,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1051.0,
+          "y": 408.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000341",
+      "stem": "00000341_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.01297,
+        "pixel_x": 1026.0,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1040.0,
+          "y": 433.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000341",
+      "stem": "00000341_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.017109,
+        "pixel_x": 702.0,
+        "pixel_y": 408.00000000000006,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 709.0,
+          "y": 370.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000341",
+      "stem": "00000341_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.322976,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 216.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 634.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000341",
+      "stem": "00000341_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.278948,
+        "pixel_x": 270.0,
+        "pixel_y": 384.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 571.0,
+          "y": 356.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000361",
+      "stem": "00000361_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.018522,
+        "pixel_x": 86.4,
+        "pixel_y": 408.00000000000006,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 96.0,
+          "y": 369.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000381",
+      "stem": "00000381_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.370414,
+        "pixel_x": 140.4,
+        "pixel_y": 696.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 654.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000381",
+      "stem": "00000381_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.007811,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 1367.9999999999998,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 893.0,
+          "y": 1359.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005399,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 1800.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 985.0,
+          "y": 1788.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.077178,
+        "pixel_x": 378.0,
+        "pixel_y": 1104.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 295.0,
+          "y": 1087.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000421",
+      "stem": "00000421_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000442",
+      "stem": "00000442_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.063568,
+        "pixel_x": 378.0,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 310.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000442",
+      "stem": "00000442_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "kayak",
+        "gt_text": "kayak",
+        "pred_text_norm": "kayak",
+        "gt_text_norm": "kayak"
+      }
+    },
+    {
+      "episode_id": "00000442",
+      "stem": "00000442_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.071199,
+        "pixel_x": 918.0,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2158.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.000833,
+        "pixel_x": 540.0,
+        "pixel_y": 1608.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1606.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.02875,
+        "pixel_x": 540.0,
+        "pixel_y": 408.00000000000006,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 339.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.04376,
+        "pixel_x": 540.0,
+        "pixel_y": 1128.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 1023.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.010985,
+        "pixel_x": 1015.1999999999999,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1021.0,
+          "y": 241.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009855,
+        "pixel_x": 140.4,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 133.0,
+          "y": 2119.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "karin.iversen@example.com",
+        "gt_text": "karin.iversen@example.com",
+        "pred_text_norm": "karin.iversen@example.com",
+        "gt_text_norm": "karin.iversen@example.com"
+      }
+    },
+    {
+      "episode_id": "00000462",
+      "stem": "00000462_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.010031,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 890.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000482",
+      "stem": "00000482_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013437,
+        "pixel_x": 1026.0,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1022.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000482",
+      "stem": "00000482_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "sound of ocean",
+        "gt_text": "Ocean",
+        "pred_text_norm": "sound of ocean",
+        "gt_text_norm": "ocean"
+      }
+    },
+    {
+      "episode_id": "00000482",
+      "stem": "00000482_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.50191,
+        "pixel_x": 270.0,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 810.0,
+          "y": 639.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000482",
+      "stem": "00000482_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.02498,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 672.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 964.0,
+          "y": 629.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000482",
+      "stem": "00000482_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000502",
+      "stem": "00000502_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000502",
+      "stem": "00000502_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.113922,
+        "pixel_x": 410.4,
+        "pixel_y": 216.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 533.0,
+          "y": 193.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000502",
+      "stem": "00000502_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "stand desk for laptop",
+        "gt_text": "stand desk for laptop",
+        "pred_text_norm": "stand desk for laptop",
+        "gt_text_norm": "stand desk for laptop"
+      }
+    },
+    {
+      "episode_id": "00000502",
+      "stem": "00000502_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.017222,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2169.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000522",
+      "stem": "00000522_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.02636,
+        "pixel_x": 75.60000000000001,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 73.0,
+          "y": 201.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000522",
+      "stem": "00000522_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.021585,
+        "pixel_x": 810.0,
+        "pixel_y": 768.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 823.0,
+          "y": 725.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Oakland",
+        "gt_text": "Oakland",
+        "pred_text_norm": "oakland",
+        "gt_text_norm": "oakland"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.02,
+        "pixel_x": 540.0,
+        "pixel_y": 1944.0000000000002,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1896.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_009",
+      "step_idx": 9,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.219157,
+        "pixel_x": 345.6,
+        "pixel_y": 2088.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 582.0,
+          "y": 2062.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000542",
+      "stem": "00000542_010",
+      "step_idx": 10,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.036068,
+        "pixel_x": 378.0,
+        "pixel_y": 408.00000000000006,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 413.0,
+          "y": 370.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "shoes",
+        "gt_text": "shoes",
+        "pred_text_norm": "shoes",
+        "gt_text_norm": "shoes"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.140617,
+        "pixel_x": 378.0,
+        "pixel_y": 384.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 529.0,
+          "y": 348.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.039324,
+        "pixel_x": 918.0,
+        "pixel_y": 384.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 960.0,
+          "y": 370.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.097615,
+        "pixel_x": 540.0,
+        "pixel_y": 1392.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 435.0,
+          "y": 1413.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.015812,
+        "pixel_x": 486.0,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 474.0,
+          "y": 717.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000562",
+      "stem": "00000562_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.20001,
+        "pixel_x": 540.0,
+        "pixel_y": 2236.8,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 756.0,
+          "y": 2232.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000582",
+      "stem": "00000582_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013162,
+        "pixel_x": 1015.1999999999999,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1005.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000582",
+      "stem": "00000582_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.190436,
+        "pixel_x": 626.4,
+        "pixel_y": 504.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 832.0,
+          "y": 492.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000582",
+      "stem": "00000582_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.037711,
+        "pixel_x": 140.4,
+        "pixel_y": 2208.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 133.0,
+          "y": 2119.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000582",
+      "stem": "00000582_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "dbwscratch.test.id9@gmail.com",
+        "gt_text": "dbwscratch.test.id9@gmail.com",
+        "pred_text_norm": "dbwscratch.test.id9@gmail.com",
+        "gt_text_norm": "dbwscratch.test.id9@gmail.com"
+      }
+    },
+    {
+      "episode_id": "00000582",
+      "stem": "00000582_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.019595,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 890.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000602",
+      "stem": "00000602_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.10007,
+        "pixel_x": 432.0,
+        "pixel_y": 1512.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1521.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.045661,
+        "pixel_x": 464.4,
+        "pixel_y": 384.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 416.0,
+          "y": 363.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.069984,
+        "pixel_x": 464.4,
+        "pixel_y": 600.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 573.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.012388,
+        "pixel_x": 486.0,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 477.0,
+          "y": 722.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.554738,
+        "pixel_x": 961.2,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 373.0,
+          "y": 493.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Knoxville",
+        "gt_text": "Knoxville.",
+        "pred_text_norm": "knoxville",
+        "gt_text_norm": "knoxville."
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.081635,
+        "pixel_x": 486.0,
+        "pixel_y": 768.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 398.0,
+          "y": 756.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.096713,
+        "pixel_x": 378.0,
+        "pixel_y": 936.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 477.0,
+          "y": 862.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Hawaii",
+        "gt_text": "Hawaii",
+        "pred_text_norm": "hawaii",
+        "gt_text_norm": "hawaii"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_009",
+      "step_idx": 9,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.250326,
+        "pixel_x": 540.0,
+        "pixel_y": 816.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 271.0,
+          "y": 756.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_010",
+      "step_idx": 10,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005917,
+        "pixel_x": 540.0,
+        "pixel_y": 1315.2,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1301.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000622",
+      "stem": "00000622_011",
+      "step_idx": 11,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.077996,
+        "pixel_x": 270.0,
+        "pixel_y": 1464.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 186.0,
+          "y": 1450.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.001667,
+        "pixel_x": 540.0,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 2180.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.03125,
+        "pixel_x": 540.0,
+        "pixel_y": 912.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 837.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000642",
+      "stem": "00000642_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009628,
+        "pixel_x": 540.0,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 2161.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000662",
+      "stem": "00000662_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.024411,
+        "pixel_x": 313.2,
+        "pixel_y": 2232.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 334.0,
+          "y": 2268.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000662",
+      "stem": "00000662_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Leonardo Da Vinci Mona lisa's painting",
+        "gt_text": "Leonardo Da Vinci Mona lisa's painting",
+        "pred_text_norm": "leonardo da vinci mona lisa's painting",
+        "gt_text_norm": "leonardo da vinci mona lisa's painting"
+      }
+    },
+    {
+      "episode_id": "00000662",
+      "stem": "00000662_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": false,
+        "hit_by_distance": true,
+        "norm_distance": 0.017222,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2169.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000662",
+      "stem": "00000662_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.210509,
+        "pixel_x": 378.0,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 605.0,
+          "y": 772.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000682",
+      "stem": "00000682_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000682",
+      "stem": "00000682_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.121758,
+        "pixel_x": 345.6,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 475.0,
+          "y": 212.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.074616,
+        "pixel_x": 540.0,
+        "pixel_y": 888.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 618.0,
+          "y": 843.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.027426,
+        "pixel_x": 723.6,
+        "pixel_y": 1560.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 753.0,
+          "y": 1568.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.048912,
+        "pixel_x": 615.5999999999999,
+        "pixel_y": 1824.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 605.0,
+          "y": 1939.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000702",
+      "stem": "00000702_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": false,
+        "hit_by_distance": true,
+        "norm_distance": 0.011844,
+        "pixel_x": 918.0,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 922.0,
+          "y": 2157.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000743",
+      "stem": "00000743_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.112032,
+        "pixel_x": 540.0,
+        "pixel_y": 1488.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 633.0,
+          "y": 1316.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000743",
+      "stem": "00000743_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000743",
+      "stem": "00000743_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000743",
+      "stem": "00000743_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.250128,
+        "pixel_x": 270.0,
+        "pixel_y": 1783.2,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1764.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000743",
+      "stem": "00000743_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013566,
+        "pixel_x": 658.8,
+        "pixel_y": 648.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 648.0,
+          "y": 626.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.018881,
+        "pixel_x": 86.4,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 84.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.034224,
+        "pixel_x": 270.0,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 237.0,
+          "y": 2173.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.317646,
+        "pixel_x": 270.0,
+        "pixel_y": 816.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 613.0,
+          "y": 802.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.317807,
+        "pixel_x": 270.0,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 613.0,
+          "y": 404.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000763",
+      "stem": "00000763_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.307598,
+        "pixel_x": 270.0,
+        "pixel_y": 432.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 602.0,
+          "y": 406.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000783",
+      "stem": "00000783_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.022917,
+        "pixel_x": 540.0,
+        "pixel_y": 1367.9999999999998,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1313.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000783",
+      "stem": "00000783_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.007277,
+        "pixel_x": 874.8000000000001,
+        "pixel_y": 216.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 882.0,
+          "y": 209.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000783",
+      "stem": "00000783_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "hiking shoe",
+        "gt_text": "hiking shoe",
+        "pred_text_norm": "hiking shoe",
+        "gt_text_norm": "hiking shoe"
+      }
+    },
+    {
+      "episode_id": "00000783",
+      "stem": "00000783_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013841,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2158.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000803",
+      "stem": "00000803_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.033207,
+        "pixel_x": 86.4,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 116.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000803",
+      "stem": "00000803_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.059681,
+        "pixel_x": 270.0,
+        "pixel_y": 672.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 206.0,
+          "y": 655.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000803",
+      "stem": "00000803_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.006164,
+        "pixel_x": 993.6,
+        "pixel_y": 2088.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 988.0,
+          "y": 2080.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000803",
+      "stem": "00000803_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.237694,
+        "pixel_x": 345.6,
+        "pixel_y": 1944.0000000000002,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 602.0,
+          "y": 1972.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000823",
+      "stem": "00000823_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.020299,
+        "pixel_x": 75.60000000000001,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 84.0,
+          "y": 219.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000823",
+      "stem": "00000823_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.139885,
+        "pixel_x": 270.0,
+        "pixel_y": 936.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 420.0,
+          "y": 896.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.15878,
+        "pixel_x": 378.0,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 548.0,
+          "y": 214.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "India gate basmati rice",
+        "gt_text": "India gate basmati rice",
+        "pred_text_norm": "india gate basmati rice",
+        "gt_text_norm": "india gate basmati rice"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.072125,
+        "pixel_x": 410.4,
+        "pixel_y": 983.9999999999999,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 479.0,
+          "y": 902.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.286243,
+        "pixel_x": 540.0,
+        "pixel_y": 600.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 232.0,
+          "y": 541.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_009",
+      "step_idx": 9,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005906,
+        "pixel_x": 540.0,
+        "pixel_y": 1992.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 2006.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000843",
+      "stem": "00000843_010",
+      "step_idx": 10,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "scroll",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000863",
+      "stem": "00000863_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000863",
+      "stem": "00000863_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000863",
+      "stem": "00000863_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "down",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013851,
+        "pixel_x": 669.6,
+        "pixel_y": 2232.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 675.0,
+          "y": 2263.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": false,
+        "hit_by_distance": true,
+        "norm_distance": 0.000833,
+        "pixel_x": 540.0,
+        "pixel_y": 576.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 578.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.091549,
+        "pixel_x": 378.0,
+        "pixel_y": 1104.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 459.0,
+          "y": 978.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.084785,
+        "pixel_x": 540.0,
+        "pixel_y": 888.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 456.0,
+          "y": 807.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.008333,
+        "pixel_x": 540.0,
+        "pixel_y": 1152.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 1172.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_008",
+      "step_idx": 8,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005575,
+        "pixel_x": 270.0,
+        "pixel_y": 1367.9999999999998,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 274.0,
+          "y": 1378.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_009",
+      "step_idx": 9,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_010",
+      "step_idx": 10,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009491,
+        "pixel_x": 270.0,
+        "pixel_y": 1152.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 260.0,
+          "y": 1157.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_011",
+      "step_idx": 11,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.012083,
+        "pixel_x": 540.0,
+        "pixel_y": 2208.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 2237.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_012",
+      "step_idx": 12,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.225065,
+        "pixel_x": 540.0,
+        "pixel_y": 1488.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 783.0,
+          "y": 1501.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_013",
+      "step_idx": 13,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.661133,
+        "pixel_x": 270.0,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 984.0,
+          "y": 2123.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_014",
+      "step_idx": 14,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.00228,
+        "pixel_x": 540.0,
+        "pixel_y": 1872.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 1867.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000883",
+      "stem": "00000883_015",
+      "step_idx": 15,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00000903",
+      "stem": "00000903_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": false,
+        "hit_by_distance": true,
+        "norm_distance": 0.035742,
+        "pixel_x": 1015.1999999999999,
+        "pixel_y": 1080.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1010.0,
+          "y": 995.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000903",
+      "stem": "00000903_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.022105,
+        "pixel_x": 129.6,
+        "pixel_y": 1608.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 106.0,
+          "y": 1600.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000903",
+      "stem": "00000903_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.012119,
+        "pixel_x": 540.0,
+        "pixel_y": 2064.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 2035.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000903",
+      "stem": "00000903_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "karin.iversen@example.com",
+        "gt_text": "karin.iversen@example.com",
+        "pred_text_norm": "karin.iversen@example.com",
+        "gt_text_norm": "karin.iversen@example.com"
+      }
+    },
+    {
+      "episode_id": "00000903",
+      "stem": "00000903_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.638847,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 200.0,
+          "y": 68.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000923",
+      "stem": "00000923_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.182076,
+        "pixel_x": 410.4,
+        "pixel_y": 360.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 607.0,
+          "y": 369.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000923",
+      "stem": "00000923_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": false,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "input_text",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    },
+    {
+      "episode_id": "00000923",
+      "stem": "00000923_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Bicycle Helmet for women",
+        "gt_text": "Bicycle Helmet for women",
+        "pred_text_norm": "bicycle helmet for women",
+        "gt_text_norm": "bicycle helmet for women"
+      }
+    },
+    {
+      "episode_id": "00000923",
+      "stem": "00000923_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.006261,
+        "pixel_x": 993.6,
+        "pixel_y": 2184.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2169.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000943",
+      "stem": "00000943_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.12886,
+        "pixel_x": 486.0,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 624.0,
+          "y": 200.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000943",
+      "stem": "00000943_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.369802,
+        "pixel_x": 162.0,
+        "pixel_y": 648.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 561.0,
+          "y": 609.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000963",
+      "stem": "00000963_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": false,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": false,
+        "hit_by_bbox": false,
+        "hit_by_distance": false,
+        "norm_distance": 0.040678,
+        "pixel_x": 194.4,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 231.0,
+          "y": 210.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000963",
+      "stem": "00000963_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.14171,
+        "pixel_x": 540.0,
+        "pixel_y": 465.6,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 387.0,
+          "y": 474.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000963",
+      "stem": "00000963_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.266675,
+        "pixel_x": 378.0,
+        "pixel_y": 648.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 666.0,
+          "y": 653.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009533,
+        "pixel_x": 270.0,
+        "pixel_y": 504.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 275.0,
+          "y": 484.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009708,
+        "pixel_x": 1026.0,
+        "pixel_y": 2280.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 1016.0,
+          "y": 2273.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.088483,
+        "pixel_x": 270.0,
+        "pixel_y": 1872.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 175.0,
+          "y": 1895.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.111927,
+        "pixel_x": 453.59999999999997,
+        "pixel_y": 1367.9999999999998,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 571.0,
+          "y": 1304.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.011229,
+        "pixel_x": 129.6,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 121.0,
+          "y": 2155.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "andrewreed@dayrep.com",
+        "gt_text": "andrewreed@dayrep.com",
+        "pred_text_norm": "andrewreed@dayrep.com",
+        "gt_text_norm": "andrewreed@dayrep.com"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.097051,
+        "pixel_x": 540.0,
+        "pixel_y": 672.0000000000001,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 436.0,
+          "y": 643.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00000983",
+      "stem": "00000983_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.019595,
+        "pixel_x": 885.5999999999999,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 890.0,
+          "y": 218.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.005623,
+        "pixel_x": 907.1999999999999,
+        "pixel_y": 216.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 913.0,
+          "y": 212.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "navigate_back",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.012321,
+        "pixel_x": 75.60000000000001,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 73.0,
+          "y": 211.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.020542,
+        "pixel_x": 345.6,
+        "pixel_y": 744.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 367.0,
+          "y": 757.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.018357,
+        "pixel_x": 540.0,
+        "pixel_y": 648.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 539.0,
+          "y": 604.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_006",
+      "step_idx": 6,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.009855,
+        "pixel_x": 410.4,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 403.0,
+          "y": 2119.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001003",
+      "stem": "00001003_007",
+      "step_idx": 7,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.020042,
+        "pixel_x": 939.6,
+        "pixel_y": 240.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 922.0,
+          "y": 212.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001023",
+      "stem": "00001023_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001023",
+      "stem": "00001023_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001023",
+      "stem": "00001023_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.127864,
+        "pixel_x": 302.40000000000003,
+        "pixel_y": 1704.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 249.0,
+          "y": 1421.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001023",
+      "stem": "00001023_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.124939,
+        "pixel_x": 777.6,
+        "pixel_y": 1704.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 733.0,
+          "y": 1421.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001064",
+      "stem": "00001064_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.01218,
+        "pixel_x": 1339.2,
+        "pixel_y": 280.8,
+        "image_size": {
+          "width": 1440,
+          "height": 3120
+        },
+        "gt": {
+          "x": 1341.0,
+          "y": 243.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001064",
+      "stem": "00001064_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.061102,
+        "pixel_x": 503.99999999999994,
+        "pixel_y": 1684.8000000000002,
+        "image_size": {
+          "width": 1440,
+          "height": 3120
+        },
+        "gt": {
+          "x": 464.0,
+          "y": 1515.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001064",
+      "stem": "00001064_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    },
+    {
+      "episode_id": "00001084",
+      "stem": "00001084_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.045002,
+        "pixel_x": 442.79999999999995,
+        "pixel_y": 768.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 414.0,
+          "y": 681.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001084",
+      "stem": "00001084_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.01375,
+        "pixel_x": 540.0,
+        "pixel_y": 264.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 540.0,
+          "y": 231.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001084",
+      "stem": "00001084_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.050233,
+        "pixel_x": 723.6,
+        "pixel_y": 1080.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 769.0,
+          "y": 1014.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001084",
+      "stem": "00001084_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001084",
+      "stem": "00001084_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001104",
+      "stem": "00001104_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.035363,
+        "pixel_x": 540.0,
+        "pixel_y": 1008.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 557.0,
+          "y": 932.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001104",
+      "stem": "00001104_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.306866,
+        "pixel_x": 540.0,
+        "pixel_y": 1008.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 210.0,
+          "y": 940.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001104",
+      "stem": "00001104_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001104",
+      "stem": "00001104_004",
+      "step_idx": 4,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001104",
+      "stem": "00001104_005",
+      "step_idx": 5,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "scroll",
+      "pred_action_type": "scroll",
+      "detail": {
+        "pred_direction": "up",
+        "gt_direction": "down",
+        "expected_gesture_direction": "up",
+        "mode": "gesture_vs_ac_gt"
+      }
+    },
+    {
+      "episode_id": "00001124",
+      "stem": "00001124_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": false,
+        "norm_distance": 0.050685,
+        "pixel_x": 540.0,
+        "pixel_y": 384.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 592.0,
+          "y": 346.0
+        },
+        "mode": "baseline"
+      }
+    },
+    {
+      "episode_id": "00001124",
+      "stem": "00001124_002",
+      "step_idx": 2,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "input_text",
+      "pred_action_type": "input_text",
+      "detail": {
+        "pred_text": "Taps",
+        "gt_text": "taps",
+        "pred_text_norm": "taps",
+        "gt_text_norm": "taps"
+      }
+    },
+    {
+      "episode_id": "00001124",
+      "stem": "00001124_003",
+      "step_idx": 3,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "click",
+      "pred_action_type": "click",
+      "detail": {
+        "hit": true,
+        "hit_by_bbox": true,
+        "hit_by_distance": true,
+        "norm_distance": 0.013841,
+        "pixel_x": 982.8000000000001,
+        "pixel_y": 2136.0,
+        "image_size": {
+          "width": 1080,
+          "height": 2400
+        },
+        "gt": {
+          "x": 994.0,
+          "y": 2158.0
+        },
+        "mode": "baseline"
+      }
+    }
+  ]
+}

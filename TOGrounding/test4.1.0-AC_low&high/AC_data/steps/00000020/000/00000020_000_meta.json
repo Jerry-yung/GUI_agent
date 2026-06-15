@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000020_000",
+  "episode_id": "00000020",
+  "step_idx": 0,
+  "action_type": "navigate_back",
+  "episode_goal": "Go to the mobile category after closing the pop up and browse the products",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 4
+}

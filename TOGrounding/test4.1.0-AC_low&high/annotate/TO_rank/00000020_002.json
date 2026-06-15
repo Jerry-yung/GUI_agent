@@ -1,0 +1,168 @@
+{
+  "stem": "00000020_002",
+  "gt_node_ids": [
+    4,
+    5,
+    7,
+    0,
+    2
+  ],
+  "total_tos": 11,
+  "hit_tos": 11,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 6,
+      "TO_string": "close button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.754613,
+      "margin": 0.277711,
+      "gt_max_sim": 0.754613
+    },
+    {
+      "rank": 2,
+      "TO_id": 0,
+      "TO_string": "Close button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.75035,
+      "margin": 0.258313,
+      "gt_max_sim": 0.75035
+    },
+    {
+      "rank": 3,
+      "TO_id": 7,
+      "TO_string": "x icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.684395,
+      "margin": 0.072717,
+      "gt_max_sim": 0.684395
+    },
+    {
+      "rank": 4,
+      "TO_id": 1,
+      "TO_string": "X icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.65544,
+      "margin": 0.020564,
+      "gt_max_sim": 0.65544
+    },
+    {
+      "rank": 5,
+      "TO_id": 3,
+      "TO_string": "Close",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.609269,
+      "margin": 0.167768,
+      "gt_max_sim": 0.609269
+    },
+    {
+      "rank": 6,
+      "TO_id": 9,
+      "TO_string": "close",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.606327,
+      "margin": 0.18751,
+      "gt_max_sim": 0.606327
+    },
+    {
+      "rank": 7,
+      "TO_id": 8,
+      "TO_string": "dismiss popup",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.60305,
+      "margin": 0.245213,
+      "gt_max_sim": 0.60305
+    },
+    {
+      "rank": 8,
+      "TO_id": 2,
+      "TO_string": "Dismiss popup",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.585236,
+      "margin": 0.232971,
+      "gt_max_sim": 0.585236
+    },
+    {
+      "rank": 9,
+      "TO_id": 5,
+      "TO_string": "Dismiss",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.564973,
+      "margin": 0.166368,
+      "gt_max_sim": 0.564973
+    },
+    {
+      "rank": 10,
+      "TO_id": 4,
+      "TO_string": "X",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.529471,
+      "margin": 0.020398,
+      "gt_max_sim": 0.529471
+    },
+    {
+      "rank": 11,
+      "TO_id": 10,
+      "TO_string": "dismiss",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 4,
+      "pred_score": 0.496534,
+      "margin": 0.088398,
+      "gt_max_sim": 0.496534
+    }
+  ]
+}

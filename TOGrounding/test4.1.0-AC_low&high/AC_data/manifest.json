@@ -1,0 +1,22 @@
+{
+  "schema_version": "4.1.0",
+  "layout": "steps/{episode_id}/{step_idx:03d}/{stem}_*",
+  "total_episodes": 2,
+  "total_steps": 7,
+  "action_type_counts": {
+    "click": 3,
+    "navigate_back": 1,
+    "open_app": 1,
+    "scroll": 1,
+    "wait": 1
+  },
+  "stems": [
+    "00000000_000",
+    "00000000_001",
+    "00000000_002",
+    "00000020_000",
+    "00000020_001",
+    "00000020_002",
+    "00000020_003"
+  ]
+}

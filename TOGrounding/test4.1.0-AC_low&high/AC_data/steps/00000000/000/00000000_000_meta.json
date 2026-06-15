@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000000_000",
+  "episode_id": "00000000",
+  "step_idx": 0,
+  "action_type": "open_app",
+  "episode_goal": "Open the Zoho Meet app , view the scheduled meetings .",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 3
+}

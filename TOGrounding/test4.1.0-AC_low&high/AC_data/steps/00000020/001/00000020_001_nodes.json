@@ -1,0 +1,542 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      956,
+      157,
+      1072,
+      272
+    ],
+    "text_for_emb": "scan it"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      0,
+      136,
+      1080,
+      294
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      10,
+      438,
+      210,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      204,
+      438,
+      404,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      401,
+      438,
+      598,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      595,
+      438,
+      795,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      790,
+      438,
+      987,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      984,
+      438,
+      1183,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      1178,
+      438,
+      1378,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      1375,
+      438,
+      1572,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      1569,
+      438,
+      1766,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      1764,
+      438,
+      1963,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      1958,
+      438,
+      2157,
+      588
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      10,
+      438,
+      210,
+      630
+    ],
+    "text_for_emb": "Mobiles Mobiles"
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      204,
+      438,
+      404,
+      630
+    ],
+    "text_for_emb": "Electronics Electronics"
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      401,
+      438,
+      598,
+      630
+    ],
+    "text_for_emb": "Fresh Fresh"
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      595,
+      438,
+      795,
+      630
+    ],
+    "text_for_emb": "Fashion Fashion"
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      790,
+      438,
+      987,
+      630
+    ],
+    "text_for_emb": "miniTV miniTV"
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      984,
+      438,
+      1183,
+      630
+    ],
+    "text_for_emb": "Home Home"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      1178,
+      438,
+      1378,
+      630
+    ],
+    "text_for_emb": "Deals Deals"
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      1375,
+      438,
+      1572,
+      630
+    ],
+    "text_for_emb": "Beauty Beauty"
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      1569,
+      438,
+      1766,
+      630
+    ],
+    "text_for_emb": "Books, Toys Books, Toys"
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      1764,
+      438,
+      1963,
+      630
+    ],
+    "text_for_emb": "Appliances Appliances"
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      1958,
+      438,
+      2157,
+      630
+    ],
+    "text_for_emb": "Essentials Essentials"
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      0,
+      662,
+      9736,
+      1509
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      0,
+      662,
+      1084,
+      1612
+    ],
+    "text_for_emb": "Outdoor toys"
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      1078,
+      662,
+      2163,
+      1612
+    ],
+    "text_for_emb": "Shoes Unrec Dec"
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      2163,
+      662,
+      3247,
+      1612
+    ],
+    "text_for_emb": "Summer appliances"
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      3241,
+      662,
+      4326,
+      1612
+    ],
+    "text_for_emb": "tshirt under 249"
+  },
+  {
+    "node_id": 29,
+    "bounds": [
+      4326,
+      662,
+      5410,
+      1612
+    ],
+    "text_for_emb": "Chess & carrom"
+  },
+  {
+    "node_id": 30,
+    "bounds": [
+      5404,
+      662,
+      6489,
+      1612
+    ],
+    "text_for_emb": "Bluetooth Calling Smartwatches Under ₹1,999"
+  },
+  {
+    "node_id": 31,
+    "bounds": [
+      6489,
+      662,
+      7573,
+      1612
+    ],
+    "text_for_emb": "Shop now"
+  },
+  {
+    "node_id": 32,
+    "bounds": [
+      7567,
+      662,
+      8652,
+      1612
+    ],
+    "text_for_emb": "Shoes Unrec Dec"
+  },
+  {
+    "node_id": 33,
+    "bounds": [
+      8652,
+      662,
+      9736,
+      1612
+    ],
+    "text_for_emb": "Water bottles & lunch boxes under 499"
+  },
+  {
+    "node_id": 34,
+    "bounds": [
+      0,
+      410,
+      1084,
+      2329
+    ],
+    "text_for_emb": "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"
+  },
+  {
+    "node_id": 35,
+    "bounds": [
+      21,
+      1357,
+      244,
+      1588
+    ],
+    "text_for_emb": "Amazon Pay"
+  },
+  {
+    "node_id": 36,
+    "bounds": [
+      238,
+      1357,
+      462,
+      1588
+    ],
+    "text_for_emb": "Send Money"
+  },
+  {
+    "node_id": 37,
+    "bounds": [
+      1606,
+      1357,
+      1832,
+      1588
+    ],
+    "text_for_emb": "Starting ₹299"
+  },
+  {
+    "node_id": 38,
+    "bounds": [
+      1827,
+      1357,
+      2052,
+      1588
+    ],
+    "text_for_emb": "Under ₹499"
+  },
+  {
+    "node_id": 39,
+    "bounds": [
+      490,
+      1368,
+      829,
+      1817
+    ],
+    "text_for_emb": "Keep shopping for realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display"
+  },
+  {
+    "node_id": 40,
+    "bounds": [
+      0,
+      1344,
+      1084,
+      1848
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 41,
+    "bounds": [
+      855,
+      1357,
+      1215,
+      1835
+    ],
+    "text_for_emb": "Watches unrec"
+  },
+  {
+    "node_id": 42,
+    "bounds": [
+      1231,
+      1357,
+      1590,
+      1835
+    ],
+    "text_for_emb": "Comfort wear"
+  },
+  {
+    "node_id": 43,
+    "bounds": [
+      21,
+      1593,
+      244,
+      1827
+    ],
+    "text_for_emb": "Scan any QR"
+  },
+  {
+    "node_id": 44,
+    "bounds": [
+      238,
+      1593,
+      462,
+      1827
+    ],
+    "text_for_emb": "Pay Bills"
+  },
+  {
+    "node_id": 45,
+    "bounds": [
+      1606,
+      1593,
+      1832,
+      1827
+    ],
+    "text_for_emb": "Under ₹499"
+  },
+  {
+    "node_id": 46,
+    "bounds": [
+      1827,
+      1593,
+      2052,
+      1827
+    ],
+    "text_for_emb": "Under ₹499"
+  },
+  {
+    "node_id": 47,
+    "bounds": [
+      -5,
+      1856,
+      1086,
+      1987
+    ],
+    "text_for_emb": "Pay on delivery"
+  },
+  {
+    "node_id": 48,
+    "bounds": [
+      0,
+      1995,
+      1084,
+      2329
+    ],
+    "text_for_emb": "cab88d39-4769-4a48-8d54-26e07bf6ccd1?aaxitk=3f24bd1a1f096f5a71b2a3724aadeb36&pd_rd_plhdr=t&dplnk=mIngress&mtv_pt=gateway&refMarker=avod_in_gw_ad_matf_Unrec_Gutargu"
+  },
+  {
+    "node_id": 49,
+    "bounds": [
+      0,
+      2211,
+      213,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 50,
+    "bounds": [
+      213,
+      2211,
+      431,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 51,
+    "bounds": [
+      431,
+      2211,
+      649,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 52,
+    "bounds": [
+      649,
+      2211,
+      867,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 53,
+    "bounds": [
+      867,
+      2211,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  }
+]

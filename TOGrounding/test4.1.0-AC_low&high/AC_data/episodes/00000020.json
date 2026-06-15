@@ -1,0 +1,17 @@
+{
+  "episode_id": "00000020",
+  "goal": "Go to the mobile category after closing the pop up and browse the products",
+  "num_steps": 4,
+  "stems": [
+    "00000020_000",
+    "00000020_001",
+    "00000020_002",
+    "00000020_003"
+  ],
+  "action_types": [
+    "navigate_back",
+    "click",
+    "click",
+    "scroll"
+  ]
+}

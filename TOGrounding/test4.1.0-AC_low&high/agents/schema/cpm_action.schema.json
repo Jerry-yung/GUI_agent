@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["action_type"],
+  "properties": {
+    "thought": { "type": "string" },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "click",
+        "long_press",
+        "long_click",
+        "scroll",
+        "input_text",
+        "wait",
+        "navigate_back",
+        "navigate_home"
+      ]
+    },
+    "x": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "y": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "direction": {
+      "type": "string",
+      "enum": ["up", "down", "left", "right"]
+    },
+    "text": { "type": "string" }
+  }
+}
