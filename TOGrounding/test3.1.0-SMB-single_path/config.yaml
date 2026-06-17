@@ -1,0 +1,4 @@
+# Optional defaults (main.py / eval.py globals take precedence)
+data_dir: "../../datasets/Mobile3M/datasets"
+top_k: 10
+max_rounds: 20
