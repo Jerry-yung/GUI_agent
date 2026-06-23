@@ -1,4 +1,4 @@
-"""JSON parser for cN/sN SMAN actions."""
+"""JSON parser for N / legacy cN/sN SMAN actions."""
 from __future__ import annotations
 
 import json
@@ -12,7 +12,9 @@ _TYPE_ALIASES = {
     "tap": "click",
     "press": "click",
     "点击": "click",
-    "点按": "click",
+    "long_press": "long_press",
+    "长按": "long_press",
+    "long press": "long_press",
     "scroll": "scroll",
     "swipe": "scroll",
     "滑动": "scroll",
@@ -41,7 +43,7 @@ _DIR_ALIASES = {
     "右": "right",
 }
 
-_ELEMENT_RE = re.compile(r"\b([cs]\d+)\b", re.IGNORECASE)
+_ELEMENT_RE = re.compile(r"\b(?:([cs]\d+)|(\d+))\b", re.IGNORECASE)
 _ACTION_CALL_RE = re.compile(
     r"(?P<kind>click|scroll|input|back)\s*\((?P<args>.*)\)\s*$",
     re.IGNORECASE | re.DOTALL,
@@ -227,22 +229,51 @@ def _extract_label(raw: str, *, kind: str) -> str | None:
         return None
     m = _ELEMENT_RE.search(text)
     if m:
-        return m.group(1).lower()
+        legacy = m.group(1)
+        if legacy:
+            return legacy.lower()
+        digit = m.group(2)
+        if digit:
+            return digit
     text_l = text.lower()
+    if re.fullmatch(r"\d+", text_l):
+        return text_l
     prefix = "c" if kind == "click" else "s"
     if re.fullmatch(rf"{prefix}\d+", text_l):
         return text_l
     return None
 
 
+def _label_from_element_match(m: re.Match[str]) -> str:
+    legacy = m.group(1)
+    if legacy:
+        return legacy.lower()
+    digit = m.group(2)
+    return digit if digit else ""
+
+
+def _find_element_labels(text: str) -> list[str]:
+    labels: list[str] = []
+    for m in _ELEMENT_RE.finditer(text):
+        label = _label_from_element_match(m)
+        if label:
+            labels.append(label)
+    return labels
+
+
 def _infer_from_summary(summary: str) -> tuple[str, str] | None:
     if not summary:
         return None
-    clicks = _ELEMENT_RE.findall(summary)
+    clicks = _find_element_labels(summary)
     if not clicks:
         return None
     label = clicks[-1].lower()
-    kind = "scroll" if label.startswith("s") else "click"
+    if label.startswith("s"):
+        kind = "scroll"
+    elif label.startswith("c"):
+        kind = "click"
+    else:
+        kind = "click"
     return kind, label
 
 
@@ -283,7 +314,7 @@ def _parse_action_dict(data: dict[str, Any], *, allow_click_xy: bool = True) -> 
             node_index = action.get("node_index")
             if node_index is not None:
                 try:
-                    element = f"c{int(node_index)}"
+                    element = str(int(node_index))
                 except (TypeError, ValueError):
                     element = None
         if element is None:
@@ -344,3 +375,63 @@ def parse_labeled_json(rsp: str, *, allow_click_xy: bool = True) -> list[str] | 
         return _parse_action_dict({"thought": "", "action": call}, allow_click_xy=allow_click_xy)
 
     return None
+
+
+def _exec_action_type(fixed_action_type: str) -> str:
+    act_type = _normalize_type(fixed_action_type)
+    if act_type == "long_press":
+        return "click"
+    return act_type
+
+
+def parse_labeled_json_fixed(
+    rsp: str,
+    fixed_action_type: str,
+    *,
+    allow_click_xy: bool = True,
+) -> list[str] | None:
+    """解析 VLM 输出并注入 llm_TO 固定的 action_type。"""
+    exec_type = _exec_action_type(fixed_action_type)
+    data = extract_json_object(rsp)
+    if data is not None:
+        coerced = _coerce_action_dict(data)
+        if coerced is not None:
+            action = coerced.get("action")
+            if not isinstance(action, dict):
+                action = {}
+            if exec_type == "back":
+                patched = {"type": "back"}
+            elif exec_type == "input":
+                patched = {**action, "type": "input"}
+            else:
+                patched = {**action, "type": exec_type}
+            return _parse_action_dict(
+                {**coerced, "action": patched},
+                allow_click_xy=allow_click_xy,
+            )
+        if exec_type == "back" and data.get("thought") is not None:
+            return _parse_action_dict(
+                {"thought": data.get("thought", ""), "action": {"type": "back"}},
+                allow_click_xy=allow_click_xy,
+            )
+
+    return parse_labeled_json(rsp, allow_click_xy=allow_click_xy)
+
+
+def coerce_fixed_pointer_response(
+    rsp: str,
+    fixed_action_type: str,
+) -> dict[str, Any] | None:
+    """TO 固定 click/long_press：允许仅输出 thought。"""
+    if _normalize_type(fixed_action_type) not in ("click", "long_press"):
+        return extract_json_object(rsp)
+    data = extract_json_object(rsp)
+    if data is None:
+        return None
+    action = data.get("action")
+    if isinstance(action, dict) and action:
+        return data
+    thought = str(data.get("thought", "")).strip()
+    if thought:
+        return {"thought": thought, "action": {"type": "click"}}
+    return data

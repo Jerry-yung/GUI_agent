@@ -108,7 +108,7 @@ def format_pred_vlm_display(
             label = str(pred_res[1]).lower()
             text = "?"
             if assets is not None:
-                m = re.search(r"c(\d+)", label, re.IGNORECASE)
+                m = re.search(r"(?:c)?(\d+)", label, re.IGNORECASE)
                 if m:
                     idx = int(m.group(1)) - 1
                     if 0 <= idx < len(assets.click_actions):
@@ -254,20 +254,23 @@ def print_step_compare(
     action_ok: bool,
     top_k: int,
     topk_ok: bool,
-    instruction_hit: str | None = None,
+    llm_action_type: str | None = None,
     scroll_node_cnt: int | None = None,
     gt_similarity_rank: int | None = None,
 ) -> None:
     print(f'Step {round_count}/{max_rounds} | {step_page} | "{step_instruction}"')
-    if instruction_hit:
-        print(f"  {Fore.YELLOW}instruction_hit={instruction_hit}{Style.RESET_ALL}")
+    if llm_action_type:
+        print(f"  {Fore.YELLOW}llm_action_type={llm_action_type}{Style.RESET_ALL}")
 
-    if instruction_hit == "scroll":
-        cnt = scroll_node_cnt if scroll_node_cnt is not None else 0
-        print(f"  Scroll_node_cnt={cnt} | Retrieval={_color_bool(topk_ok)}")
-    elif instruction_hit != "input":
+    if llm_action_type not in ("input", "back"):
         to_text = (target_object or "?").replace('"', "'")
-        print(f'  TO="{to_text}" | Top_{top_k}_Retrieval={_color_topk_retrieval(topk_ok, gt_similarity_rank)}')
+        line = (
+            f'  TO="{to_text}" | Top_{top_k}_Retrieval='
+            f"{_color_topk_retrieval(topk_ok, gt_similarity_rank)}"
+        )
+        if llm_action_type == "scroll" and scroll_node_cnt is not None:
+            line += f" | scroll_pool={scroll_node_cnt}"
+        print(line)
 
     print(
         f"  GT={gt_disp} | pred={pred_disp} | "

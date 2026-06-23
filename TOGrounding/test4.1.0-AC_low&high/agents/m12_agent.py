@@ -9,12 +9,13 @@ from pathlib import Path
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from agents.action_validate import validate_ac_action
+from agents.action_validate import validate_ac_action, validate_vlm_fields
 from agents.m2_agent import (
     VLM_TEMPERATURE,
     VLM_TOP_P,
     _encode_image,
     _normalize_action,
+    merge_low_action,
 )
 from agents.parse_utils import parse_vlm_response
 from agents.prompts import build_m12_prompt_parts
@@ -42,10 +43,13 @@ class M12Agent:
         stem: str = "",
         has_annotated_nodes: bool = True,
         top_k_nodes: list | None = None,
+        fixed_action_type: str | None = None,
     ) -> dict:
         annotated_screenshot_path = Path(annotated_screenshot_path)
         if not annotated_screenshot_path.is_file():
             raise FileNotFoundError(f"标注截图不存在: {annotated_screenshot_path}")
+
+        use_fixed_fields = mode.lower() in ("low", "high") and fixed_action_type
 
         candidate_table = ""
         if has_annotated_nodes and top_k_nodes and stem:
@@ -63,6 +67,7 @@ class M12Agent:
             prev_step_instruction=prev_step_instruction,
             candidate_nodes_table=candidate_table,
             has_annotated_nodes=has_annotated_nodes,
+            fixed_action_type=fixed_action_type if use_fixed_fields else None,
         )
         b64_image = _encode_image(annotated_screenshot_path)
 
@@ -90,21 +95,39 @@ class M12Agent:
                 "error": "无法解析 VLM JSON 输出",
             }
 
-        schema_ok, schema_error = validate_ac_action(
-            parsed,
+        schema_ok, schema_error = (
+            validate_vlm_fields(
+                parsed,
+                fixed_action_type=fixed_action_type,
+                has_annotated_nodes=has_annotated_nodes,
+                mode=mode,
+                agent="m12",
+            )
+            if use_fixed_fields
+            else validate_ac_action(
+                parsed,
+                has_annotated_nodes=has_annotated_nodes,
+                mode=mode,
+                agent="m12",
+            )
+        )
+
+        is_high = mode.lower() == "high"
+        norm_kwargs = dict(
             has_annotated_nodes=has_annotated_nodes,
-            mode=mode,
-            agent="m12",
+            instruction=instruction,
+            current_step_instruction=current_step_instruction,
+            include_target_object=is_high,
+            include_next_action_type=is_high,
+        )
+        action = (
+            merge_low_action(fixed_action_type, parsed, mode, **norm_kwargs)
+            if use_fixed_fields
+            else _normalize_action(parsed, mode, **norm_kwargs)
         )
 
         result: dict = {
-            "action": _normalize_action(
-                parsed,
-                mode,
-                has_annotated_nodes=has_annotated_nodes,
-                instruction=instruction,
-                current_step_instruction=current_step_instruction,
-            ),
+            "action": action,
             "raw_response": raw,
             "vlm_tokens": vlm_tokens,
             "candidate_nodes_table": candidate_table or None,

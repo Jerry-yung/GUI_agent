@@ -67,7 +67,7 @@ def click_label_from_action_id(
     area_idx = click_area_idx_from_action_id(
         action_id, click_actions, current_page_all_actions, all_action_ids
     )
-    return f"c{area_idx}" if area_idx is not None else None
+    return str(area_idx) if area_idx is not None else None
 
 
 def _scroll_coords_from_action_str(action_str: str) -> tuple[int, int, int, int] | None:
@@ -155,7 +155,7 @@ def scroll_label_from_action_id(
     )
     if area_idx is None:
         return None, direction
-    return f"s{area_idx}", direction
+    return str(area_idx), direction
 
 
 def _scroll_direction_from_action_str(action_str: str) -> str | None:
@@ -192,7 +192,7 @@ def resolve_area_label_from_action_id(
         )
         text = "?"
         if label:
-            m = re.search(r"c(\d+)", label, re.IGNORECASE)
+            m = re.search(r"(?:c)?(\d+)", label, re.IGNORECASE)
             if m:
                 idx = int(m.group(1)) - 1
                 if 0 <= idx < len(assets.click_actions):

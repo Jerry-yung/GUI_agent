@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Run SMAN-Bench single-path inference with m2 / TO / TOa / AppAgent agents."""
+"""Run SMAN-Bench single-path inference with m2 / TO / AppAgent agents.
+
+流水线（m2/TO）：
+  llm_TO → action_type + target_object → 条件 Top-K 检索
+  VLM → 固定 type，仅填 element/direction/text 等字段
+"""
 from __future__ import annotations
 
 import sys
@@ -11,11 +16,8 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from utils.click_res import is_click_xy_res
-from annotate.instruction_hint import infer_instruction_hit
 from agents import load_agent
 from llm_set.llm import get_vlm_model_name, slug_for_run_filename
-from utils.click_geom import judge_click_norm_coords
 from utils.mobile3m_io import load_tasks
 from utils.paths import ensure_cache_dirs, resolve_data_dir, result_dir
 from utils.result_io import write_typed_result_slices
@@ -38,9 +40,8 @@ from utils.task_filter import filter_tasks
 
 # ── Global configuration ─────────────────────────────────────────────
 
-# AGENT = "m2"
-AGENT = "to"   # click 路由 Top-1；ambiguous 步用 TOP_K + m2 动作空间
-# AGENT = "toa"  # 同上，TOa 非 ambiguous 支持 element/坐标
+AGENT = "m2"
+# AGENT = "to"   # click/scroll 用 Top-1；type 由 llm_TO 固定
 # AGENT = "AppAgent"  # 官方 AppAgent single-path（全页 SoM + 英文 prompt）
 
 # TASK_JSON = "simple_tasks_sample.json"
@@ -49,13 +50,13 @@ TASK_TYPE = "single_simple"
 TEST_START = 0
 TEST_END = -1  # -1 = all after START
 APP_NAMES = ["ximalaya"]
-TOP_K = 5  # m2 检索 Top-K；to/toa 仅在 instruction_hit=ambiguous 时使用
+TOP_K = 5  # m2 全路径；TO click/scroll 为 Top-1
 DATA_DIR = "../../datasets/Mobile3M/datasets"
 DRY_RUN = False
 REQUEST_INTERVAL = 0.0
 # 仅推理 GT 动作类型在此列表中的步；其他类型跳过（终端 SKIP，结果写 is_skip）
-# TYPE: list[str] = ["click"]
-TYPE: list[str] = ["scroll"]
+TYPE: list[str] = ["click"]
+# TYPE: list[str] = ["scroll"]
 
 # ─────────────────────────────────────────────────────────────────────
 
@@ -95,7 +96,6 @@ def _finish_step(
     assets=None,
     pred_res: list[str] | None = None,
     top_k: int = 10,
-    toa_meta: dict[str, Any] | None = None,
 ) -> str:
     step_top_k = (
         assets.retrieval_top_k
@@ -109,50 +109,19 @@ def _finish_step(
     gt_type = action_type(gt_action)
     type_ok = type_match(pred_id, pred_info, gt_id, ctx.id_to_action, pred_res=pred_res)
     action_ok = action_match(pred_id, gt_id)
-    action_geom_ok: bool | None = None
-    geom_detail: dict | None = None
-    if (
-        gt_type == "click"
-        and assets is not None
-        and (is_click_xy_res(pred_res) or (toa_meta or {}).get("locator_source") == "coords")
-    ):
-        coords_meta = toa_meta or {}
-        norm_x = coords_meta.get("norm_x")
-        norm_y = coords_meta.get("norm_y")
-        if norm_x is None or norm_y is None:
-            if pred_res and is_click_xy_res(pred_res):
-                try:
-                    norm_x = float(pred_res[2])
-                    norm_y = float(pred_res[3])
-                except (TypeError, ValueError, IndexError):
-                    norm_x = norm_y = None
-        if norm_x is not None and norm_y is not None:
-            geom_detail = judge_click_norm_coords(
-                float(norm_x),
-                float(norm_y),
-                gt_id,
-                click_actions=assets.click_actions,
-                current_page_all_actions=assets.current_page_all_actions,
-                all_action_ids=ctx.all_action_ids,
-                screenshot_path=assets.screenshot_path,
-            )
-            action_geom_ok = bool(geom_detail.get("hit"))
     topk_ok = topk_retrieval_match(
         gt_id,
         gt_action,
         assets=assets,
         all_action_ids=ctx.all_action_ids,
     )
-    gt_rank = (
-        gt_similarity_rank(
-            gt_id,
-            gt_action,
-            assets=assets,
-            all_action_ids=ctx.all_action_ids,
-        )
-        if topk_ok
-        else None
+    gt_rank = gt_similarity_rank(
+        gt_id,
+        gt_action,
+        assets=assets,
+        all_action_ids=ctx.all_action_ids,
     )
+    gt_rank_display = gt_rank if topk_ok else None
 
     gt_disp, pred_disp = build_step_displays(
         gt_id,
@@ -167,9 +136,9 @@ def _finish_step(
 
     step_instruction = str(step_record.get("step_instruction") or "")
     target_object = getattr(assets, "target_object", None) if assets is not None else None
-    instruction_hit = (
-        step_record.get("instruction_hit")
-        or (getattr(assets, "instruction_hit", None) if assets is not None else None)
+    llm_action_type = (
+        step_record.get("llm_action_type")
+        or (getattr(assets, "llm_action_type", None) if assets is not None else None)
     )
     scroll_node_cnt = (
         getattr(assets, "scroll_node_cnt", None) if assets is not None else None
@@ -187,15 +156,16 @@ def _finish_step(
         action_ok=action_ok,
         top_k=step_top_k,
         topk_ok=topk_ok,
-        instruction_hit=instruction_hit,
+        llm_action_type=llm_action_type,
         scroll_node_cnt=scroll_node_cnt,
-        gt_similarity_rank=gt_rank,
+        gt_similarity_rank=gt_rank_display,
     )
 
     step_update: dict[str, Any] = {
         "page": step_page,
         "target_object": target_object,
-        "instruction_hit": instruction_hit,
+        "llm_action_type": llm_action_type,
+        "llm_to_raw": getattr(assets, "llm_to_raw", None) if assets else step_record.get("llm_to_raw"),
         "gt_action_id": gt_id,
         "gt_action_type": gt_type,
         "gt_action_info": gt_disp,
@@ -206,17 +176,6 @@ def _finish_step(
         "top_k": step_top_k,
         "topk_retrieval_match": topk_ok,
     }
-    if toa_meta:
-        step_update.update(
-            {k: v for k, v in toa_meta.items() if k in ("locator_source", "norm_x", "norm_y")}
-        )
-    if action_geom_ok is not None:
-        step_update["action_match_geom"] = action_geom_ok
-        if geom_detail:
-            step_update["geom_hit_by_bbox"] = geom_detail.get("hit_by_bbox")
-            step_update["geom_hit_by_distance"] = geom_detail.get("hit_by_distance")
-            if geom_detail.get("norm_distance") is not None:
-                step_update["geom_norm_distance"] = geom_detail["norm_distance"]
     if gt_rank is not None:
         step_update["gt_similarity_rank"] = gt_rank
     if scroll_node_cnt is not None:
@@ -318,14 +277,12 @@ def run_single_task(
     for page_id in final_page_name.split("_")[1:]:
         round_count += 1
         step_instruction = get_step_instruction(ctx, round_count)
-        instruction_hit = infer_instruction_hit(step_instruction)
         gt_id = gt_ids[round_count - 1]
 
         if not gt_type_allowed(gt_id, ctx.id_to_action, type_filter):
             step_record = {
                 "round": round_count,
                 "step_instruction": step_instruction,
-                "instruction_hit": instruction_hit,
             }
             current_page_name = _finish_skip_step(
                 round_count=round_count,
@@ -355,7 +312,6 @@ def run_single_task(
             step_record = {
                 "round": round_count,
                 "step_instruction": step_instruction,
-                "instruction_hit": instruction_hit,
                 "error": "prepare_error",
             }
             current_page_name = _finish_step(
@@ -384,13 +340,14 @@ def run_single_task(
             step_instruction,
             dry_run=dry_run,
         )
-        toa_meta = getattr(agent, "last_decide_meta", None) or {}
         elapsed_ms = round((time.perf_counter() - t0) * 1000, 2)
 
         step_record: dict[str, Any] = {
             "round": round_count,
             "step_instruction": step_instruction,
-            "instruction_hit": assets.instruction_hit or instruction_hit,
+            "llm_action_type": assets.llm_action_type,
+            "llm_to_raw": assets.llm_to_raw,
+            "llm_routing_fallback": assets.llm_routing_fallback,
             "thought": thought,
             "vlm_input_tokens": vlm_stats.input_tokens,
             "vlm_output_tokens": vlm_stats.output_tokens,
@@ -445,11 +402,6 @@ def run_single_task(
                 time.sleep(REQUEST_INTERVAL)
             continue
 
-        if toa_meta:
-            step_record.update(
-                {k: v for k, v in toa_meta.items() if k in ("locator_source", "norm_x", "norm_y")}
-            )
-
         act_name = res[0]
         step_record["action"] = act_name
 
@@ -480,7 +432,6 @@ def run_single_task(
             assets=assets,
             pred_res=res,
             top_k=top_k,
-            toa_meta=toa_meta if toa_meta else None,
         )
 
         if REQUEST_INTERVAL:

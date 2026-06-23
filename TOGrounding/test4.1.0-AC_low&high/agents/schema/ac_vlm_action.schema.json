@@ -27,6 +27,19 @@
     },
     "text": { "type": "string" },
     "next_instruction": { "type": "string" },
-    "target_object": { "type": "string" }
+    "target_object": { "type": "string" },
+    "next_action_type": {
+      "type": "string",
+      "enum": [
+        "click",
+        "long_press",
+        "long_click",
+        "scroll",
+        "input_text",
+        "wait",
+        "navigate_back",
+        "navigate_home"
+      ]
+    }
   }
 }

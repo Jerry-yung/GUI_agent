@@ -1,14 +1,15 @@
-"""TO agent: Top-1 检索 + VLM 仅判 type；click 后处理注入 top1 label。"""
+"""TO agent: Top-1 检索 + VLM 填字段；type 由 llm_TO 固定。"""
 from __future__ import annotations
 
 import json
 import logging
 
 from agents.m2_agent import M2Agent, MAX_VLM_PARSE_RETRIES, MOCK_RESPONSE, _print_parse_retry
-from agents.parser import parse_labeled_json
-from agents.prompts import VLM_ACTION_TYPES, build_to_user_prompt
+from agents.parser import coerce_fixed_pointer_response, parse_labeled_json_fixed
+from agents.prompts import VLM_ACTION_TYPES, build_to_prompt_parts
 from agents.to_click import parse_to_response
-from agents.vlm_client import call_vlm
+from agents.to_scroll import coerce_fixed_scroll_response, parse_to_scroll_response
+from agents.vlm_client import call_vlm_parts
 from utils.sman_bridge import RoundAssets
 from utils.task_context import TaskContext
 from utils.vlm_stats import VlmCallStats
@@ -17,14 +18,16 @@ logger = logging.getLogger(__name__)
 
 
 class TOAgent(M2Agent):
-    """click 路由用 Top-1；instruction_hit=ambiguous 时回退 m2（TOP_K + 动作空间）。"""
+    """需检索的 type 用 Top-1；VLM 不输出 action.type。"""
 
     name = "to"
 
     def retrieval_top_k_for_hint(self, hint: str) -> int:
-        if hint == "ambiguous":
-            return self.top_k
-        return 1
+        from annotate.llm_TO import RETRIEVAL_ACTION_TYPES
+
+        if hint in RETRIEVAL_ACTION_TYPES:
+            return 1
+        return self.top_k
 
     def decide(
         self,
@@ -34,63 +37,68 @@ class TOAgent(M2Agent):
         *,
         dry_run: bool = False,
     ) -> tuple[bool, list[str] | None, str, VlmCallStats]:
-        if assets.instruction_hit == "ambiguous":
-            return super().decide(ctx, assets, step_instruction, dry_run=dry_run)
-
         del ctx
-        prompt = build_to_user_prompt(
+        fixed_type = assets.llm_action_type or "click"
+        system_prompt, user_prompt = build_to_prompt_parts(
             step_instruction,
+            fixed_action_type=fixed_type,
             target_object=assets.target_object or "",
-            instruction_hit=assets.instruction_hit,
         )
         stats = VlmCallStats()
         top_k_nodes = assets.top_k_nodes or []
 
         if dry_run:
             rsp = MOCK_RESPONSE
-            if assets.instruction_hit == "scroll" and top_k_nodes:
-                label = str(top_k_nodes[0].get("label", "s1")).lower()
+            if fixed_type == "scroll" and top_k_nodes:
                 rsp = json.dumps(
                     {
-                        "thought": f"干跑：滑动 {label}",
-                        "action": {"type": "scroll", "element": label, "direction": "down"},
+                        "thought": "干跑：滑动",
+                        "action": {"direction": "down"},
                     },
                     ensure_ascii=False,
                 )
-                res = parse_labeled_json(rsp)
-            elif top_k_nodes:
-                label = str(top_k_nodes[0].get("label", "c1")).lower()
-                rsp = json.dumps(
-                    {"thought": f"干跑：点击 {label}", "action": {"type": "click"}},
-                    ensure_ascii=False,
-                )
+                res = parse_to_scroll_response(rsp, top_k_nodes, force_top1=True)
+            elif fixed_type in ("click", "long_press") and top_k_nodes:
+                rsp = json.dumps({"thought": "干跑：点击"}, ensure_ascii=False)
                 res = parse_to_response(rsp, top_k_nodes, force_top1=True)
             else:
-                res = parse_labeled_json(rsp)
+                res = parse_labeled_json_fixed(rsp, fixed_type)
             thought = res[-1] if res else ""
             return True, res, thought, stats
 
-        force_top1 = assets.instruction_hit != "scroll"
         for attempt in range(MAX_VLM_PARSE_RETRIES + 1):
-            status, rsp, call_stats = call_vlm(prompt, assets.drawn_screenshot)
+            status, rsp, call_stats = call_vlm_parts(
+                system_prompt, user_prompt, assets.drawn_screenshot
+            )
             stats.add(call_stats)
 
             if not status:
                 logger.warning("VLM call failed: %s", str(rsp)[:200])
                 return False, None, "", stats
 
-            if force_top1:
-                res = parse_to_response(rsp, top_k_nodes, force_top1=True)
+            if fixed_type in ("click", "long_press"):
+                coerced = coerce_fixed_pointer_response(rsp, fixed_type)
+                res = parse_to_response(
+                    json.dumps(coerced, ensure_ascii=False) if coerced else rsp,
+                    top_k_nodes,
+                    force_top1=True,
+                )
                 if res is None:
-                    res = parse_labeled_json(rsp)
-                    if res and res[0] == "click" and top_k_nodes:
-                        label = str(top_k_nodes[0].get("label", "")).lower()
-                        thought = res[-1] if len(res) > 2 else ""
-                        res = ["click", label, thought]
+                    res = parse_labeled_json_fixed(rsp, fixed_type)
+            elif fixed_type == "scroll":
+                coerced = coerce_fixed_scroll_response(rsp)
+                res = parse_to_scroll_response(
+                    json.dumps(coerced, ensure_ascii=False) if coerced else rsp,
+                    top_k_nodes,
+                    force_top1=True,
+                )
+                if res is None:
+                    res = parse_labeled_json_fixed(rsp, fixed_type)
             else:
-                res = parse_labeled_json(rsp)
+                res = parse_labeled_json_fixed(rsp, fixed_type)
 
-            if res is not None and res[0] in VLM_ACTION_TYPES:
+            exec_type = res[0] if res else ""
+            if res is not None and exec_type in VLM_ACTION_TYPES | {"back"}:
                 thought = res[-1] if res else ""
                 return True, res, thought, stats
 

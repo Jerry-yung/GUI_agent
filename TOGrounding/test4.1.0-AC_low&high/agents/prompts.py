@@ -28,11 +28,6 @@ _TO_ANNOTATED_DESC = (
     "This is the top-1 candidate retrieved for the current target object.\n"
 )
 
-_TOa_ANNOTATED_DESC = (
-    "The screenshot shows ONE colored semi-transparent box for the top-1 retrieval candidate "
-    "(no # labels). The box may be WRONG — it is a hint only.\n"
-)
-
 _COORD_FALLBACK_DESC = (
     "The screenshot has NO usable node annotation. "
     "For click/long_press you must predict normalized tap coordinates on the raw screenshot.\n"
@@ -225,6 +220,130 @@ def _target_object_rules() -> str:
     )
 
 
+POINTER_ACTION_TYPES = frozenset({"click", "long_press"})
+
+
+def _high_planning_schema_lines() -> tuple[list[str], list[str]]:
+    return (
+        [
+            '  "next_instruction": "one concise English sentence for the NEXT step after the current action",',
+            '  "target_object": "English UI label for the element to interact with on the NEXT step",',
+            '  "next_action_type": "click"|"long_press"|"scroll"|"input_text"|"wait"|"navigate_back"|"navigate_home",',
+        ],
+        [
+            "- next_instruction: one short English imperative for the step AFTER the current action.",
+            "- target_object: English on-screen label for the UI element the NEXT step should "
+            "interact with (for retrieval; do not call a separate TO model).",
+            "- next_action_type: action type for the NEXT step (used to prepare retrieval and "
+            "fix the following step's action_type).",
+            "- On the last step of a task, omit or leave planning fields empty.",
+        ],
+    )
+
+
+def _high_planning_duties_block() -> str:
+    return (
+        "# High-mode planning duties\n"
+        "- Execute the current step action (fixed action_type when provided).\n"
+        "- Also plan the step AFTER the current action: next_instruction, target_object, "
+        "next_action_type.\n"
+    )
+
+
+def _append_high_planning(
+    schema_lines: list[str],
+    extra_rules: list[str],
+) -> tuple[list[str], list[str]]:
+    plan_lines, plan_rules = _high_planning_schema_lines()
+    return schema_lines + plan_lines, extra_rules + plan_rules
+
+
+def _fixed_action_type_block(fixed_action_type: str) -> str:
+    return (
+        f"FIXED ACTION TYPE: The action_type for this step is already determined: "
+        f"{fixed_action_type!r}. Do NOT output action_type.\n"
+    )
+
+
+def _schema_lines_low_fields(
+    fixed_action_type: str,
+    *,
+    has_annotated_nodes: bool,
+    agent: str,
+    include_pointer_coords: bool = False,
+) -> tuple[list[str], list[str]]:
+    """AC-low：VLM 不输出 action_type，仅输出该 type 所需字段。"""
+    action_type = fixed_action_type.strip()
+    if action_type == "long_click":
+        action_type = "long_press"
+
+    schema_lines = ['  "thought": "1-3 concise sentences",']
+    extra_rules: list[str] = []
+    agent_upper = agent.upper()
+
+    if action_type in POINTER_ACTION_TYPES:
+        if has_annotated_nodes:
+            if agent_upper in ("M2", "M2V", "M12"):
+                schema_lines.append('  "node_id": 0,')
+            # TO: thought only — locator injected by system
+        elif include_pointer_coords or not has_annotated_nodes:
+            schema_lines.extend(['  "x": 0.52,', '  "y": 0.31,'])
+    elif action_type == "scroll":
+        schema_lines.append('  "direction": "up"|"down"|"left"|"right",')
+    elif action_type == "input_text":
+        schema_lines.append('  "text": ""')
+
+    return schema_lines, extra_rules
+
+
+def _rules_block_low(
+    fixed_action_type: str,
+    *,
+    agent: str,
+    has_annotated_nodes: bool,
+    extra_rules: list[str],
+) -> str:
+    action_type = fixed_action_type.strip()
+    if action_type == "long_click":
+        action_type = "long_press"
+    agent_upper = agent.upper()
+
+    if action_type in POINTER_ACTION_TYPES:
+        if has_annotated_nodes:
+            if agent_upper in ("M2", "M2V", "M12"):
+                click_rules = (
+                    "- Set node_id to an integer from annotated # labels on screen.\n"
+                    "- node_id must be one of the annotated # numbers.\n"
+                )
+            elif agent_upper == "TO":
+                click_rules = (
+                    "- The system will tap the highlighted retrieval candidate automatically.\n"
+                    "- Do NOT output node_id, x, or y.\n"
+                )
+            else:
+                click_rules = build_baseline_coord_rules()
+        else:
+            click_rules = build_baseline_coord_rules()
+        rules = click_rules
+    elif action_type == "scroll":
+        rules = _scroll_gesture_direction_rules()
+    elif action_type == "input_text":
+        rules = "- Set text to the string to type.\n"
+    else:
+        rules = "- No extra fields beyond thought are required.\n"
+
+    if agent_upper == "M12" and action_type in POINTER_ACTION_TYPES and has_annotated_nodes:
+        rules = f"{rules}{_m12_candidate_node_rules()}"
+
+    rules = (
+        f"{rules}"
+        "- Use only fields relevant to the fixed action_type; omit unused fields.\n"
+        + "\n".join(extra_rules)
+        + ("\n" if extra_rules else "")
+    )
+    return rules
+
+
 def _schema_lines(
     *,
     has_annotated_nodes: bool,
@@ -243,13 +362,6 @@ def _schema_lines(
     if has_annotated_nodes:
         if agent_upper in ("M2", "M2V", "M12"):
             schema_lines.append('  "node_id": 0,')
-        elif agent_upper == "TOA":
-            schema_lines.extend(['  "x": 0.52,', '  "y": 0.31,'])
-            extra_rules.append(
-                "- click/long_press: x,y are OPTIONAL. Omit x,y to trust the suggestion box; "
-                "include x,y (normalized to full screen) only when the box does not match the step."
-            )
-            extra_rules.append("- Do NOT output node_id or click_id.")
     elif include_pointer_coords or not has_annotated_nodes:
         schema_lines.extend(['  "x": 0.52,', '  "y": 0.31,'])
 
@@ -261,21 +373,7 @@ def _schema_lines(
     )
 
     if mode == "high":
-        schema_lines.append(
-            '  "next_instruction": "one concise English sentence for the NEXT step after the current action"'
-        )
-        extra_rules.append(
-            "- next_instruction: required in high mode. One short English imperative sentence "
-            "for the step AFTER the current action."
-        )
-        if agent_upper == "M2V":
-            schema_lines.append(
-                '  "target_object": "English UI label for the element to interact with on the NEXT step"'
-            )
-            extra_rules.append(
-                "- target_object: required in high mode for m2v. Predict the on-screen label/name "
-                "for the UI element the NEXT step should interact with (for retrieval)."
-            )
+        schema_lines, extra_rules = _append_high_planning(schema_lines, extra_rules)
 
     return schema_lines, extra_rules
 
@@ -333,74 +431,6 @@ def _to_rules_block(
     return rules
 
 
-def _toa_rules_block(
-    *,
-    has_annotated_nodes: bool,
-    extra_rules: list[str],
-) -> str:
-    if has_annotated_nodes:
-        click_rules = (
-            "- click / long_press: if the suggestion box matches the step instruction, "
-            "output action_type only (system taps that region).\n"
-            "- If the box is wrong or mismatched, output normalized x,y relative to the FULL "
-            "screen (0.0–1.0) for the correct tap — do NOT output node_id.\n"
-            "- If the step needs scroll, input_text, wait, or navigation, "
-            "output that action_type — do not click just because a box is shown.\n"
-        )
-    else:
-        click_rules = build_baseline_coord_rules()
-
-    rules = (
-        f"{click_rules}"
-        "- input_text: set text to the string to type (text field only).\n"
-        f"{_scroll_gesture_direction_rules()}"
-        f"{_wait_and_navigate_rules(has_annotated_nodes=has_annotated_nodes)}"
-        "- Use fields that match the chosen action_type; omit unused fields.\n"
-        + "\n".join(extra_rules)
-        + ("\n" if extra_rules else "")
-    )
-    return rules
-
-
-TAU_SIM_STRONG = 0.50
-TAU_MARGIN_STRONG = 0.04
-
-
-def _toa_low_confidence_block(
-    *,
-    has_annotated_nodes: bool,
-    retrieval_final_sim: float,
-    retrieval_margin: float | None,
-) -> str:
-    margin = retrieval_margin
-    force = not has_annotated_nodes
-    strong = force
-    if has_annotated_nodes:
-        if retrieval_final_sim < TAU_SIM_STRONG:
-            strong = True
-        if margin is not None and margin < TAU_MARGIN_STRONG:
-            strong = True
-    if not strong:
-        return ""
-    lines = [
-        "RETRIEVAL LOW CONFIDENCE:",
-        "- The retrieval suggestion may be unreliable.",
-    ]
-    if not has_annotated_nodes:
-        lines.append(
-            "- No suggestion box is shown — for click/long_press you MUST output normalized x,y."
-        )
-    else:
-        sim_s = f"{retrieval_final_sim:.3f}"
-        margin_s = f"{margin:.3f}" if margin is not None else "n/a"
-        lines.append(f"- Retrieval score (top1): {sim_s}; margin top1-top2: {margin_s}.")
-        lines.append(
-            "- If the highlighted region does not match the step instruction, "
-            "output x,y for the correct tap instead of relying on the box."
-        )
-    return "\n".join(lines) + "\n"
-
-
 def _m12_candidate_node_rules() -> str:
     return (
         "CANDIDATE NODES (m12):\n"
@@ -450,20 +480,42 @@ def build_m12_prompt_parts(
     prev_step_instruction: str = "",
     candidate_nodes_table: str = "",
     has_annotated_nodes: bool = True,
+    fixed_action_type: str | None = None,
 ) -> tuple[str, str]:
     """返回 (system_prompt, user_prompt)。m2 + top-k 候选节点语义表。"""
     mode = mode.lower()
-    schema_lines, extra_rules = _schema_lines(
-        has_annotated_nodes=has_annotated_nodes,
-        mode=mode,
-        agent="m12",
-    )
+    use_low_fixed = mode == "low" and fixed_action_type
+    use_high_fixed = mode == "high" and fixed_action_type
+    if use_low_fixed or use_high_fixed:
+        schema_lines, extra_rules = _schema_lines_low_fields(
+            fixed_action_type,
+            has_annotated_nodes=has_annotated_nodes,
+            agent="m12",
+        )
+        if use_high_fixed:
+            schema_lines, extra_rules = _append_high_planning(schema_lines, extra_rules)
+        rules_block = _rules_block_low(
+            fixed_action_type,
+            agent="m12",
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = _fixed_action_type_block(fixed_action_type)
+        high_duties = _high_planning_duties_block() if use_high_fixed else ""
+    else:
+        schema_lines, extra_rules = _schema_lines(
+            has_annotated_nodes=has_annotated_nodes,
+            mode=mode,
+            agent="m12",
+        )
+        rules_block = _m12_ac_rules_block(
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = ""
+        high_duties = _high_planning_duties_block() if mode == "high" else ""
     schema = "{\n" + ",\n".join(schema_lines) + "\n}"
     screen_desc = _ANNOTATED_DESC if has_annotated_nodes else _COORD_FALLBACK_DESC
-    rules_block = _m12_ac_rules_block(
-        has_annotated_nodes=has_annotated_nodes,
-        extra_rules=extra_rules,
-    )
 
     system_prompt = (
         "# Role\n"
@@ -472,6 +524,8 @@ def build_m12_prompt_parts(
         "predict the NEXT action on the current screen.\n\n"
         "# Task\n"
         "Output exactly ONE JSON object for the immediate next action.\n\n"
+        f"{high_duties}"
+        f"{fixed_block}"
         f"# Screen\n{screen_desc}\n"
         "# Rule\n"
         "- Output compact raw JSON only. No markdown or code fences.\n"
@@ -507,20 +561,42 @@ def build_m2_prompt_parts(
     current_step_instruction: str = "",
     prev_step_instruction: str = "",
     has_annotated_nodes: bool = True,
+    fixed_action_type: str | None = None,
 ) -> tuple[str, str]:
     """返回 (system_prompt, user_prompt)。"""
     mode = mode.lower()
-    schema_lines, extra_rules = _schema_lines(
-        has_annotated_nodes=has_annotated_nodes,
-        mode=mode,
-        agent="m2",
-    )
+    use_low_fixed = mode == "low" and fixed_action_type
+    use_high_fixed = mode == "high" and fixed_action_type
+    if use_low_fixed or use_high_fixed:
+        schema_lines, extra_rules = _schema_lines_low_fields(
+            fixed_action_type,
+            has_annotated_nodes=has_annotated_nodes,
+            agent="m2",
+        )
+        if use_high_fixed:
+            schema_lines, extra_rules = _append_high_planning(schema_lines, extra_rules)
+        rules_block = _rules_block_low(
+            fixed_action_type,
+            agent="m2",
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = _fixed_action_type_block(fixed_action_type)
+        high_duties = _high_planning_duties_block() if use_high_fixed else ""
+    else:
+        schema_lines, extra_rules = _schema_lines(
+            has_annotated_nodes=has_annotated_nodes,
+            mode=mode,
+            agent="m2",
+        )
+        rules_block = _ac_rules_block(
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = ""
+        high_duties = _high_planning_duties_block() if mode == "high" else ""
     schema = "{\n" + ",\n".join(schema_lines) + "\n}"
     screen_desc = _ANNOTATED_DESC if has_annotated_nodes else _COORD_FALLBACK_DESC
-    rules_block = _ac_rules_block(
-        has_annotated_nodes=has_annotated_nodes,
-        extra_rules=extra_rules,
-    )
 
     system_prompt = (
         "# Role\n"
@@ -529,6 +605,8 @@ def build_m2_prompt_parts(
         "predict the NEXT action on the current screen.\n\n"
         "# Task\n"
         "Output exactly ONE JSON object for the immediate next action.\n\n"
+        f"{high_duties}"
+        f"{fixed_block}"
         f"# Screen\n{screen_desc}\n"
         "# Rule\n"
         "- Output compact raw JSON only. No markdown or code fences.\n"
@@ -559,32 +637,42 @@ def build_m2v_prompt_parts(
     current_step_instruction: str = "",
     prev_step_instruction: str = "",
     has_annotated_nodes: bool = True,
+    fixed_action_type: str | None = None,
 ) -> tuple[str, str]:
-    """返回 (system_prompt, user_prompt)。high 模式额外要求 target_object。"""
+    """返回 (system_prompt, user_prompt)。high 模式额外要求下一步规划三字段。"""
     mode = mode.lower()
-    schema_lines, extra_rules = _schema_lines(
-        has_annotated_nodes=has_annotated_nodes,
-        mode=mode,
-        agent="m2v",
-    )
+    use_low_fixed = mode == "low" and fixed_action_type
+    use_high_fixed = mode == "high" and fixed_action_type
+    if use_low_fixed or use_high_fixed:
+        schema_lines, extra_rules = _schema_lines_low_fields(
+            fixed_action_type,
+            has_annotated_nodes=has_annotated_nodes,
+            agent="m2v",
+        )
+        if use_high_fixed:
+            schema_lines, extra_rules = _append_high_planning(schema_lines, extra_rules)
+        rules_block = _rules_block_low(
+            fixed_action_type,
+            agent="m2v",
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = _fixed_action_type_block(fixed_action_type)
+        m2v_duties = _high_planning_duties_block() if use_high_fixed else ""
+    else:
+        schema_lines, extra_rules = _schema_lines(
+            has_annotated_nodes=has_annotated_nodes,
+            mode=mode,
+            agent="m2v",
+        )
+        rules_block = _ac_rules_block(
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = ""
+        m2v_duties = _high_planning_duties_block() if mode == "high" else ""
     schema = "{\n" + ",\n".join(schema_lines) + "\n}"
     screen_desc = _ANNOTATED_DESC if has_annotated_nodes else _COORD_FALLBACK_DESC
-    rules_block = _ac_rules_block(
-        has_annotated_nodes=has_annotated_nodes,
-        extra_rules=extra_rules,
-    )
-    if mode == "high":
-        rules_block = f"{rules_block}\n{_target_object_rules()}"
-
-    m2v_duties = ""
-    if mode == "high":
-        m2v_duties = (
-            "# M2V agent duties\n"
-            "- Predict the immediate next action AND plan the step after that.\n"
-            "- next_instruction: one English sentence describing what to do on the NEXT step.\n"
-            "- target_object: English on-screen label for the UI element that NEXT step should "
-            "interact with (used for retrieval; do not call a separate TO model).\n"
-        )
 
     system_prompt = (
         "# Role\n"
@@ -594,6 +682,7 @@ def build_m2v_prompt_parts(
         "# Task\n"
         "Output exactly ONE JSON object for the immediate next action.\n\n"
         f"{m2v_duties}"
+        f"{fixed_block}"
         f"# Screen\n{screen_desc}\n"
         "# Rule\n"
         "- Output compact raw JSON only. No markdown or code fences.\n"
@@ -666,30 +755,60 @@ def build_to_vlm_prompt_parts(
     current_step_instruction: str = "",
     prev_step_instruction: str = "",
     has_annotated_nodes: bool = True,
+    fixed_action_type: str | None = None,
 ) -> tuple[str, str]:
     """返回 (system_prompt, user_prompt)。"""
     mode = mode.lower()
-    schema_lines, extra_rules = _schema_lines(
-        has_annotated_nodes=has_annotated_nodes,
-        mode=mode,
-        agent="TO",
-        include_pointer_coords=not has_annotated_nodes,
-    )
+    use_low_fixed = mode == "low" and fixed_action_type
+    use_high_fixed = mode == "high" and fixed_action_type
+    if use_low_fixed or use_high_fixed:
+        schema_lines, extra_rules = _schema_lines_low_fields(
+            fixed_action_type,
+            has_annotated_nodes=has_annotated_nodes,
+            agent="TO",
+            include_pointer_coords=not has_annotated_nodes,
+        )
+        if use_high_fixed:
+            schema_lines, extra_rules = _append_high_planning(schema_lines, extra_rules)
+        rules_block = _rules_block_low(
+            fixed_action_type,
+            agent="TO",
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = _fixed_action_type_block(fixed_action_type)
+        to_duties = (
+            "# TO agent duties\n"
+            f"- The action_type is fixed to {fixed_action_type!r}.\n"
+            "- Fill in only the fields required for that action_type.\n"
+            "- For click/long_press with a highlighted candidate, the system taps it automatically.\n"
+        )
+        if use_high_fixed:
+            to_duties = f"{to_duties}\n{_high_planning_duties_block()}"
+    else:
+        schema_lines, extra_rules = _schema_lines(
+            has_annotated_nodes=has_annotated_nodes,
+            mode=mode,
+            agent="TO",
+            include_pointer_coords=not has_annotated_nodes,
+        )
+        rules_block = _to_rules_block(
+            has_annotated_nodes=has_annotated_nodes,
+            extra_rules=extra_rules,
+        )
+        fixed_block = ""
+        to_duties = (
+            "# TO agent duties\n"
+            "- Decide the NEXT action_type for the current step (follow step instruction in low mode).\n"
+            "- For click/long_press ONLY when the step requires tapping the retrieved target: "
+            "output action_type only; the system uses the highlighted candidate.\n"
+            "- For wait, navigate_back, navigate_home, scroll, input_text: "
+            "output that action_type — never default to click because a highlight exists.\n"
+        )
+        if mode == "high":
+            to_duties = f"{to_duties}\n{_high_planning_duties_block()}"
     schema = "{\n" + ",\n".join(schema_lines) + "\n}"
     screen_desc = _TO_ANNOTATED_DESC if has_annotated_nodes else _COORD_FALLBACK_DESC
-    rules_block = _to_rules_block(
-        has_annotated_nodes=has_annotated_nodes,
-        extra_rules=extra_rules,
-    )
-
-    to_duties = (
-        "# TO agent duties\n"
-        "- Decide the NEXT action_type for the current step (follow step instruction in low mode).\n"
-        "- For click/long_press ONLY when the step requires tapping the retrieved target: "
-        "output action_type only; the system uses the highlighted candidate.\n"
-        "- For wait, navigate_back, navigate_home, scroll, input_text: "
-        "output that action_type — never default to click because a highlight exists.\n"
-    )
 
     system_prompt = (
         "# Role\n"
@@ -698,6 +817,7 @@ def build_to_vlm_prompt_parts(
         "# Task\n"
         "Output exactly ONE JSON object for the immediate next action.\n\n"
         f"{to_duties}\n"
+        f"{fixed_block}"
         f"# Screen\n{screen_desc}\n"
         "# Rule\n"
         "- Output compact raw JSON only. No markdown or code fences.\n"
@@ -721,92 +841,6 @@ def build_to_vlm_prompt_parts(
     hints = _build_instruction_hints(instruction, goal, mode=mode)
     user_prompt = (
         f"{prev_block}{target_line}{hints}{task_block}\n\nCurrent screen screenshot:"
-    )
-    return system_prompt, user_prompt
-
-
-def build_toa_prompt_parts(
-    mode: str,
-    *,
-    instruction: str = "",
-    goal: str = "",
-    target_object: str = "",
-    current_step_instruction: str = "",
-    prev_step_instruction: str = "",
-    has_annotated_nodes: bool = True,
-    retrieval_final_sim: float = 0.0,
-    retrieval_margin: float | None = None,
-) -> tuple[str, str]:
-    """返回 (system_prompt, user_prompt) for TOa agent."""
-    mode = mode.lower()
-    schema_lines, extra_rules = _schema_lines(
-        has_annotated_nodes=has_annotated_nodes,
-        mode=mode,
-        agent="TOa",
-        include_pointer_coords=not has_annotated_nodes,
-    )
-    schema = "{\n" + ",\n".join(schema_lines) + "\n}"
-    screen_desc = _TOa_ANNOTATED_DESC if has_annotated_nodes else _COORD_FALLBACK_DESC
-    rules_block = _toa_rules_block(
-        has_annotated_nodes=has_annotated_nodes,
-        extra_rules=extra_rules,
-    )
-
-    toa_duties = (
-        "# TOa agent duties\n"
-        "- Decide the NEXT action_type (follow step instruction in low mode).\n"
-        "- A retrieval pipeline proposed ONE suggestion region (may be wrong).\n"
-        "- click/long_press: trust the box OR output normalized x,y — see rules.\n"
-        "- For wait, navigate_back, navigate_home, scroll, input_text: "
-        "never default to click because a box is shown.\n"
-    )
-
-    system_prompt = (
-        "# Role\n"
-        "You are an Android GUI automation agent (TOa) with target-object retrieval.\n\n"
-        "# Task\n"
-        "Output exactly ONE JSON object for the immediate next action.\n\n"
-        f"{toa_duties}\n"
-        f"# Screen\n{screen_desc}\n"
-        "# Rule\n"
-        "- Output compact raw JSON only. No markdown or code fences.\n"
-        "- Follow the schema and rules below.\n\n"
-        f"# Schema\n{schema}\n\n"
-        f"# Rules\n{rules_block}"
-    )
-
-    task_block = _build_task_block(
-        mode,
-        instruction=instruction,
-        goal=goal,
-        current_step_instruction=current_step_instruction if mode != "high" else "",
-    )
-    prev_block = (
-        "" if mode == "high" else _build_prev_step_context_block(prev_step_instruction)
-    )
-    target_line = ""
-    if target_object.strip():
-        target_line = f'Retrieved target: "{target_object.strip()}"\n'
-    score_line = ""
-    if has_annotated_nodes:
-        margin_s = (
-            f"{retrieval_margin:.3f}"
-            if retrieval_margin is not None
-            else "n/a"
-        )
-        score_line = (
-            f"Retrieval score (top1): {retrieval_final_sim:.3f}\n"
-            f"Margin top1-top2: {margin_s}\n"
-        )
-    low_conf = _toa_low_confidence_block(
-        has_annotated_nodes=has_annotated_nodes,
-        retrieval_final_sim=retrieval_final_sim,
-        retrieval_margin=retrieval_margin,
-    )
-    hints = _build_instruction_hints(instruction, goal, mode=mode)
-    user_prompt = (
-        f"{prev_block}{target_line}{score_line}{low_conf}{hints}{task_block}\n\n"
-        "Current screen screenshot:"
     )
     return system_prompt, user_prompt
 

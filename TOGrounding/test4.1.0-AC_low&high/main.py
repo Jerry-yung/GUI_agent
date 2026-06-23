@@ -2,17 +2,15 @@
 """
 AC-low / AC-high 实验入口（全步轨迹）。
 
-每步流程：
-  1. llm_TO → target_object → top_k 标注（当前步截图）
-  2. VLM 预测 action（及 high 模式下的 next_instruction）
+每步流程（AC-low）：
+  1. llm_TO → action_type + target_object
+  2. click/long_press：target_object → top_k 标注；其他类型：原图
+  3. VLM 填充 action 字段（node_id / direction / text 等）；type 由 llm_TO 固定
 
-step0 标注输入：
-  - low:  step0 instruction
-  - high: episode goal
-
-step n+1 标注输入（step n VLM 之后）：
-  - low:  step n+1 instruction（GT）
-  - high: step n VLM 的 next_instruction（VLM 输入本身每步仅 goal，与 CPM 一致）
+每步流程（AC-high）：
+  step0：llm_TO(goal) → action_type + target_object → 条件检索
+  step n+1：上步 VLM 的 next_action_type + target_object + next_instruction → 条件检索
+  VLM：固定本步 type（llm_TO 或上步 next_action_type）+ 填字段 + 输出下一步规划三字段
 """
 
 from __future__ import annotations
@@ -26,15 +24,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from agents.TO_agent import TOAgent
-from agents.TOa_agent import TOaAgent
 from agents.CPM_agent import CPMAgent
 from agents.m2_agent import M2Agent
 from agents.m12_agent import M12Agent
 from agents.m2v_agent import M2VAgent
-from annotate.annotate import annotate_step, annotate_toa_step, save_original_annotated
+from annotate.annotate import annotate_step, save_original_annotated
 from annotate.cos_sim_topk import rank_nodes_by_to
 from annotate.node_filter import is_valid_top1_bounds
-from annotate.llm_TO import generate_target_object
+from annotate.llm_TO import POINTER_ACTION_TYPES, generate_target_object
 from annotate.to_rank_select import pick_to_string_from_rank, TO_SELECT_CHOICES
 from eval.run_naming import run_filename
 from eval.step_judge import is_evaluable_step, is_skipped_gt_action, judge_step_match
@@ -54,16 +51,16 @@ AC_MODE = "low"
 
 # AGENT = "CPM" # 不看 TOP_K, TO_SELECT 限制
 # AGENT = "m2"
-# AGENT = "m12"  # m2 + top-k 候选节点文本表
+AGENT = "m12"  # m2 + top-k 候选节点文本表
 # AGENT = "m2v"
 # AGENT = "TO"
-AGENT = "TOa"
+# AGENT = "TO"
 
-TOP_K = 1 # TO, TOa 时必须为 1
-TO_SELECT = "best"  # best | mid | worst | generate
+TOP_K = 5 # TO 时必须为 1
+TO_SELECT = "generate"  # best | mid | worst | generate
 
-TEST_START = 0
-TEST_END = 2  # episode end, None 表示到最后一个 episode（当前 AC_data 仅保留 2 个 episode）
+TEST_START = 89
+TEST_END = 100  # episode end, None 表示到最后一个 episode
 
 # TEST_LIST: list[str] = [ "00000020", "00000040", "00000220", "00000240", "00000421",
 #     "00000542", "00000682", "00000743", "00000763", "00000843",
@@ -138,6 +135,13 @@ def _to_prompt_step0(episode_id: str, stem: str) -> str:
 def _parse_next_instruction(pred_action: dict | None) -> str | None:
     text = str((pred_action or {}).get("next_instruction", "")).strip()
     return text or None
+
+
+def _parse_next_action_type(pred_action: dict | None) -> str:
+    action_type = str((pred_action or {}).get("next_action_type", "")).strip()
+    if action_type == "long_click":
+        return "long_press"
+    return action_type
 
 
 def _to_prompt_after_step(
@@ -255,7 +259,7 @@ def _fallback_annotation(
 
 
 def _is_to_family() -> bool:
-    return AGENT.upper() in ("TO", "TOA")
+    return AGENT.upper() == "TO"
 
 
 def _compute_retrieval_margin(top_nodes: list[dict]) -> float | None:
@@ -321,10 +325,7 @@ def _annotate_from_target_object(
         )
 
     top_k_nodes = _serialize_top_nodes(top_nodes)
-    if AGENT.upper() == "TOA":
-        ann_path = annotate_toa_step(stem, TOP_K, top_nodes)
-    else:
-        ann_path = annotate_step(stem, TOP_K, top_nodes)
+    ann_path = annotate_step(stem, TOP_K, top_nodes)
     return {
         "status": "ok",
         "to_prompt_text": to_text,
@@ -345,39 +346,111 @@ def _is_pointer_gt_stem(stem: str) -> bool:
     return gt_type in ("click", "long_press", "long_click")
 
 
-def _resolve_target_object(stem: str, to_text: str) -> tuple[str, str]:
+def _resolve_to_plan(stem: str, to_text: str) -> tuple[str, str, str, str | None]:
     """
-    解析本步 target_object。
+    解析本步 llm_TO 结果（AC-low 每步；AC-high 仅 step0）。
 
     Returns:
-        (target_object, source)  source 为 generate | best | mid | worst
+        (action_type, target_object, source, raw_response)
+        source 为 generate | best | mid | worst
     """
-    mode = TO_SELECT.lower()
-    if mode == "generate" or not _is_pointer_gt_stem(stem):
-        to_result = generate_target_object(to_text)
-        return to_result["target_object"], "generate"
-
-    if mode not in ("best", "mid", "worst"):
-        raise ValueError(f"未知 TO_SELECT: {TO_SELECT!r}")
-
-    ranked_to = pick_to_string_from_rank(stem, mode)
-    if ranked_to:
-        return ranked_to, mode
-
-    print(f"  [TO_SELECT={mode}] {stem} 无 TO_rank，回退 llm_TO")
     to_result = generate_target_object(to_text)
-    return to_result["target_object"], "generate"
+    action_type = to_result["action_type"]
+    target_object = to_result["target_object"]
+    raw = to_result.get("raw_response")
+    source = "generate"
+
+    mode = TO_SELECT.lower()
+    if mode in ("best", "mid", "worst") and _is_pointer_gt_stem(stem):
+        ranked_to = pick_to_string_from_rank(stem, mode)
+        if ranked_to:
+            return action_type, ranked_to, mode, raw
+
+    return action_type, target_object, source, raw
+
+
+def _annotate_from_llm_plan(stem: str, to_text: str) -> dict:
+    """llm_TO + 条件检索/标注（AC-low 每步；AC-high step0）。"""
+    action_type, target_object, to_source, raw = _resolve_to_plan(stem, to_text)
+
+    if action_type not in POINTER_ACTION_TYPES:
+        ann = _fallback_annotation(
+            stem,
+            to_prompt_text=to_text,
+            target_object=target_object,
+            reason="llm_non_pointer",
+        )
+    elif not (target_object or "").strip():
+        ann = _fallback_annotation(
+            stem,
+            to_prompt_text=to_text,
+            target_object="",
+            reason="empty_to",
+        )
+    else:
+        ann = _annotate_from_target_object(
+            stem,
+            target_object,
+            to_prompt_text=to_text,
+        )
+
+    ann["planned_action_type"] = action_type
+    ann["llm_action_type"] = action_type
+    ann["to_select"] = to_source
+    if raw:
+        ann["llm_to_raw"] = raw
+    return ann
 
 
 def _annotate_from_to(stem: str, to_text: str) -> dict:
-    """解析 target_object + top_k 检索 + 标注，返回当前步标注上下文。"""
-    target_object, to_source = _resolve_target_object(stem, to_text)
-    ann = _annotate_from_target_object(
-        stem,
-        target_object,
-        to_prompt_text=to_text,
-    )
-    ann["to_select"] = to_source
+    """兼容入口：llm_TO 标注路径。"""
+    return _annotate_from_llm_plan(stem, to_text)
+
+
+def _annotate_from_vlm_plan(
+    episode_id: str,
+    stem: str,
+    pred_action: dict | None,
+) -> dict:
+    """AC-high step n+1：由上一步 VLM 规划驱动检索/标注。"""
+    pred_action = pred_action or {}
+    action_type = _parse_next_action_type(pred_action)
+    target_object = str(pred_action.get("target_object", "")).strip()
+    next_instr = _parse_next_instruction(pred_action)
+    goal = _load_episode_goal(episode_id)
+    to_text = next_instr or goal or ""
+
+    if not action_type:
+        print(f"  [high] 上步无 next_action_type，回退原图")
+        ann = _fallback_annotation(
+            stem,
+            to_prompt_text=to_text,
+            target_object=target_object,
+            reason="missing_next_action_type",
+        )
+    elif action_type not in POINTER_ACTION_TYPES:
+        ann = _fallback_annotation(
+            stem,
+            to_prompt_text=to_text,
+            target_object=target_object,
+            reason="vlm_non_pointer",
+        )
+    elif not target_object:
+        ann = _fallback_annotation(
+            stem,
+            to_prompt_text=to_text,
+            target_object="",
+            reason="empty_to",
+        )
+    else:
+        ann = _annotate_from_target_object(
+            stem,
+            target_object,
+            to_prompt_text=to_text,
+        )
+
+    ann["planned_action_type"] = action_type or None
+    ann["vlm_planned_action_type"] = action_type or None
     return ann
 
 
@@ -483,6 +556,8 @@ def _print_step_result(step_rec: dict) -> None:
     instr = step_rec.get("display_instruction")
     instr_text = "None" if instr is None else _clip(instr)
     print(f"  instruction : {instr_text}")
+    if step_rec.get("llm_action_type"):
+        print(f"  llm_type    : {step_rec.get('llm_action_type')}")
     print(f"  target_obj  : {_clip(step_rec.get('target_object', '-'))}")
     print(f"  nodes       : {nodes_line}")
     print(f"  GT          : {_format_action_detail(step_rec.get('gt'))}")
@@ -537,29 +612,10 @@ def _annotate_for_next_step(
     pred_action: dict | None,
 ) -> dict:
     """为 step n+1 准备标注上下文。"""
-    if AGENT.upper() == "M2V" and AC_MODE == "high":
-        pred_action = pred_action or {}
-        target_object = str(pred_action.get("target_object", "")).strip()
-        next_instr = _parse_next_instruction(pred_action)
-        to_text_next = next_instr or _load_episode_goal(episode_id)
-        if target_object:
-            return _annotate_from_target_object(
-                next_stem,
-                target_object,
-                to_prompt_text=to_text_next,
-            )
-        print(
-            f"  [m2v] step {step_idx} 无 target_object，"
-            f"step {step_idx + 1} 回退 llm_TO"
-        )
-        return _annotate_from_to(next_stem, to_text_next)
+    if AC_MODE == "high":
+        return _annotate_from_vlm_plan(episode_id, next_stem, pred_action)
 
     to_text_next = _to_prompt_after_step(episode_id, step_idx, pred_action)
-    if AC_MODE == "high" and _parse_next_instruction(pred_action) is None:
-        print(
-            f"  [high] step {step_idx} 无 next_instruction，"
-            f"step {step_idx + 1} instruction=None；llm_TO 回退 goal"
-        )
     return _annotate_from_to(next_stem, to_text_next)
 
 
@@ -585,12 +641,10 @@ def _cpm_step_context(stem: str) -> dict:
     }
 
 
-def _create_agent() -> M2Agent | M12Agent | M2VAgent | TOAgent | TOaAgent | CPMAgent:
+def _create_agent() -> M2Agent | M12Agent | M2VAgent | TOAgent | CPMAgent:
     agent_upper = AGENT.upper()
     if agent_upper == "TO":
         return TOAgent()
-    if agent_upper == "TOA":
-        return TOaAgent()
     if agent_upper == "M2V":
         return M2VAgent()
     if agent_upper == "CPM":
@@ -602,7 +656,7 @@ def _create_agent() -> M2Agent | M12Agent | M2VAgent | TOAgent | TOaAgent | CPMA
 
 def _run_episode(
     episode_id: str,
-    agent: M2Agent | M12Agent | M2VAgent | TOAgent | TOaAgent | CPMAgent,
+    agent: M2Agent | M12Agent | M2VAgent | TOAgent | CPMAgent,
     *,
     episode_idx: int = 1,
     episode_total: int = 1,
@@ -691,6 +745,16 @@ def _run_episode(
                 "annotation_skipped": ann.get("annotation_skipped"),
                 "to_select": ann.get("to_select"),
             }
+            if ann.get("llm_action_type"):
+                step_rec["llm_action_type"] = ann["llm_action_type"]
+            if ann.get("vlm_planned_action_type"):
+                step_rec["vlm_planned_action_type"] = ann["vlm_planned_action_type"]
+            if AC_MODE == "high" and step_idx > 0:
+                prev_next_type = _parse_next_action_type(prev_pred_action)
+                if prev_next_type:
+                    step_rec["next_action_type_from_prev"] = prev_next_type
+            if ann.get("llm_to_raw"):
+                step_rec["llm_to_raw"] = ann.get("llm_to_raw")
             if ann.get("retrieval_final_sim") is not None:
                 step_rec["retrieval_final_sim"] = ann.get("retrieval_final_sim")
             if "retrieval_margin" in ann:
@@ -723,15 +787,12 @@ def _run_episode(
             if not is_cpm and AC_MODE == "low":
                 predict_kwargs["prev_step_instruction"] = prev_step_instruction or ""
                 predict_kwargs["current_step_instruction"] = current_step_instruction or ""
-            if AGENT.upper() in ("TO", "M12", "TOA"):
+            if AGENT.upper() in ("TO", "M12"):
                 predict_kwargs["target_object"] = ann.get("target_object", "")
-            if AGENT.upper() == "TOA":
-                predict_kwargs["retrieval_final_sim"] = float(
-                    ann.get("retrieval_final_sim") or 0.0
-                )
-                predict_kwargs["retrieval_margin"] = ann.get("retrieval_margin")
             if AGENT.upper() == "M12":
                 predict_kwargs["stem"] = stem
+            if not is_cpm and ann.get("planned_action_type"):
+                predict_kwargs["fixed_action_type"] = ann["planned_action_type"]
             vlm_out = agent.predict(ann["ann_path"], AC_MODE, **predict_kwargs)
             step_rec["vlm_raw_response"] = vlm_out.get("raw_response")
             step_rec["vlm_tokens"] = vlm_out.get("vlm_tokens")
@@ -834,7 +895,7 @@ def main() -> None:
     if AC_MODE not in ("low", "high"):
         raise SystemExit(f"AC_MODE 必须为 low 或 high，当前: {AC_MODE!r}")
     if _is_to_family() and TOP_K != 1:
-        raise SystemExit("AGENT=TO 或 TOa 时 TOP_K 必须为 1")
+        raise SystemExit("AGENT=TO 时 TOP_K 必须为 1")
     if TO_SELECT not in TO_SELECT_CHOICES:
         raise SystemExit(
             f"TO_SELECT 必须为 {sorted(TO_SELECT_CHOICES)} 之一，当前: {TO_SELECT!r}"

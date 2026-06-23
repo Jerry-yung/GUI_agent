@@ -9,8 +9,8 @@ from pathlib import Path
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from agents.m2_agent import VLM_TEMPERATURE, VLM_TOP_P, _encode_image, _normalize_action
-from agents.action_validate import validate_ac_action
+from agents.m2_agent import VLM_TEMPERATURE, VLM_TOP_P, _encode_image, _normalize_action, merge_low_action
+from agents.action_validate import validate_ac_action, validate_vlm_fields
 from agents.parse_utils import parse_json_from_text, parse_vlm_response
 from agents.prompts import build_to_vlm_prompt_parts
 from agents.vlm_tokens import invoke_vlm
@@ -35,10 +35,13 @@ class TOAgent:
         prev_step_instruction: str = "",
         has_annotated_nodes: bool = True,
         top_k_nodes: list | None = None,
+        fixed_action_type: str | None = None,
     ) -> dict:
         annotated_screenshot_path = Path(annotated_screenshot_path)
         if not annotated_screenshot_path.is_file():
             raise FileNotFoundError(f"标注截图不存在: {annotated_screenshot_path}")
+
+        use_fixed_fields = mode.lower() in ("low", "high") and fixed_action_type
 
         system_prompt, user_prompt = build_to_vlm_prompt_parts(
             mode,
@@ -48,6 +51,7 @@ class TOAgent:
             current_step_instruction=current_step_instruction,
             prev_step_instruction=prev_step_instruction,
             has_annotated_nodes=has_annotated_nodes,
+            fixed_action_type=fixed_action_type if use_fixed_fields else None,
         )
         b64_image = _encode_image(annotated_screenshot_path)
 
@@ -88,27 +92,45 @@ class TOAgent:
                 "error": "无法解析 VLM JSON 输出",
             }
 
-        schema_ok, schema_error = validate_ac_action(
-            parsed,
-            has_annotated_nodes=has_annotated_nodes,
-            mode=mode,
-            agent="TO",
+        schema_ok, schema_error = (
+            validate_vlm_fields(
+                parsed,
+                fixed_action_type=fixed_action_type,
+                has_annotated_nodes=has_annotated_nodes,
+                mode=mode,
+                agent="TO",
+            )
+            if use_fixed_fields
+            else validate_ac_action(
+                parsed,
+                has_annotated_nodes=has_annotated_nodes,
+                mode=mode,
+                agent="TO",
+            )
         )
 
-        action = _normalize_action(
-            parsed,
-            mode,
+        is_high = mode.lower() == "high"
+        norm_kwargs = dict(
             has_annotated_nodes=has_annotated_nodes,
             skip_pointer_node_id=has_annotated_nodes,
             skip_input_node_id=True,
             instruction=instruction,
             current_step_instruction=current_step_instruction,
+            include_target_object=is_high,
+            include_next_action_type=is_high,
+        )
+        action = (
+            merge_low_action(fixed_action_type, parsed, mode, **norm_kwargs)
+            if use_fixed_fields
+            else _normalize_action(parsed, mode, **norm_kwargs)
         )
 
+        pointer_types = ("click", "long_press")
+        effective_type = action.get("action_type")
         if (
             has_annotated_nodes
             and top_k_nodes
-            and action.get("action_type") in ("click", "long_press")
+            and effective_type in pointer_types
         ):
             action["node_id"] = int(top_k_nodes[0]["node_id"])
             action.pop("x", None)

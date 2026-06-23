@@ -108,17 +108,6 @@ def _judge_pointer_action(
     agent: str = "m2",
     top_k_nodes: list | None = None,
 ) -> tuple[bool, dict]:
-    if agent.upper() == "TOA":
-        if _has_norm_coords(pred):
-            detail = judge_baseline(float(pred["x"]), float(pred["y"]), stem)
-            detail["mode"] = "TOa_coords"
-            return detail["hit"], detail
-        if top_k_nodes:
-            detail = judge_top1_center(stem, top_k_nodes[0])
-            detail["mode"] = "TOa_top1"
-            return detail["hit"], detail
-        return False, {"mode": "missing_locator", "reason": "no x,y or top1"}
-
     if agent.upper() == "TO" and top_k_nodes:
         detail = judge_top1_center(stem, top_k_nodes[0])
         detail["mode"] = "TO_top1"

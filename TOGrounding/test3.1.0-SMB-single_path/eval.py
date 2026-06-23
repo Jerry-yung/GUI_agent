@@ -30,9 +30,9 @@ MODEL = "qwen-vl-max"
 DATA_DIR = "../../datasets/Mobile3M/datasets"
 APP_NAMES = ["ximalaya"]
 # 评估 GT 动作类型：具体类型列表，或含 ``all`` 合并各类型子目录评测整条任务
-# TYPE: list[str] = ["click"]
+TYPE: list[str] = ["click"]
 # TYPE: list[str] = ["scroll"]
-TYPE: list[str] = ["all"]
+# TYPE: list[str] = ["all"]
 # TYPE: list[str] = ["click", "scroll"]  # 分目录各算一行（不合并）
 # 可选：仅评测指定目录（覆盖 MODEL 多 agent 扫描）
 RESULT_DIR: str | None = None
@@ -77,8 +77,8 @@ def _score_task_eval_pairs(
     pred_lines: list[str],
     id_to_action: dict[int, str],
     no_finish_list: list[str],
-) -> tuple[int, int, int, int, int] | None:
-    """返回 (true_action, type_true, retrieval_true, geom_true, coord_steps)；未完成则 None。"""
+) -> tuple[int, int, int] | None:
+    """返回 (true_action, type_true, retrieval_true)；未完成则 None。"""
     if any(_pred_action_num(i, steps, pred_lines) is None for i, _ in eval_pairs):
         no_finish_list.append(stem)
         return None
@@ -86,8 +86,6 @@ def _score_task_eval_pairs(
     true_action_sum = 0
     type_true_action_sum = 0
     retrieval_true_sum = 0
-    geom_true_sum = 0
-    coord_step_sum = 0
 
     for i, gt_id in eval_pairs:
         pred_action_num = _pred_action_num(i, steps, pred_lines)
@@ -122,17 +120,10 @@ def _score_task_eval_pairs(
         if step and step.get("topk_retrieval_match") is True:
             retrieval_true_sum += 1
 
-        if step and step.get("locator_source") == "coords":
-            coord_step_sum += 1
-            if step.get("action_match_geom") is True:
-                geom_true_sum += 1
-
     return (
         true_action_sum,
         type_true_action_sum,
         retrieval_true_sum,
-        geom_true_sum,
-        coord_step_sum,
     )
 
 
@@ -153,8 +144,6 @@ def single_path_eval(
     no_finish_list: list[str] = []
     type_true_action_sum = 0
     retrieval_true_sum = 0
-    geom_true_sum = 0
-    coord_step_sum = 0
     evaluated = 0
 
     for filename in files:
@@ -208,12 +197,10 @@ def single_path_eval(
 
         evaluated += 1
         gt_action_sum += len(eval_pairs)
-        true_action_sum, type_true, retrieval_true, geom_true, coord_n = scored
+        true_action_sum, type_true, retrieval_true = scored
         all_true_action_sum += true_action_sum
         type_true_action_sum += type_true
         retrieval_true_sum += retrieval_true
-        geom_true_sum += geom_true
-        coord_step_sum += coord_n
         if true_action_sum == len(eval_pairs):
             success_sum += 1
 
@@ -232,9 +219,6 @@ def single_path_eval(
         "type_true_action_sum": type_true_action_sum,
         "retrieval_true_sum": retrieval_true_sum,
         "mean_retrieval": retrieval_true_sum / gt_action_sum if gt_action_sum else 0.0,
-        "coord_step_sum": coord_step_sum,
-        "geom_true_sum": geom_true_sum,
-        "action_acc_geom": geom_true_sum / coord_step_sum if coord_step_sum else None,
         "no_finish": no_finish_list,
         "no_finish_count": len(no_finish_list),
         "incomplete_task_count": 0,
@@ -328,8 +312,6 @@ def single_path_eval_merged(
     incomplete_list: list[str] = []
     type_true_action_sum = 0
     retrieval_true_sum = 0
-    geom_true_sum = 0
-    coord_step_sum = 0
     evaluated = 0
 
     for stem in _task_stems_across_types(agent_base, typed_subdirs):
@@ -387,12 +369,10 @@ def single_path_eval_merged(
 
         evaluated += 1
         gt_action_sum += len(eval_pairs)
-        true_action_sum, type_true, retrieval_true, geom_true, coord_n = scored
+        true_action_sum, type_true, retrieval_true = scored
         all_true_action_sum += true_action_sum
         type_true_action_sum += type_true
         retrieval_true_sum += retrieval_true
-        geom_true_sum += geom_true
-        coord_step_sum += coord_n
         if true_action_sum == len(eval_pairs):
             success_sum += 1
 
@@ -410,9 +390,6 @@ def single_path_eval_merged(
         "type_true_action_sum": type_true_action_sum,
         "retrieval_true_sum": retrieval_true_sum,
         "mean_retrieval": retrieval_true_sum / gt_action_sum if gt_action_sum else 0.0,
-        "coord_step_sum": coord_step_sum,
-        "geom_true_sum": geom_true_sum,
-        "action_acc_geom": geom_true_sum / coord_step_sum if coord_step_sum else None,
         "no_finish": no_finish_list,
         "no_finish_count": len(no_finish_list),
         "incomplete_task_count": len(incomplete_list),
@@ -553,9 +530,6 @@ def format_eval_summary(report: dict) -> str:
     gt_sum = report.get("gt_action_sum")
     type_true_sum = report.get("type_true_action_sum")
     retrieval_true = report.get("retrieval_true_sum")
-    coord_sum = report.get("coord_step_sum", 0)
-    geom_sum = report.get("geom_true_sum", 0)
-    geom_acc = report.get("action_acc_geom")
     lines = [
         f"task_num: {task_num}",
         f"success_rate: {report.get('success_rate', 0):.4f} ( {success_sum} / {task_num} )",
@@ -566,9 +540,6 @@ def format_eval_summary(report: dict) -> str:
         lines.append(
             f"Mean_Retrieval: {report.get('mean_retrieval', 0):.4f} ( {retrieval_true} / {gt_sum} )"
         )
-    if coord_sum:
-        geom_s = f"{geom_acc:.4f}" if isinstance(geom_acc, float) else "n/a"
-        lines.append(f"action_acc_geom: {geom_s} ( {geom_sum} / {coord_sum} coords steps )")
     incomplete = report.get("incomplete_task_count", 0)
     if incomplete:
         lines.append(
