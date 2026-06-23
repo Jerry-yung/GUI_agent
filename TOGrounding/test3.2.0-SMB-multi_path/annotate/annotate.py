@@ -277,7 +277,7 @@ def default_label_dims() -> tuple[int, int]:
     """Approximate label pad size for pre-render filtering (P4)."""
     img = Image.new("RGB", (1, 1))
     draw = ImageDraw.Draw(img)
-    tw, th = _text_size(draw, "c99", _load_font())
+    tw, th = _text_size(draw, "#99", _load_font())
     return _label_dims(tw, th)
 
 
@@ -322,7 +322,7 @@ def annotate_nodes(
     placed_labels: list[tuple[int, int, int, int]] = []
 
     for node in label_order:
-        label = str(node.get("label") or "")
+        label = "#" + str(node.get("label") or "")
         if not label:
             continue
         tw, th = _text_size(draw, label, font)

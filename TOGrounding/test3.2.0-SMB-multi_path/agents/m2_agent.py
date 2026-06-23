@@ -6,11 +6,16 @@ import logging
 
 from colorama import Fore, Style
 
-from agents.parser import parse_labeled_json_fields
-from agents.prompts import VLM_ACTION_TYPES, build_m2_user_prompt
-from agents.vlm_client import call_vlm
-from annotate.instruction_hint import infer_instruction_hit
-from annotate.llm_TO import generate_target_object
+from agents.parser import parse_labeled_json_fields_fixed
+from agents.prompts import VLM_ACTION_TYPES, build_m2_prompt_parts
+from agents.vlm_client import call_vlm_parts
+from annotate.llm_TO import (
+    LlmToContext,
+    MAX_ACTION_HISTORY,
+    RETRIEVAL_ACTION_TYPES,
+    format_action_history_line,
+    generate_target_object,
+)
 from annotate.topk import run_topk_pipeline
 from utils.sman_bridge import RoundAssets, prepare_round_assets
 from utils.step_log import gt_area_label
@@ -25,7 +30,7 @@ MOCK_RESPONSE = json.dumps(
     {
         "thought": "干跑：点击第一个可点击区域",
         "summary": "点击推荐入口；预计进入页面：下一级子页面",
-        "action": {"type": "click", "element": "c1"},
+        "action": {"element": "1"},
     },
     ensure_ascii=False,
 )
@@ -44,14 +49,55 @@ class M2Agent:
         self._task_desc = ""
         self._last_summary = ""
         self.last_vlm_summary = ""
+        self._last_action = ""
+        self._action_history: list[str] = []
 
     def begin_task(self, ctx: TaskContext) -> None:
         self._task_desc = ctx.task_desc
         self._last_summary = ""
         self.last_vlm_summary = ""
+        self._last_action = ""
+        self._action_history = []
+
+    def _llm_to_context(self, current_page_name: str) -> LlmToContext:
+        return LlmToContext(
+            current_page=current_page_name,
+            last_summary=self._last_summary,
+            last_action=self._last_action,
+            action_history=list(self._action_history),
+        )
+
+    def record_step_outcome(
+        self,
+        *,
+        step_page: str,
+        next_page: str,
+        step_instruction: str,
+        llm_action_type: str = "",
+        target_object: str = "",
+        pred: str = "",
+    ) -> None:
+        line = format_action_history_line(
+            step_page=step_page,
+            next_page=next_page,
+            step_instruction=step_instruction,
+            llm_action_type=llm_action_type,
+            target_object=target_object,
+            pred=pred,
+        )
+        self._action_history.append(line)
+        if len(self._action_history) > MAX_ACTION_HISTORY:
+            self._action_history = self._action_history[-MAX_ACTION_HISTORY:]
+        if pred:
+            if next_page and next_page != step_page:
+                self._last_action = f"{pred} (@{step_page}→{next_page})"
+            else:
+                self._last_action = f"{pred} (@{step_page})"
+        else:
+            self._last_action = ""
 
     def retrieval_top_k_for_hint(self, hint: str) -> int:
-        """m2 始终使用 ``self.top_k``；TO/TOa 在非 ambiguous 时覆盖为 1。"""
+        """m2 始终使用 ``self.top_k``；TO 对需检索的 type 覆盖为 1。"""
         del hint
         return self.top_k
 
@@ -74,17 +120,25 @@ class M2Agent:
         if assets is None:
             return None
 
-        hint = infer_instruction_hit(step_instruction)
-        target_object: str | None = None
+        llm_type = "click"
+        target_object = ""
+        llm_to_raw: str | None = None
 
-        if hint in ("click", "ambiguous"):
-            if dry_run:
-                target_object = step_instruction[:40] or "目标"
-            else:
-                to_result = generate_target_object(step_instruction)
+        if dry_run:
+            target_object = step_instruction[:40] or "目标"
+        else:
+            try:
+                to_result = generate_target_object(
+                    step_instruction,
+                    ctx=self._llm_to_context(current_page_name),
+                )
+                llm_type = to_result["action_type"]
                 target_object = to_result["target_object"]
-        elif dry_run:
-            target_object = None
+                llm_to_raw = to_result.get("raw_response")
+            except ValueError as exc:
+                logger.warning("llm_TO failed: %s", exc)
+                llm_type = "input"
+                target_object = ""
 
         gt_label: str | None = None
         if gt_id is not None:
@@ -96,46 +150,65 @@ class M2Agent:
                 all_action_ids=ctx.all_action_ids,
             )
 
+        retrieval_k = self.retrieval_top_k_for_hint(llm_type)
+        routing_fallback: str | None = None
+
         try:
-            retrieval_k = self.retrieval_top_k_for_hint(hint)
-            labeled_png, _nodes_json, selected, effective_hint, rank_by_label = run_topk_pipeline(
-                ctx.final_page_name,
-                current_page_name,
-                assets.click_actions,
-                assets.scroll_action_bounds,
-                assets.screenshot_path,
-                target_object or "",
-                retrieval_k,
-                instruction_hint=hint,
-                fresh_instruction_embed=True,
-                gt_label=gt_label,
-            )
-            ambiguous_k = self.retrieval_top_k_for_hint("ambiguous")
-            if (
-                effective_hint == "ambiguous"
-                and hint != "ambiguous"
-                and retrieval_k < ambiguous_k
-            ):
-                retrieval_k = ambiguous_k
-                labeled_png, _nodes_json, selected, effective_hint, rank_by_label = run_topk_pipeline(
-                    ctx.final_page_name,
-                    current_page_name,
-                    assets.click_actions,
-                    assets.scroll_action_bounds,
-                    assets.screenshot_path,
-                    target_object or "",
-                    retrieval_k,
-                    instruction_hint=hint,
-                    fresh_instruction_embed=True,
-                    gt_label=gt_label,
+            if llm_type in RETRIEVAL_ACTION_TYPES and not (target_object or "").strip():
+                routing_fallback = "empty_to"
+                labeled_png, _nodes_json, selected, effective_hint, rank_by_label = (
+                    run_topk_pipeline(
+                        ctx.final_page_name,
+                        current_page_name,
+                        assets.click_actions,
+                        assets.scroll_action_bounds,
+                        assets.screenshot_path,
+                        "",
+                        retrieval_k,
+                        action_type_hint="input",
+                        fresh_instruction_embed=True,
+                        gt_label=gt_label,
+                    )
+                )
+            elif llm_type in RETRIEVAL_ACTION_TYPES:
+                labeled_png, _nodes_json, selected, effective_hint, rank_by_label = (
+                    run_topk_pipeline(
+                        ctx.final_page_name,
+                        current_page_name,
+                        assets.click_actions,
+                        assets.scroll_action_bounds,
+                        assets.screenshot_path,
+                        target_object,
+                        retrieval_k,
+                        action_type_hint=llm_type,
+                        fresh_instruction_embed=True,
+                        gt_label=gt_label,
+                    )
+                )
+            else:
+                labeled_png, _nodes_json, selected, effective_hint, rank_by_label = (
+                    run_topk_pipeline(
+                        ctx.final_page_name,
+                        current_page_name,
+                        assets.click_actions,
+                        assets.scroll_action_bounds,
+                        assets.screenshot_path,
+                        "",
+                        retrieval_k,
+                        action_type_hint=llm_type,
+                        fresh_instruction_embed=True,
+                        gt_label=gt_label,
+                    )
                 )
         except ValueError:
             return None
 
         assets.drawn_screenshot = str(labeled_png)
         assets.top_k_nodes = selected
-        assets.target_object = target_object
-        assets.instruction_hit = effective_hint
+        assets.target_object = target_object or None
+        assets.llm_action_type = llm_type
+        assets.llm_to_raw = llm_to_raw
+        assets.llm_routing_fallback = routing_fallback
         assets.retrieval_top_k = retrieval_k
         assets.scroll_node_cnt = (
             len(selected) if effective_hint == "scroll" else None
@@ -153,38 +226,59 @@ class M2Agent:
         dry_run: bool = False,
     ) -> tuple[bool, list[str] | None, str, VlmCallStats]:
         del ctx
-        prompt = build_m2_user_prompt(
+        fixed_type = assets.llm_action_type or "click"
+        system_prompt, user_prompt = build_m2_prompt_parts(
             step_instruction,
+            fixed_action_type=fixed_type,
             task_desc=self._task_desc,
             current_page_name=assets.page_name or "",
             last_summary=self._last_summary,
-            instruction_hit=assets.instruction_hit,
             top_k=assets.retrieval_top_k or self.top_k,
+            target_object=assets.target_object or "",
         )
         stats = VlmCallStats()
 
         if dry_run:
             rsp = MOCK_RESPONSE
-            if assets.instruction_hit == "scroll" and assets.top_k_nodes:
-                label = str(assets.top_k_nodes[0].get("label", "s1")).lower()
+            if fixed_type == "scroll" and assets.top_k_nodes:
+                label = str(assets.top_k_nodes[0].get("label", "1")).lower()
                 rsp = json.dumps(
                     {
                         "thought": f"干跑：在 {label} 区域向下滑动",
                         "summary": f"滑动 {label}；预计进入页面：滑动后的列表页",
-                        "action": {"type": "scroll", "element": label, "direction": "down"},
+                        "action": {"element": label, "direction": "down"},
                     },
                     ensure_ascii=False,
                 )
-            elif assets.click_actions:
+            elif fixed_type in ("click", "long_press") and assets.click_actions:
                 rsp = json.dumps(
                     {
-                        "thought": "干跑：点击 c1",
-                        "summary": "点击 c1；预计进入页面：下一级子页面",
-                        "action": {"type": "click", "element": "c1"},
+                        "thought": "干跑：点击 1",
+                        "summary": "点击 1；预计进入页面：下一级子页面",
+                        "action": {"element": "1"},
                     },
                     ensure_ascii=False,
                 )
-            parsed = parse_labeled_json_fields(rsp, allow_click_xy=False)
+            elif fixed_type == "input":
+                rsp = json.dumps(
+                    {
+                        "thought": "干跑：输入",
+                        "summary": "输入文本；预计进入页面：当前页",
+                        "action": {"text": "test"},
+                    },
+                    ensure_ascii=False,
+                )
+            elif fixed_type == "back":
+                rsp = json.dumps(
+                    {
+                        "thought": "干跑：返回",
+                        "summary": "返回上一页；预计进入页面：上一级页面",
+                    },
+                    ensure_ascii=False,
+                )
+            parsed = parse_labeled_json_fields_fixed(
+                rsp, fixed_type, allow_click_xy=False
+            )
             if parsed is None:
                 return True, None, "", stats
             self._last_summary = parsed.summary
@@ -192,15 +286,20 @@ class M2Agent:
             return True, parsed.res, parsed.thought, stats
 
         for attempt in range(MAX_VLM_PARSE_RETRIES + 1):
-            status, rsp, call_stats = call_vlm(prompt, assets.drawn_screenshot)
+            status, rsp, call_stats = call_vlm_parts(
+                system_prompt, user_prompt, assets.drawn_screenshot
+            )
             stats.add(call_stats)
 
             if not status:
                 logger.warning("VLM call failed: %s", str(rsp)[:200])
                 return False, None, "", stats
 
-            parsed = parse_labeled_json_fields(rsp, allow_click_xy=False)
-            if parsed is not None and parsed.res[0] in VLM_ACTION_TYPES:
+            parsed = parse_labeled_json_fields_fixed(
+                rsp, fixed_type, allow_click_xy=False
+            )
+            exec_type = parsed.res[0] if parsed and parsed.res else ""
+            if parsed is not None and exec_type in VLM_ACTION_TYPES | {"back"}:
                 self._last_summary = parsed.summary
                 self.last_vlm_summary = parsed.summary
                 return True, parsed.res, parsed.thought, stats
@@ -211,7 +310,9 @@ class M2Agent:
         return True, None, "", stats
 
     def _commit_vlm_fields(self, rsp: str) -> str:
-        parsed = parse_labeled_json_fields(rsp, allow_click_xy=False)
+        parsed = parse_labeled_json_fields_fixed(
+            rsp, "click", allow_click_xy=False
+        )
         if parsed is not None:
             self._last_summary = parsed.summary
             self.last_vlm_summary = parsed.summary

@@ -12,7 +12,6 @@ from PIL import Image
 from annotate.annotate import annotate_nodes, default_label_dims, load_base_image
 from annotate.bounds import TARGET_SCREEN_SIZE, parse_bounds_from_action, scale_bounds
 from annotate.embedder import build_node_embeddings, embed_instruction
-from annotate.instruction_hint import InstructionHit
 from annotate.node_dedupe import dedupe_nodes_by_bounds
 from annotate.node_filter import filter_nodes_for_annotation
 from annotate.similarity import cosine_similarity, label_ranks_by_score, topk_indices
@@ -26,8 +25,8 @@ from utils.sman_bridge import render_scroll_only_labeled_image
 
 
 def _label_from_action(action_str: str, area_idx: int, kind: str) -> str:
-    prefix = "c" if kind == "clickable" else "s"
-    return f"{prefix}{area_idx}"
+    del action_str, kind
+    return str(area_idx)
 
 
 def _text_from_click_action(action_str: str) -> str:
@@ -74,7 +73,7 @@ def build_sman_scroll_nodes(scroll_bounds: list[str]) -> list[dict]:
         area_idx = i + 1
         nodes.append(
             {
-                "label": f"s{area_idx}",
+                "label": str(area_idx),
                 "kind": "scroll",
                 "sman_area_idx": area_idx,
                 "sman_type": "scroll",
@@ -142,7 +141,7 @@ def _write_retrieval_cache(
     *,
     target_object: str,
     top_k: int,
-    instruction_hint: str | None,
+    action_type_hint: str | None,
     pool: list[dict],
     scores: np.ndarray,
     topk_idx: list[int],
@@ -165,7 +164,7 @@ def _write_retrieval_cache(
     payload: dict[str, Any] = {
         "target_object": target_object,
         "top_k": top_k,
-        "instruction_hit": instruction_hint,
+        "action_type_hint": action_type_hint,
         "pool_size": len(pool),
         "topk": topk_items,
     }
@@ -193,7 +192,7 @@ def _topk_from_pool(
     query_text: str,
     top_k: int,
     fresh_instruction_embed: bool,
-    instruction_hint: str | None = None,
+    action_type_hint: str | None = None,
     gt_label: str | None = None,
 ) -> tuple[list[dict], dict[str, int]]:
     if not pool:
@@ -227,7 +226,7 @@ def _topk_from_pool(
                 cache_path,
                 target_object=query_text,
                 top_k=top_k,
-                instruction_hint=instruction_hint,
+                action_type_hint=action_type_hint,
                 pool=pool,
                 scores=scores,
                 topk_idx=idx,
@@ -271,11 +270,11 @@ def run_topk_pipeline(
     query_text: str,
     top_k: int,
     *,
-    instruction_hint: InstructionHit = "ambiguous",
+    action_type_hint: str = "click",
     fresh_instruction_embed: bool = False,
     gt_label: str | None = None,
-) -> tuple[Path, Path, list[dict], InstructionHit, dict[str, int]]:
-    effective_hint = instruction_hint
+) -> tuple[Path, Path, list[dict], str, dict[str, int]]:
+    effective_hint = action_type_hint
     rank_by_label: dict[str, int] = {}
     screenshot = Image.open(screenshot_path).convert("RGB")
     orig_size = screenshot.size
@@ -286,26 +285,36 @@ def run_topk_pipeline(
     click_nodes = build_sman_click_nodes(click_actions)
     scroll_nodes_deduped = _deduped_scroll_nodes(scroll_bounds)
 
-    if instruction_hint == "scroll":
-        if not scroll_nodes_deduped:
-            effective_hint = "ambiguous"
-        else:
-            selected = sorted(
-                scroll_nodes_deduped,
-                key=lambda n: n.get("sman_area_idx", 0),
-            )
-            display_nodes = _write_nodes_json(nodes_json, selected, orig_size)
-            render_scroll_only_labeled_image(screenshot_path, selected, labeled_png)
-            return labeled_png, nodes_json, display_nodes, effective_hint, rank_by_label
+    pool_hint = action_type_hint
+    if pool_hint == "long_press":
+        pool_hint = "click"
 
-    if instruction_hint == "input":
+    if pool_hint == "scroll":
+        if not scroll_nodes_deduped:
+            raise ValueError(f"{page_name}: no scroll candidate nodes")
+        selected, rank_by_label = _topk_from_pool(
+            scroll_nodes_deduped,
+            task_name=task_name,
+            page_name=page_name,
+            screenshot=screenshot,
+            query_text=query_text,
+            top_k=top_k,
+            fresh_instruction_embed=fresh_instruction_embed,
+            action_type_hint=action_type_hint,
+            gt_label=gt_label,
+        )
+        display_nodes = _write_nodes_json(nodes_json, selected, orig_size)
+        _save_labeled_image(screenshot_path, selected, labeled_png)
+        return labeled_png, nodes_json, display_nodes, effective_hint, rank_by_label
+
+    if pool_hint in ("input", "back"):
         _save_raw_screenshot(screenshot_path, labeled_png)
         nodes_json.parent.mkdir(parents=True, exist_ok=True)
         with open(nodes_json, "w", encoding="utf-8") as f:
             json.dump([], f, ensure_ascii=False, indent=2)
         return labeled_png, nodes_json, [], effective_hint, rank_by_label
 
-    if instruction_hint == "click":
+    if pool_hint == "click":
         pool = click_nodes
         if not pool:
             raise ValueError(f"{page_name}: no click candidate nodes")
@@ -317,29 +326,11 @@ def run_topk_pipeline(
             query_text=query_text,
             top_k=top_k,
             fresh_instruction_embed=fresh_instruction_embed,
-            instruction_hint=instruction_hint,
+            action_type_hint=action_type_hint,
             gt_label=gt_label,
         )
         display_nodes = _write_nodes_json(nodes_json, selected, orig_size)
         _save_labeled_image(screenshot_path, selected, labeled_png)
         return labeled_png, nodes_json, display_nodes, effective_hint, rank_by_label
 
-    # ambiguous (or scroll fallback)
-    all_nodes = dedupe_nodes_by_bounds(click_nodes + build_sman_scroll_nodes(scroll_bounds))
-    if not all_nodes:
-        raise ValueError(f"{page_name}: no SMAN candidate nodes")
-
-    selected, rank_by_label = _topk_from_pool(
-        all_nodes,
-        task_name=task_name,
-        page_name=page_name,
-        screenshot=screenshot,
-        query_text=query_text,
-        top_k=top_k,
-        fresh_instruction_embed=fresh_instruction_embed,
-        instruction_hint=effective_hint,
-        gt_label=gt_label,
-    )
-    display_nodes = _write_nodes_json(nodes_json, selected, orig_size)
-    _save_labeled_image(screenshot_path, selected, labeled_png)
-    return labeled_png, nodes_json, display_nodes, effective_hint, rank_by_label
+    raise ValueError(f"{page_name}: unknown action_type_hint {action_type_hint!r}")

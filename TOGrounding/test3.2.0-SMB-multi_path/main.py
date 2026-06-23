@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Run SMAN-Bench multi-path inference with m2 / TO / TOa / AppAgent agents."""
+"""Run SMAN-Bench multi-path inference with m2 / TO / AppAgent agents.
+
+流水线（m2/TO）：
+  llm_TO → action_type + target_object → 条件 Top-K 检索
+  VLM → 固定 type，仅填 element/direction/text 等字段
+"""
 from __future__ import annotations
 
 import sys
@@ -13,7 +18,6 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from annotate.instruction_hint import infer_instruction_hit
 from agents import load_agent
 from llm_set.llm import get_vlm_model_name, slug_for_run_filename
 from utils.mobile3m_io import load_tasks
@@ -27,23 +31,22 @@ from utils.task_filter import filter_tasks
 
 # ── Global configuration ─────────────────────────────────────────────
 
-# AGENT = "m2"
+AGENT = "m2"
 # AGENT = "to"
-# AGENT = "toa"
-AGENT = "AppAgent"
+# AGENT = "AppAgent"
 
 TASK_JSON = "simple_normal_tasks.json"
 # TASK_JSON = "complex_normal_tasks.json"
 TASK_TYPE = "multi_simple"
 # TASK_TYPE = "multi_complex"
-TEST_START = 20
-TEST_END = 21  # -1 = all after START
+TEST_START = 4
+TEST_END = 5  # -1 = all after START
 APP_NAMES = ["ximalaya"]
 TOP_K = 5
 DATA_DIR = "../../datasets/Mobile3M/datasets"
 DRY_RUN = False
 REQUEST_INTERVAL = 0.0
-MAX_ROUNDS = 20
+MAX_ROUNDS = 20 if TASK_TYPE == "multi_simple" else 25
 
 # ─────────────────────────────────────────────────────────────────────
 
@@ -73,7 +76,6 @@ def _record_step(
     pred_info: str,
     assets=None,
     pred_res: list[str] | None = None,
-    toa_meta: dict[str, Any] | None = None,
 ) -> None:
     pred_disp = format_pred_vlm_display(
         pred_info,
@@ -84,9 +86,9 @@ def _record_step(
         all_action_ids=None,
     )
     target_object = getattr(assets, "target_object", None) if assets is not None else None
-    instruction_hit = (
-        step_record.get("instruction_hit")
-        or (getattr(assets, "instruction_hit", None) if assets is not None else None)
+    llm_action_type = (
+        step_record.get("llm_action_type")
+        or (getattr(assets, "llm_action_type", None) if assets is not None else None)
     )
 
     print_step_multipath(
@@ -96,7 +98,7 @@ def _record_step(
         step_instruction,
         pred_disp,
         next_page,
-        instruction_hit=instruction_hit,
+        llm_action_type=llm_action_type,
         target_object=target_object,
     )
 
@@ -104,16 +106,41 @@ def _record_step(
         "page": step_page,
         "next_page": next_page,
         "target_object": target_object,
-        "instruction_hit": instruction_hit,
+        "llm_action_type": llm_action_type,
+        "llm_to_raw": getattr(assets, "llm_to_raw", None) if assets else step_record.get("llm_to_raw"),
         "pred_action_id": pred_id,
         "pred_action_info": pred_disp,
     }
-    if toa_meta:
-        step_update.update(
-            {k: v for k, v in toa_meta.items() if k in ("locator_source", "norm_x", "norm_y")}
-        )
     step_record.update(step_update)
     steps.append(step_record)
+    return pred_disp
+
+
+def _record_agent_step_history(
+    agent,
+    *,
+    step_page: str,
+    next_page: str,
+    step_instruction: str,
+    pred_disp: str,
+    assets=None,
+) -> None:
+    if not hasattr(agent, "record_step_outcome"):
+        return
+    agent.record_step_outcome(
+        step_page=step_page,
+        next_page=next_page,
+        step_instruction=step_instruction,
+        llm_action_type=(
+            getattr(assets, "llm_action_type", None) if assets is not None else None
+        )
+        or "",
+        target_object=(
+            getattr(assets, "target_object", None) if assets is not None else None
+        )
+        or "",
+        pred=pred_disp,
+    )
 
 
 def run_multi_task(
@@ -156,7 +183,6 @@ def run_multi_task(
     while round_count < max_rounds and not task_complete:
         round_count += 1
         step_instruction = get_multipath_step_instruction(ctx, current_page_name)
-        instruction_hit = infer_instruction_hit(step_instruction)
         step_page = current_page_name
 
         t0 = time.perf_counter()
@@ -171,10 +197,9 @@ def run_multi_task(
             step_record: dict[str, Any] = {
                 "round": round_count,
                 "step_instruction": step_instruction,
-                "instruction_hit": instruction_hit,
                 "error": "prepare_error",
             }
-            _record_step(
+            pred_disp = _record_step(
                 round_count=round_count,
                 max_rounds=max_rounds,
                 step_page=step_page,
@@ -184,6 +209,13 @@ def run_multi_task(
                 steps=steps,
                 pred_id=-2,
                 pred_info="prepare_error",
+            )
+            _record_agent_step_history(
+                agent,
+                step_page=step_page,
+                next_page=current_page_name,
+                step_instruction=step_instruction,
+                pred_disp=pred_disp,
             )
             ans_action_id.append(-2)
             ans_action_info.append("prepare_error")
@@ -198,13 +230,14 @@ def run_multi_task(
             step_instruction,
             dry_run=dry_run,
         )
-        toa_meta = getattr(agent, "last_decide_meta", None) or {}
         elapsed_ms = round((time.perf_counter() - t0) * 1000, 2)
 
         step_record = {
             "round": round_count,
             "step_instruction": step_instruction,
-            "instruction_hit": assets.instruction_hit or instruction_hit,
+            "llm_action_type": assets.llm_action_type,
+            "llm_to_raw": assets.llm_to_raw,
+            "llm_routing_fallback": assets.llm_routing_fallback,
             "thought": thought,
             "summary": getattr(agent, "last_vlm_summary", "") or "",
             "vlm_input_tokens": vlm_stats.input_tokens,
@@ -215,7 +248,7 @@ def run_multi_task(
 
         if not ok:
             step_record["error"] = "vlm_error"
-            _record_step(
+            pred_disp = _record_step(
                 round_count=round_count,
                 max_rounds=max_rounds,
                 step_page=step_page,
@@ -227,6 +260,14 @@ def run_multi_task(
                 pred_info="vlm_error",
                 assets=assets,
             )
+            _record_agent_step_history(
+                agent,
+                step_page=step_page,
+                next_page=current_page_name,
+                step_instruction=step_instruction,
+                pred_disp=pred_disp,
+                assets=assets,
+            )
             ans_action_id.append(-2)
             ans_action_info.append("vlm_error")
             ans_history_pages.append(current_page_name)
@@ -236,7 +277,7 @@ def run_multi_task(
 
         if res is None:
             step_record["error"] = "parse_error"
-            _record_step(
+            pred_disp = _record_step(
                 round_count=round_count,
                 max_rounds=max_rounds,
                 step_page=step_page,
@@ -248,17 +289,20 @@ def run_multi_task(
                 pred_info="parse_error",
                 assets=assets,
             )
+            _record_agent_step_history(
+                agent,
+                step_page=step_page,
+                next_page=current_page_name,
+                step_instruction=step_instruction,
+                pred_disp=pred_disp,
+                assets=assets,
+            )
             ans_action_id.append(-2)
             ans_action_info.append("parse_error")
             ans_history_pages.append(current_page_name)
             if REQUEST_INTERVAL:
                 time.sleep(REQUEST_INTERVAL)
             continue
-
-        if toa_meta:
-            step_record.update(
-                {k: v for k, v in toa_meta.items() if k in ("locator_source", "norm_x", "norm_y")}
-            )
 
         act_name = res[0]
         step_record["action"] = act_name
@@ -275,7 +319,7 @@ def run_multi_task(
         step_record["action_info"] = action_info
 
         current_page_name = new_page
-        _record_step(
+        pred_disp = _record_step(
             round_count=round_count,
             max_rounds=max_rounds,
             step_page=step_page,
@@ -287,7 +331,14 @@ def run_multi_task(
             pred_info=action_info,
             assets=assets,
             pred_res=res,
-            toa_meta=toa_meta if toa_meta else None,
+        )
+        _record_agent_step_history(
+            agent,
+            step_page=step_page,
+            next_page=current_page_name,
+            step_instruction=step_instruction,
+            pred_disp=pred_disp,
+            assets=assets,
         )
         ans_action_id.append(action_id)
         ans_action_info.append(action_info)

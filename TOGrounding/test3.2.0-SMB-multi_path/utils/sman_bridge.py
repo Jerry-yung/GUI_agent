@@ -28,7 +28,9 @@ class RoundAssets:
     screenshot_path: str
     top_k_nodes: list[dict] = field(default_factory=list)
     target_object: str | None = None
-    instruction_hit: str | None = None
+    llm_action_type: str | None = None
+    llm_to_raw: str | None = None
+    llm_routing_fallback: str | None = None
     scroll_node_cnt: int | None = None
     similarity_rank_by_label: dict[str, int] = field(default_factory=dict)
     page_name: str | None = None
@@ -246,7 +248,7 @@ def apply_action(
     act_name = res[0]
     params = res[:-1]
 
-    if act_name == "click":
+    if act_name in ("click", "long_press"):
         if len(res) >= 5 and str(res[1]).lower() == "xy":
             coords = parse_norm_coords(res[2], res[3])
             if coords is None:
