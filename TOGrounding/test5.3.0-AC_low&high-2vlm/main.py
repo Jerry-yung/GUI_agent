@@ -7,7 +7,10 @@ AC-low / AC-high 实验入口（全步轨迹，按 episode 并行）。
   2. click/long_press：target_object → top_k 标注；其他类型：原图
   3. VLM 填充 action 字段（node_id / direction / text 等）；type 由 llm_TO 固定
 
-每步流程（AC-high）：
+每步流程（AC-high TO）：
+  每步 vlm_TO(原图 + history) → click/long_press：target_object → top-1 pred；其余 type：planner 直出
+
+每步流程（AC-high m2 / 旧 TO 已废弃）：
   step0：llm_TO(goal) → action_type + target_object → 条件检索
   step n+1：上步 VLM 的 next_action_type + target_object + next_instruction → 条件检索
   VLM：固定本步 type（llm_TO 或上步 next_action_type）+ 填字段 + 输出下一步规划三字段
@@ -58,14 +61,14 @@ AC_MODE = "high"  # "low" | "high"
 
 # AGENT = "CPM" # 不看 TOP_K, TO_SELECT 限制
 # AGENT = "m2"
-AGENT = "m2p"  # AC-high only: vlm_TO + vlm_action
-# AGENT = "TO"
+# AGENT = "m2p"  # AC-high only: vlm_TO + vlm_action
+AGENT = "TO"
 
-TOP_K = 5 # TO 时必须为 1
+TOP_K = 1 # TO 时必须为 1
 TO_SELECT = "generate"  # generate
 
-TEST_START = 0
-TEST_END = 50  # episode end, None 表示到最后一个 episode
+TEST_START = 50
+TEST_END = 100  # episode end, None 表示到最后一个 episode
 
 # TEST_LIST: list[str] = [ "00000020", "00000040", "00000220", "00000240", "00000421",
 #     "00000542", "00000682", "00000743", "00000763", "00000843",
@@ -1235,6 +1238,309 @@ def _run_episode_m2p(
     return episode_record
 
 
+def _run_episode_to(
+    episode_id: str,
+    agent: TOAgent,
+    *,
+    episode_idx: int = 1,
+    episode_total: int = 1,
+) -> dict:
+    """AC-high TO：每步 vlm_TO(原图)；click/long_press → top-1 检索直接 pred；其余 type 由 planner 直出。"""
+    stems = stems_in_episode(episode_id)
+    if not stems:
+        return {
+            "episode_id": episode_id,
+            "ac_mode": AC_MODE,
+            "status": "error",
+            "error": "无 step 数据",
+            "steps": [],
+        }
+
+    if MAX_STEPS is not None:
+        stems = stems[:MAX_STEPS]
+
+    goal = _load_episode_goal(episode_id)
+    episode_record: dict = {
+        "episode_id": episode_id,
+        "ac_mode": AC_MODE,
+        "goal": goal,
+        "num_steps": len(stems),
+        "status": "ok",
+        "steps": [],
+    }
+
+    _print_episode_header(episode_id, episode_idx, episode_total, goal)
+    history: list[StepHistoryEntry] = []
+
+    try:
+        for step_idx, stem in enumerate(stems):
+            gt = _load_gt(stem)
+
+            if is_skipped_gt_action(gt):
+                _print_skip_open_app(step_idx, stem)
+                step_rec = {
+                    "step_idx": step_idx,
+                    "stem": stem,
+                    "status": "skipped",
+                    "skip_reason": "open_app_gt",
+                    "gt": gt,
+                    "gt_action_type": gt.get("action_type"),
+                }
+                episode_record["steps"].append(step_rec)
+                continue
+
+            raw_png = step_paths(stem)["screenshot"]
+            if not raw_png.is_file():
+                raise FileNotFoundError(f"[{stem}] 缺少 screenshot")
+
+            plan_out = agent.plan(
+                raw_png,
+                goal=goal,
+                step_num=step_idx + 1,
+                max_steps=len(stems),
+                history=history,
+            )
+            planner = plan_out.get("planner")
+
+            if planner is None:
+                step_rec = {
+                    "step_idx": step_idx,
+                    "stem": stem,
+                    "status": "vlm_parse_error",
+                    "error": plan_out.get("error", "vlm_TO parse error"),
+                    "goal": goal,
+                    "display_instruction": None,
+                    "planner_raw": plan_out.get("raw_response"),
+                    "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                    "vlm_tokens": plan_out.get("vlm_tokens"),
+                    "gt": gt,
+                    "gt_action_type": gt.get("action_type"),
+                    "pred_action": None,
+                }
+                _apply_step_eval(step_rec)
+                _print_step_result(step_rec)
+                episode_record["steps"].append(step_rec)
+                episode_record["status"] = "partial"
+                continue
+
+            step_instruction = (planner.get("step_instruction") or "").strip()
+            target_object = (planner.get("target_object") or "").strip()
+            planned_type = _parse_planned_action_type(planner)
+            action: dict | None = None
+            ann: dict
+
+            if planned_type in M2P_PLANNER_ONLY_TYPES:
+                ann = _fallback_annotation(
+                    stem,
+                    to_prompt_text=step_instruction,
+                    target_object=target_object,
+                    reason="non_pointer",
+                )
+                action = agent.build_action_from_planner(
+                    planner,
+                    step_instruction=step_instruction,
+                )
+                if action is None:
+                    step_rec = {
+                        "step_idx": step_idx,
+                        "stem": stem,
+                        "status": "vlm_parse_error",
+                        "error": "planner 缺少该 action type 所需字段 (direction/text)",
+                        "goal": goal,
+                        "display_instruction": step_instruction or None,
+                        "planned_action_type": planned_type or None,
+                        "to_prompt_text": ann["to_prompt_text"],
+                        "target_object": target_object,
+                        "has_annotated_nodes": ann["has_annotated_nodes"],
+                        "top_k_nodes": ann["top_k_nodes"],
+                        "annotated_screenshot": ann["annotated_screenshot"],
+                        "annotation_fallback_reason": ann.get(
+                            "annotation_fallback_reason"
+                        ),
+                        "planner_decision": planner,
+                        "planner_raw": plan_out.get("raw_response"),
+                        "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                        "vlm_tokens": plan_out.get("vlm_tokens"),
+                        "gt": gt,
+                        "gt_action_type": gt.get("action_type"),
+                        "pred_action": None,
+                    }
+                    _apply_step_eval(step_rec)
+                    _print_step_result(step_rec)
+                    episode_record["steps"].append(step_rec)
+                    episode_record["status"] = "partial"
+                    continue
+            elif planned_type in M2P_EXECUTOR_TYPES:
+                if not target_object:
+                    ann = _fallback_annotation(
+                        stem,
+                        to_prompt_text=step_instruction,
+                        target_object="",
+                        reason="empty_target_object",
+                    )
+                    step_rec = {
+                        "step_idx": step_idx,
+                        "stem": stem,
+                        "status": "vlm_parse_error",
+                        "error": "click/long_press 缺少 target_object",
+                        "goal": goal,
+                        "display_instruction": step_instruction or None,
+                        "planned_action_type": planned_type or None,
+                        "to_prompt_text": ann["to_prompt_text"],
+                        "target_object": target_object,
+                        "has_annotated_nodes": ann["has_annotated_nodes"],
+                        "top_k_nodes": ann["top_k_nodes"],
+                        "annotated_screenshot": ann["annotated_screenshot"],
+                        "annotation_fallback_reason": ann.get(
+                            "annotation_fallback_reason"
+                        ),
+                        "planner_decision": planner,
+                        "planner_raw": plan_out.get("raw_response"),
+                        "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                        "vlm_tokens": plan_out.get("vlm_tokens"),
+                        "gt": gt,
+                        "gt_action_type": gt.get("action_type"),
+                        "pred_action": None,
+                    }
+                    _apply_step_eval(step_rec)
+                    _print_step_result(step_rec)
+                    episode_record["steps"].append(step_rec)
+                    episode_record["status"] = "partial"
+                    continue
+                ann = _annotate_from_target_object(
+                    stem,
+                    target_object,
+                    to_prompt_text=step_instruction,
+                )
+                action = agent.build_pointer_pred(
+                    planner,
+                    ann["top_k_nodes"],
+                    has_annotated_nodes=ann["has_annotated_nodes"],
+                )
+                if action is None:
+                    step_rec = {
+                        "step_idx": step_idx,
+                        "stem": stem,
+                        "status": "vlm_parse_error",
+                        "error": "top-1 检索失败或缺少有效标注节点",
+                        "goal": goal,
+                        "display_instruction": step_instruction or None,
+                        "planned_action_type": planned_type or None,
+                        "to_prompt_text": ann["to_prompt_text"],
+                        "target_object": target_object,
+                        "has_annotated_nodes": ann["has_annotated_nodes"],
+                        "top_k_nodes": ann["top_k_nodes"],
+                        "annotated_screenshot": ann["annotated_screenshot"],
+                        "annotation_fallback_reason": ann.get(
+                            "annotation_fallback_reason"
+                        ),
+                        "planner_decision": planner,
+                        "planner_raw": plan_out.get("raw_response"),
+                        "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                        "vlm_tokens": plan_out.get("vlm_tokens"),
+                        "gt": gt,
+                        "gt_action_type": gt.get("action_type"),
+                        "pred_action": None,
+                    }
+                    _apply_step_eval(step_rec)
+                    _print_step_result(step_rec)
+                    episode_record["steps"].append(step_rec)
+                    episode_record["status"] = "partial"
+                    continue
+            else:
+                ann = _fallback_annotation(
+                    stem,
+                    to_prompt_text=step_instruction,
+                    target_object=target_object,
+                    reason="invalid_planned_type",
+                )
+                step_rec = {
+                    "step_idx": step_idx,
+                    "stem": stem,
+                    "status": "vlm_parse_error",
+                    "error": f"无效 planned_action_type: {planned_type!r}",
+                    "goal": goal,
+                    "display_instruction": step_instruction or None,
+                    "planned_action_type": planned_type or None,
+                    "planner_decision": planner,
+                    "planner_raw": plan_out.get("raw_response"),
+                    "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                    "vlm_tokens": plan_out.get("vlm_tokens"),
+                    "gt": gt,
+                    "gt_action_type": gt.get("action_type"),
+                    "pred_action": None,
+                }
+                _apply_step_eval(step_rec)
+                _print_step_result(step_rec)
+                episode_record["steps"].append(step_rec)
+                episode_record["status"] = "partial"
+                continue
+
+            step_rec = {
+                "step_idx": step_idx,
+                "stem": stem,
+                "status": "ok",
+                "goal": goal,
+                "display_instruction": step_instruction or None,
+                "planned_action_type": planned_type or None,
+                "to_prompt_text": ann["to_prompt_text"],
+                "target_object": target_object,
+                "has_annotated_nodes": ann["has_annotated_nodes"],
+                "top_k_nodes": ann["top_k_nodes"],
+                "annotated_screenshot": ann["annotated_screenshot"],
+                "annotation_fallback_reason": ann.get("annotation_fallback_reason"),
+                "planner_decision": planner,
+                "planner_raw": plan_out.get("raw_response"),
+                "vlm_to_tokens": plan_out.get("vlm_tokens"),
+                "vlm_tokens": plan_out.get("vlm_tokens"),
+                "gt": gt,
+                "gt_action_type": gt.get("action_type"),
+                "pred_action": action,
+            }
+            if ann.get("retrieval_final_sim") is not None:
+                step_rec["retrieval_final_sim"] = ann.get("retrieval_final_sim")
+            if "retrieval_margin" in ann:
+                step_rec["retrieval_margin"] = ann.get("retrieval_margin")
+
+            _apply_step_eval(step_rec)
+            _print_step_result(step_rec)
+            episode_record["steps"].append(step_rec)
+
+            history.append(
+                StepHistoryEntry(
+                    step_num=step_idx + 1,
+                    step_summary=planner.get("step_summary", "")
+                    or _action_summary(action),
+                    action_summary=_action_summary(action),
+                    step_instruction=step_instruction,
+                )
+            )
+
+    except Exception as exc:
+        episode_record["status"] = "error"
+        episode_record["error"] = str(exc)
+        episode_record["traceback"] = traceback.format_exc()
+        with _PRINT_LOCK:
+            print(f"  {episode_id} | ERROR: {exc}")
+
+    episode_record["eval"] = _episode_eval_summary(episode_record)
+    ev = episode_record["eval"]
+    skip_note = ""
+    if ev.get("skipped_open_app"):
+        skip_note = f" | skipped_open_app={ev['skipped_open_app']}"
+    with _PRINT_LOCK:
+        print(
+            f">> episode {episode_id} | steps={ev['eval_steps']}{skip_note} | "
+            f"Type {ev['type_correct']}/{ev['eval_steps']} ({ev['type_acc']:.2%}) | "
+            f"Step {ev['step_correct']}/{ev['eval_steps']} ({ev['step_acc']:.2%}) | "
+            f"SR={'OK' if ev.get('sr') else 'FAIL'}"
+        )
+        print("═" * _BOX_WIDTH)
+        print()
+
+    return episode_record
+
+
 def _run_one_episode(
     *,
     episode_id: str,
@@ -1245,6 +1551,14 @@ def _run_one_episode(
     if _is_m2p_agent():
         assert isinstance(agent, M2PAgent)
         return _run_episode_m2p(
+            episode_id,
+            agent,
+            episode_idx=episode_idx,
+            episode_total=episode_total,
+        )
+    if _is_to_family() and AC_MODE == "high":
+        assert isinstance(agent, TOAgent)
+        return _run_episode_to(
             episode_id,
             agent,
             episode_idx=episode_idx,
@@ -1320,6 +1634,8 @@ def main() -> None:
         f"AC-{AC_MODE} 全步实验 | AGENT={AGENT} | TOP_K={TOP_K} | "
         f"TO_SELECT={TO_SELECT} | VLM={vlm_model}"
     )
+    if _is_to_family() and AC_MODE == "high":
+        print("TO high: single vlm_TO (m2p planner) + top-1 pred for pointer steps")
     if MAX_STEPS is not None:
         print(f"MAX_STEPS={MAX_STEPS}")
     print("=" * 60)

@@ -28,7 +28,9 @@ test5.3.0-AC_low&high_mem/
 
 ## 在线推理（`main.py`）
 
-每步：`llm_TO（或 m2p planner）→ top_k 检索 → 标注图 → VLM → 评测`。节点 embedding 读离线文件；TO embedding 在线计算不落盘。
+- **AC-low**：`llm_TO` → top_k 检索 → 标注图 → VLM `predict()` → 评测
+- **AC-high TO / m2p**：每步 `vlm_TO` planner（原图 + history）；pointer 步检索标注；TO 用 top-1 pred，m2p 再调 `vlm_action`
+- 节点 embedding 读离线文件；TO embedding 在线计算不落盘
 
 ---
 
@@ -36,9 +38,10 @@ test5.3.0-AC_low&high_mem/
 
 | | AC-low | AC-high |
 |---|--------|---------|
-| VLM 文本 | `goal` + step `instruction` | 仅 `goal`（m2）；m2p 用 planner + history |
-| 本步 type | 每步 **llm_TO** | m2：step0 llm_TO，之后上步 VLM 三字段；**m2p：每步 planner** |
-| VLM 额外输出 | 无 | m2 high：`next_instruction` 等三字段 |
+| VLM 文本 | `goal` + step `instruction` | 仅 `goal`（m2 high）；**TO / m2p：planner + history** |
+| 本步 type | 每步 **llm_TO** | m2：step0 llm_TO，之后上步 VLM 三字段；**TO / m2p：每步 planner** |
+| VLM 额外输出 | 无 | m2 high：`next_instruction` 等三字段；**TO / m2p high：无**（planner 一步出齐） |
+| pointer 定位 | m2：VLM `node_id`；TO：top-1 | m2p：vlm_action `node_id`；**TO：top-1（无 vlm_action）** |
 
 ---
 

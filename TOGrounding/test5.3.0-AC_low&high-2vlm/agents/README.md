@@ -1,6 +1,6 @@
 # Agents
 
-本目录实现 VLM Agent：**m2**、**m2p**（AC-high）、**TO**，以及无 SoM 的 **CPM**。实验入口在 `main.py`，通过 `AGENT` 切换；除 CPM / m2p planner 外，SoM 类接口统一为 `predict(annotated_screenshot_path, mode, **kwargs)`。
+本目录实现 VLM Agent：**m2**、**m2p**（AC-high）、**TO**，以及无 SoM 的 **CPM**。实验入口在 `main.py`，通过 `AGENT` 切换；m2 / TO（AC-low）使用 `predict()`；m2p / TO（AC-high）使用 `plan()` 主循环。
 
 评测规则见 [eval/README.md](../eval/README.md)。
 
@@ -12,8 +12,9 @@
 |---|--------|---------|--------|---------|
 | 模块 | `m2_agent.py` | `m2p_agent.py` | `TO_agent.py` | `CPM_agent.py` |
 | 模式 | low / high | **仅 high** | low / high | low / high |
-| 输入图 | 标注图 top_k | planner 原图 + executor 标注图 | top-1 `#` 框 | **原图** |
-| click 定位 | VLM `node_id` | executor `node_id` | **强制 top1** | 归一化 `x,y` |
+| VLM 数（high） | 1 | 2（planner + action） | **1（planner only）** | 1 |
+| 输入图 | 标注图 top_k | planner 原图 + executor 标注图 | planner 原图；pointer 步 top-1 标注 | **原图** |
+| click 定位 | VLM `node_id` | executor `node_id` | **检索 top-1**（无 vlm_action） | 归一化 `x,y` |
 | step 评测 | `judge_m2` | 同 m2 | `TO_top1` | `judge_baseline` |
 
 ---
@@ -43,9 +44,15 @@
 
 ## TO（`TOAgent`）
 
-**定位**：检索与点击解耦 — VLM 只判 type，位置由检索 top-1 决定。
+**定位**：与 m2p 相同的每步 `vlm_TO` planner + step history；pointer 步用检索 **top-1** 直接作为 pred，**不调用 vlm_action**。
+
+| 模式 | 流程 |
+|------|------|
+| **AC-high** | 每步 `plan(原图)` → click/long_press：`target_object` → top-1 → `build_pointer_pred`；其余 type：`build_action_from_planner`（同 m2p） |
+| **AC-low** | 每步 `llm_TO` + `predict(标注图)`（不变） |
 
 - **配置**：`AGENT="TO"` 且 `TOP_K=1`
+- **主循环**：high → `main._run_episode_to()`；low → `main._run_episode()`
 - **评测**：`judge_top1_center`；另统计 Retrieval Hit
 
 ---
