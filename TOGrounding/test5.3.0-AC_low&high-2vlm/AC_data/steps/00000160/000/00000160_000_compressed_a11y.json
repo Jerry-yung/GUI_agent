@@ -1,0 +1,590 @@
+[
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/settings_menu_item",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      954,
+      146,
+      1080,
+      272
+    ],
+    "rel-bounds": [
+      0,
+      10,
+      126,
+      136
+    ],
+    "content-desc": [
+      "Settings"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 0,
+    "ager_label": "Settings"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageButton",
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageButton",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      147,
+      283
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      147,
+      147
+    ],
+    "content-desc": [
+      "Navigate up"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 1,
+    "ager_label": "Navigate up"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "",
+    "text": "Naomi ros",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      189,
+      174,
+      435,
+      245
+    ],
+    "rel-bounds": [
+      189,
+      38,
+      435,
+      109
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 2,
+    "ager_label": "Naomi ros"
+  },
+  {
+    "ancestors": [
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.ViewGroup",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/tool_bar",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      1080,
+      283
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      147
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 3,
+    "ager_label": "tool_bar"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/view_header_project_count_textview",
+    "text": "0 ITEMS",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      42,
+      325,
+      180,
+      368
+    ],
+    "rel-bounds": [
+      42,
+      42,
+      180,
+      85
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 4,
+    "ager_label": "0 ITEMS"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/view_header_project_sort_imageview",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      717,
+      304,
+      802,
+      389
+    ],
+    "rel-bounds": [
+      717,
+      21,
+      802,
+      106
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 5,
+    "ager_label": "view_header_project_sort_imageview"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/view_header_project_sort_by_textview",
+    "text": "DATE ADDED",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      802,
+      314,
+      1038,
+      379
+    ],
+    "rel-bounds": [
+      802,
+      31,
+      1038,
+      96
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 6,
+    "ager_label": "DATE ADDED"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/folder_empty_image",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      291,
+      948,
+      790,
+      1329
+    ],
+    "rel-bounds": [
+      291,
+      665,
+      790,
+      1046
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 7,
+    "ager_label": "folder_empty_image"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/action_bar_root",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      2201
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 8,
+    "ager_label": "action_bar_root"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/folder_empty_message",
+    "text": "Start by adding videos.",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      147,
+      1413,
+      933,
+      1484
+    ],
+    "rel-bounds": [
+      147,
+      1130,
+      933,
+      1201
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 9,
+    "ager_label": "Start by adding videos."
+  },
+  {
+    "ancestors": [
+      "android.widget.Button",
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Button",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/folder_empty_upload_button",
+    "text": "Upload a video",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      147,
+      1526,
+      933,
+      1631
+    ],
+    "rel-bounds": [
+      147,
+      1243,
+      933,
+      1348
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 10,
+    "ager_label": "Upload a video"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageButton",
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageButton",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "com.vimeo.android.videoapp:id/folders_floating_action_button",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      891,
+      2106,
+      1038,
+      2253
+    ],
+    "rel-bounds": [
+      891,
+      1970,
+      1038,
+      2117
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 11,
+    "ager_label": "folders_floating_action_button"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "com.vimeo.android.videoapp",
+    "resource-id": "android:id/navigationBarBackground",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "rel-bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 12,
+    "ager_label": "navigationBarBackground"
+  }
+]

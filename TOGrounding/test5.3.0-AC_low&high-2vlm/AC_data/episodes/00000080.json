@@ -1,0 +1,15 @@
+{
+  "episode_id": "00000080",
+  "goal": "Open the Yahoo Mail App, Select the Starva Mail and Unmark an Email as read. ",
+  "num_steps": 3,
+  "stems": [
+    "00000080_000",
+    "00000080_001",
+    "00000080_002"
+  ],
+  "action_types": [
+    "open_app",
+    "click",
+    "click"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000040_000",
+  "episode_id": "00000040",
+  "step_idx": 0,
+  "action_type": "scroll",
+  "episode_goal": "Check out all of the suggested products and compare pricing because I'm looking for a budget friendly sofa.",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 1
+}

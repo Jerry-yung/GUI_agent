@@ -1,0 +1,454 @@
+[
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      576,
+      199,
+      639,
+      262
+    ],
+    "rel-bounds": [
+      21,
+      31,
+      84,
+      94
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 0,
+    "ager_label": "icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/content",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      555,
+      168,
+      1070,
+      294
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      515,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 1,
+    "ager_label": "content"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/title",
+    "text": "Share",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      660,
+      200,
+      1028,
+      262
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      368,
+      62
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 2,
+    "ager_label": "Share"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      576,
+      325,
+      639,
+      388
+    ],
+    "rel-bounds": [
+      21,
+      31,
+      84,
+      94
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 3,
+    "ager_label": "icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/content",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      555,
+      294,
+      1070,
+      420
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      515,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 4,
+    "ager_label": "content"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ListView",
+    "package": "com.obreey.reader",
+    "resource-id": "",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      555,
+      168,
+      1070,
+      546
+    ],
+    "rel-bounds": [
+      0,
+      21,
+      515,
+      399
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 5,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/title",
+    "text": "Add to collection",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      660,
+      326,
+      1028,
+      388
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      368,
+      62
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 6,
+    "ager_label": "Add to collection"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      576,
+      451,
+      639,
+      514
+    ],
+    "rel-bounds": [
+      21,
+      31,
+      84,
+      94
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 7,
+    "ager_label": "icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/content",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      555,
+      420,
+      1070,
+      546
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      515,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 8,
+    "ager_label": "content"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/title",
+    "text": "Delete",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      660,
+      452,
+      1028,
+      514
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      368,
+      62
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 9,
+    "ager_label": "Delete"
+  }
+]

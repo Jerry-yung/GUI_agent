@@ -1,0 +1,11 @@
+{
+  "episode_id": "00000040",
+  "goal": "Check out all of the suggested products and compare pricing because I'm looking for a budget friendly sofa.",
+  "num_steps": 1,
+  "stems": [
+    "00000040_000"
+  ],
+  "action_types": [
+    "scroll"
+  ]
+}

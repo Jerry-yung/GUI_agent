@@ -1,0 +1,996 @@
+[
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/date",
+    "text": "Fri, Aug 11",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      99,
+      292,
+      331,
+      358
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      232,
+      66
+    ],
+    "content-desc": [
+      "Fri, Aug 11"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 0,
+    "ager_label": "Fri, Aug 11"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/search_container_workspace",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      57,
+      213,
+      1023,
+      485
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      966,
+      272
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 1,
+    "ager_label": "search_container_workspace"
+  },
+  {
+    "ancestors": [
+      "android.widget.RelativeLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.RelativeLayout",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/text_group",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      99,
+      292,
+      1023,
+      466
+    ],
+    "rel-bounds": [
+      0,
+      78,
+      924,
+      252
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 2,
+    "ager_label": "text_group"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/subtitle_text",
+    "text": "32°C",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      99,
+      382,
+      258,
+      445
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      159,
+      63
+    ],
+    "content-desc": [
+      "Partly cloudy, 32°C"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 3,
+    "ager_label": "Partly cloudy, 32°C"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      118,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      118,
+      1080,
+      2337
+    ],
+    "content-desc": [
+      "Home"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 4,
+    "ager_label": "Home"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Google",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      57,
+      1155,
+      267,
+      1427
+    ],
+    "rel-bounds": [
+      0,
+      942,
+      210,
+      1214
+    ],
+    "content-desc": [
+      "Google"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 5,
+    "ager_label": "Google"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Play Store",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      57,
+      1469,
+      267,
+      1741
+    ],
+    "rel-bounds": [
+      0,
+      1256,
+      210,
+      1528
+    ],
+    "content-desc": [
+      "Play Store"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 6,
+    "ager_label": "Play Store"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Gmail",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      309,
+      1469,
+      519,
+      1741
+    ],
+    "rel-bounds": [
+      252,
+      1256,
+      462,
+      1528
+    ],
+    "content-desc": [
+      "Gmail"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 7,
+    "ager_label": "Gmail"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Photos",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      561,
+      1469,
+      771,
+      1741
+    ],
+    "rel-bounds": [
+      504,
+      1256,
+      714,
+      1528
+    ],
+    "content-desc": [
+      "Photos"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 8,
+    "ager_label": "Photos"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "YouTube",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      813,
+      1469,
+      1023,
+      1741
+    ],
+    "rel-bounds": [
+      756,
+      1256,
+      966,
+      1528
+    ],
+    "content-desc": [
+      "YouTube"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 9,
+    "ager_label": "YouTube"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/page_indicator",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1810,
+      1080,
+      1873
+    ],
+    "rel-bounds": [
+      0,
+      1810,
+      1080,
+      1873
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 10,
+    "ager_label": "page_indicator"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Phone",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      76,
+      1873,
+      249,
+      2068
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      173,
+      195
+    ],
+    "content-desc": [
+      "Phone"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 11,
+    "ager_label": "Phone"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Messages",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      328,
+      1873,
+      501,
+      2068
+    ],
+    "rel-bounds": [
+      252,
+      0,
+      425,
+      195
+    ],
+    "content-desc": [
+      "Messages"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 12,
+    "ager_label": "Messages"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Chrome",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      580,
+      1873,
+      753,
+      2068
+    ],
+    "rel-bounds": [
+      504,
+      0,
+      677,
+      195
+    ],
+    "content-desc": [
+      "Chrome"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 13,
+    "ager_label": "Chrome"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "",
+    "text": "Camera",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      832,
+      1873,
+      1004,
+      2068
+    ],
+    "rel-bounds": [
+      756,
+      0,
+      928,
+      195
+    ],
+    "content-desc": [
+      "Camera"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 14,
+    "ager_label": "Camera"
+  },
+  {
+    "ancestors": [
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.ViewGroup",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/hotseat",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1873,
+      1080,
+      2400
+    ],
+    "rel-bounds": [
+      0,
+      1873,
+      1080,
+      2400
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 15,
+    "ager_label": "hotseat"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/overview_actions_view",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2001,
+      1080,
+      2400
+    ],
+    "rel-bounds": [
+      0,
+      2001,
+      1080,
+      2400
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 16,
+    "ager_label": "overview_actions_view"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/g_icon",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      86,
+      2144,
+      212,
+      2270
+    ],
+    "rel-bounds": [
+      11,
+      19,
+      137,
+      145
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 17,
+    "ager_label": "g_icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/search_container_hotseat",
+    "text": "",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      75,
+      2125,
+      1004,
+      2290
+    ],
+    "rel-bounds": [
+      75,
+      252,
+      1004,
+      417
+    ],
+    "content-desc": [
+      "Search"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 18,
+    "ager_label": "Search"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/mic_icon",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      741,
+      2125,
+      867,
+      2290
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      126,
+      165
+    ],
+    "content-desc": [
+      "Voice search"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 19,
+    "ager_label": "Voice search"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/end_part",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      741,
+      2125,
+      993,
+      2290
+    ],
+    "rel-bounds": [
+      666,
+      0,
+      918,
+      165
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 20,
+    "ager_label": "end_part"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageButton",
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageButton",
+    "package": "com.google.android.apps.nexuslauncher",
+    "resource-id": "com.google.android.apps.nexuslauncher:id/lens_icon",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      867,
+      2125,
+      993,
+      2290
+    ],
+    "rel-bounds": [
+      126,
+      0,
+      252,
+      165
+    ],
+    "content-desc": [
+      "Google Lens"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 21,
+    "ager_label": "Google Lens"
+  }
+]

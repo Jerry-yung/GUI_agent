@@ -1,0 +1,101 @@
+{
+  "stem": "00000000_002",
+  "gt_node_ids": [
+    3,
+    4,
+    2,
+    5,
+    0
+  ],
+  "total_tos": 6,
+  "hit_tos": 6,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 0,
+      "TO_string": "Past",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.89763,
+      "margin": 0.494845,
+      "gt_max_sim": 0.89763
+    },
+    {
+      "rank": 2,
+      "TO_id": 1,
+      "TO_string": "Past section",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.755354,
+      "margin": 0.349611,
+      "gt_max_sim": 0.755354
+    },
+    {
+      "rank": 3,
+      "TO_id": 5,
+      "TO_string": "Past Tab",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.708063,
+      "margin": 0.309247,
+      "gt_max_sim": 0.708063
+    },
+    {
+      "rank": 4,
+      "TO_id": 2,
+      "TO_string": "Past tab",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.676398,
+      "margin": 0.282841,
+      "gt_max_sim": 0.676398
+    },
+    {
+      "rank": 5,
+      "TO_id": 4,
+      "TO_string": "Previous",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.618184,
+      "margin": 0.132016,
+      "gt_max_sim": 0.618184
+    },
+    {
+      "rank": 6,
+      "TO_id": 3,
+      "TO_string": "History",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.441234,
+      "margin": 0.16539,
+      "gt_max_sim": 0.441234
+    }
+  ]
+}

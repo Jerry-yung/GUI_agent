@@ -1,0 +1,482 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      53,
+      118,
+      281,
+      244
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      302,
+      118,
+      531,
+      244
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      934,
+      119,
+      1060,
+      245
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      778,
+      270,
+      1075,
+      365
+    ],
+    "text_for_emb": "Select all Select all"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      53,
+      288,
+      194,
+      348
+    ],
+    "text_for_emb": "1 email"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      0,
+      370,
+      1080,
+      387
+    ],
+    "text_for_emb": "Unread Email\nMail Delivery Subsystem\nDelivery Status Notification (Failure)"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      977,
+      420,
+      1033,
+      466
+    ],
+    "text_for_emb": "20 hours ago 20h"
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      0,
+      390,
+      1080,
+      601
+    ],
+    "text_for_emb": "Unread Email\ndbwscratch.test.id4@gmail.com, Me & Cerebra Research\nRe: Fwd: OFFICIAL WEEKEND PARTY"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      53,
+      469,
+      137,
+      553
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      980,
+      516,
+      1033,
+      569
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      995,
+      634,
+      1033,
+      680
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      0,
+      604,
+      1080,
+      815
+    ],
+    "text_for_emb": "Unread Email\nMe & Cerebra Research\nFwd: Independence day celebration"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      53,
+      683,
+      137,
+      767
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      980,
+      730,
+      1033,
+      783
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      995,
+      848,
+      1033,
+      894
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      0,
+      818,
+      1080,
+      1029
+    ],
+    "text_for_emb": "Unread Email\nMail Delivery Subsystem\nDelivery Status Notification (Failure)"
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      53,
+      897,
+      137,
+      981
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      980,
+      944,
+      1033,
+      997
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      995,
+      1062,
+      1033,
+      1108
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      0,
+      1032,
+      1080,
+      1244
+    ],
+    "text_for_emb": "Email\nMe & Strava\nControl what others see on Strava"
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      53,
+      1111,
+      137,
+      1195
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      980,
+      1158,
+      1033,
+      1211
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      0,
+      370,
+      1080,
+      2190
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      995,
+      1277,
+      1033,
+      1323
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      0,
+      1247,
+      1080,
+      1458
+    ],
+    "text_for_emb": "Unread Email\nNimbus\nNimbus Note: Confirm Your Nimbus Account"
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      53,
+      1326,
+      137,
+      1410
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      980,
+      1373,
+      1033,
+      1426
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      0,
+      1461,
+      1080,
+      1566
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      63,
+      1472,
+      147,
+      1556
+    ],
+    "text_for_emb": "Multi-select checkbox. Not checked. For emails from START_OF_THIS_WEEK"
+  },
+  {
+    "node_id": 29,
+    "bounds": [
+      210,
+      1480,
+      1080,
+      1548
+    ],
+    "text_for_emb": "THIS WEEK"
+  },
+  {
+    "node_id": 30,
+    "bounds": [
+      995,
+      1599,
+      1033,
+      1645
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 31,
+    "bounds": [
+      0,
+      1569,
+      1080,
+      1780
+    ],
+    "text_for_emb": "Unread Email\nEvernote\nFind the information you need when you need it"
+  },
+  {
+    "node_id": 32,
+    "bounds": [
+      53,
+      1648,
+      137,
+      1732
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 33,
+    "bounds": [
+      980,
+      1695,
+      1033,
+      1748
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 34,
+    "bounds": [
+      995,
+      1813,
+      1033,
+      1859
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 35,
+    "bounds": [
+      0,
+      1783,
+      1080,
+      1994
+    ],
+    "text_for_emb": "Unread Email\nCoursera\nEarn your degree online from leading universities"
+  },
+  {
+    "node_id": 36,
+    "bounds": [
+      53,
+      1862,
+      137,
+      1946
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 37,
+    "bounds": [
+      980,
+      1909,
+      1033,
+      1962
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 38,
+    "bounds": [
+      995,
+      2027,
+      1033,
+      2073
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 39,
+    "bounds": [
+      0,
+      1997,
+      1080,
+      2190
+    ],
+    "text_for_emb": "Unread Email\nEvernote\n💻 Add Evernote to your computer"
+  },
+  {
+    "node_id": 40,
+    "bounds": [
+      53,
+      2076,
+      137,
+      2160
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 41,
+    "bounds": [
+      980,
+      2123,
+      1033,
+      2176
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 42,
+    "bounds": [
+      0,
+      2190,
+      216,
+      2337
+    ],
+    "text_for_emb": "Delete"
+  },
+  {
+    "node_id": 43,
+    "bounds": [
+      216,
+      2190,
+      432,
+      2337
+    ],
+    "text_for_emb": "Archive"
+  },
+  {
+    "node_id": 44,
+    "bounds": [
+      432,
+      2190,
+      648,
+      2337
+    ],
+    "text_for_emb": "Move"
+  },
+  {
+    "node_id": 45,
+    "bounds": [
+      0,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 46,
+    "bounds": [
+      648,
+      2190,
+      864,
+      2337
+    ],
+    "text_for_emb": "Mark as unread"
+  },
+  {
+    "node_id": 47,
+    "bounds": [
+      864,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": "More"
+  }
+]

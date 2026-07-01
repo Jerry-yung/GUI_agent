@@ -1,0 +1,132 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      953,
+      146,
+      1080,
+      272
+    ],
+    "text_for_emb": "Share"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      42,
+      136,
+      270,
+      283
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      695,
+      136,
+      953,
+      283
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      42,
+      323,
+      1038,
+      538
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      706,
+      1045,
+      893,
+      1088
+    ],
+    "text_for_emb": "Connect now"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      59,
+      1302,
+      185,
+      1428
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      376,
+      1302,
+      502,
+      1428
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      561,
+      1198,
+      1038,
+      1675
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      0,
+      1864,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      0,
+      2190,
+      270,
+      2337
+    ],
+    "text_for_emb": "Tracking screen"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      270,
+      2190,
+      540,
+      2337
+    ],
+    "text_for_emb": "Coach and Plans Info screen, New notification"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      540,
+      2190,
+      810,
+      2337
+    ],
+    "text_for_emb": "Store, New notification"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      810,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": "More"
+  }
+]

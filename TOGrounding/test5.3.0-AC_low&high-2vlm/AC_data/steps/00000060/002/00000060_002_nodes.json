@@ -1,0 +1,142 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      42,
+      0,
+      289,
+      11
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      42,
+      147,
+      1038,
+      273
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      42,
+      336,
+      1038,
+      504
+    ],
+    "text_for_emb": "Find recipes on the web\nCOOKBOOK+"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      42,
+      546,
+      360,
+      964
+    ],
+    "text_for_emb": "Pasta"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      381,
+      546,
+      699,
+      964
+    ],
+    "text_for_emb": "Asian"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      720,
+      546,
+      1038,
+      964
+    ],
+    "text_for_emb": "Main"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      42,
+      985,
+      360,
+      1403
+    ],
+    "text_for_emb": "Quick"
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      381,
+      985,
+      699,
+      1403
+    ],
+    "text_for_emb": "Meatless"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      720,
+      985,
+      1038,
+      1403
+    ],
+    "text_for_emb": "Dessert"
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      0,
+      1466,
+      1080,
+      1597
+    ],
+    "text_for_emb": "All recipes"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      0,
+      1600,
+      1080,
+      1731
+    ],
+    "text_for_emb": "All stories"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      0,
+      2190,
+      360,
+      2337
+    ],
+    "text_for_emb": "Today, Tab 1 of 3"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      360,
+      2190,
+      720,
+      2337
+    ],
+    "text_for_emb": "Search, Tab 2 of 3"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      720,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": "Profile , Tab 3 of 3"
+  }
+]

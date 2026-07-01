@@ -1,0 +1,222 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      828,
+      146,
+      954,
+      272
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      954,
+      146,
+      1080,
+      272
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      42,
+      162,
+      105,
+      257
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      0,
+      451,
+      540,
+      577
+    ],
+    "text_for_emb": "Library"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      0,
+      451,
+      1080,
+      577
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      540,
+      451,
+      1080,
+      577
+    ],
+    "text_for_emb": "Showcases"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      632,
+      598,
+      717,
+      683
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      717,
+      608,
+      953,
+      673
+    ],
+    "text_for_emb": "DATE ADDED"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      953,
+      598,
+      1038,
+      683
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      983,
+      707,
+      1075,
+      825
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      0,
+      707,
+      1080,
+      970
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      983,
+      973,
+      1075,
+      1091
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      0,
+      973,
+      1080,
+      1236
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      988,
+      1239,
+      1080,
+      1357
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      0,
+      1239,
+      1080,
+      1502
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      891,
+      2001,
+      1038,
+      2148
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      477,
+      2200,
+      603,
+      2326
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      0,
+      2190,
+      216,
+      2337
+    ],
+    "text_for_emb": "Home"
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      216,
+      2190,
+      432,
+      2337
+    ],
+    "text_for_emb": "Library"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      432,
+      2190,
+      648,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      648,
+      2190,
+      864,
+      2337
+    ],
+    "text_for_emb": "Analytics"
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      864,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": "Watch"
+  }
+]

@@ -1,0 +1,1502 @@
+{
+  "activity_name": "converted.from.windows.format",
+  "activity": {
+    "root": {
+      "class": "android.view.ViewRootImpl",
+      "package": "android",
+      "resource-id": "",
+      "text": "",
+      "clickable": false,
+      "long-clickable": false,
+      "checkable": false,
+      "checked": false,
+      "enabled": true,
+      "focusable": false,
+      "focused": false,
+      "scrollable-horizontal": false,
+      "scrollable-vertical": false,
+      "password": false,
+      "selected": false,
+      "visible-to-user": true,
+      "bounds": [
+        0,
+        0,
+        1080,
+        2400
+      ],
+      "rel-bounds": [
+        0,
+        0,
+        1080,
+        2400
+      ],
+      "content-desc": [
+        null
+      ],
+      "visibility": "visible",
+      "pressed": "not_pressed",
+      "draw": true,
+      "adapter-view": false,
+      "abs-pos": true,
+      "ancestors": [
+        "android.view.ViewRootImpl",
+        "java.lang.Object"
+      ],
+      "children": [
+        {
+          "ancestors": [
+            "android.widget.FrameLayout",
+            "android.view.ViewGroup",
+            "android.view.View",
+            "java.lang.Object"
+          ],
+          "class": "android.widget.FrameLayout",
+          "package": "com.android.systemui",
+          "resource-id": "",
+          "text": "",
+          "clickable": false,
+          "long-clickable": false,
+          "checkable": false,
+          "checked": false,
+          "enabled": true,
+          "focusable": false,
+          "focused": false,
+          "scrollable-horizontal": false,
+          "scrollable-vertical": false,
+          "password": false,
+          "selected": false,
+          "visible-to-user": true,
+          "bounds": [
+            0,
+            0,
+            1080,
+            118
+          ],
+          "rel-bounds": [
+            0,
+            0,
+            1080,
+            118
+          ],
+          "content-desc": [
+            null
+          ],
+          "visibility": "visible",
+          "pressed": "not_pressed",
+          "draw": true,
+          "adapter-view": false,
+          "abs-pos": true,
+          "children": [
+            {
+              "ancestors": [
+                "android.widget.FrameLayout",
+                "android.view.ViewGroup",
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.widget.FrameLayout",
+              "package": "com.android.systemui",
+              "resource-id": "com.android.systemui:id/status_bar_launch_animation_container",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "rel-bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": []
+            },
+            {
+              "ancestors": [
+                "android.widget.FrameLayout",
+                "android.view.ViewGroup",
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.widget.FrameLayout",
+              "package": "com.android.systemui",
+              "resource-id": "com.android.systemui:id/container",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "rel-bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": []
+            },
+            {
+              "ancestors": [
+                "android.widget.FrameLayout",
+                "android.view.ViewGroup",
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.widget.FrameLayout",
+              "package": "com.android.systemui",
+              "resource-id": "com.android.systemui:id/status_bar_container",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "rel-bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": [
+                {
+                  "ancestors": [
+                    "android.widget.FrameLayout",
+                    "android.view.ViewGroup",
+                    "android.view.View",
+                    "java.lang.Object"
+                  ],
+                  "class": "android.widget.FrameLayout",
+                  "package": "com.android.systemui",
+                  "resource-id": "com.android.systemui:id/status_bar",
+                  "text": "",
+                  "clickable": false,
+                  "long-clickable": false,
+                  "checkable": false,
+                  "checked": false,
+                  "enabled": true,
+                  "focusable": false,
+                  "focused": false,
+                  "scrollable-horizontal": false,
+                  "scrollable-vertical": false,
+                  "password": false,
+                  "selected": false,
+                  "visible-to-user": true,
+                  "bounds": [
+                    0,
+                    0,
+                    1080,
+                    118
+                  ],
+                  "rel-bounds": [
+                    0,
+                    0,
+                    1080,
+                    118
+                  ],
+                  "content-desc": [
+                    null
+                  ],
+                  "visibility": "visible",
+                  "pressed": "not_pressed",
+                  "draw": true,
+                  "adapter-view": false,
+                  "abs-pos": true,
+                  "children": [
+                    {
+                      "ancestors": [
+                        "android.widget.LinearLayout",
+                        "android.view.ViewGroup",
+                        "android.view.View",
+                        "java.lang.Object"
+                      ],
+                      "class": "android.widget.LinearLayout",
+                      "package": "com.android.systemui",
+                      "resource-id": "com.android.systemui:id/status_bar_contents",
+                      "text": "",
+                      "clickable": false,
+                      "long-clickable": false,
+                      "checkable": false,
+                      "checked": false,
+                      "enabled": true,
+                      "focusable": false,
+                      "focused": false,
+                      "scrollable-horizontal": false,
+                      "scrollable-vertical": false,
+                      "password": false,
+                      "selected": false,
+                      "visible-to-user": true,
+                      "bounds": [
+                        47,
+                        0,
+                        1027,
+                        118
+                      ],
+                      "rel-bounds": [
+                        47,
+                        0,
+                        1027,
+                        118
+                      ],
+                      "content-desc": [
+                        null
+                      ],
+                      "visibility": "visible",
+                      "pressed": "not_pressed",
+                      "draw": true,
+                      "adapter-view": false,
+                      "abs-pos": true,
+                      "children": [
+                        {
+                          "ancestors": [
+                            "android.widget.FrameLayout",
+                            "android.view.ViewGroup",
+                            "android.view.View",
+                            "java.lang.Object"
+                          ],
+                          "class": "android.widget.FrameLayout",
+                          "package": "com.android.systemui",
+                          "resource-id": "com.android.systemui:id/status_bar_start_side_container",
+                          "text": "",
+                          "clickable": false,
+                          "long-clickable": false,
+                          "checkable": false,
+                          "checked": false,
+                          "enabled": true,
+                          "focusable": false,
+                          "focused": false,
+                          "scrollable-horizontal": false,
+                          "scrollable-vertical": false,
+                          "password": false,
+                          "selected": false,
+                          "visible-to-user": true,
+                          "bounds": [
+                            47,
+                            1,
+                            454,
+                            118
+                          ],
+                          "rel-bounds": [
+                            0,
+                            1,
+                            407,
+                            118
+                          ],
+                          "content-desc": [
+                            null
+                          ],
+                          "visibility": "visible",
+                          "pressed": "not_pressed",
+                          "draw": true,
+                          "adapter-view": false,
+                          "abs-pos": true,
+                          "children": [
+                            {
+                              "ancestors": [
+                                "android.widget.FrameLayout",
+                                "android.view.ViewGroup",
+                                "android.view.View",
+                                "java.lang.Object"
+                              ],
+                              "class": "android.widget.FrameLayout",
+                              "package": "com.android.systemui",
+                              "resource-id": "com.android.systemui:id/status_bar_start_side_content",
+                              "text": "",
+                              "clickable": false,
+                              "long-clickable": false,
+                              "checkable": false,
+                              "checked": false,
+                              "enabled": true,
+                              "focusable": false,
+                              "focused": false,
+                              "scrollable-horizontal": false,
+                              "scrollable-vertical": false,
+                              "password": false,
+                              "selected": false,
+                              "visible-to-user": true,
+                              "bounds": [
+                                47,
+                                1,
+                                188,
+                                118
+                              ],
+                              "rel-bounds": [
+                                0,
+                                0,
+                                141,
+                                117
+                              ],
+                              "content-desc": [
+                                null
+                              ],
+                              "visibility": "visible",
+                              "pressed": "not_pressed",
+                              "draw": true,
+                              "adapter-view": false,
+                              "abs-pos": true,
+                              "children": [
+                                {
+                                  "ancestors": [
+                                    "android.widget.LinearLayout",
+                                    "android.view.ViewGroup",
+                                    "android.view.View",
+                                    "java.lang.Object"
+                                  ],
+                                  "class": "android.widget.LinearLayout",
+                                  "package": "com.android.systemui",
+                                  "resource-id": "com.android.systemui:id/status_bar_start_side_except_heads_up",
+                                  "text": "",
+                                  "clickable": false,
+                                  "long-clickable": false,
+                                  "checkable": false,
+                                  "checked": false,
+                                  "enabled": true,
+                                  "focusable": false,
+                                  "focused": false,
+                                  "scrollable-horizontal": false,
+                                  "scrollable-vertical": false,
+                                  "password": false,
+                                  "selected": false,
+                                  "visible-to-user": true,
+                                  "bounds": [
+                                    47,
+                                    1,
+                                    188,
+                                    118
+                                  ],
+                                  "rel-bounds": [
+                                    0,
+                                    0,
+                                    141,
+                                    117
+                                  ],
+                                  "content-desc": [
+                                    null
+                                  ],
+                                  "visibility": "visible",
+                                  "pressed": "not_pressed",
+                                  "draw": true,
+                                  "adapter-view": false,
+                                  "abs-pos": true,
+                                  "children": [
+                                    {
+                                      "ancestors": [
+                                        "android.widget.TextView",
+                                        "android.view.View",
+                                        "java.lang.Object"
+                                      ],
+                                      "class": "android.widget.TextView",
+                                      "package": "com.android.systemui",
+                                      "resource-id": "com.android.systemui:id/clock",
+                                      "text": "3:02",
+                                      "clickable": false,
+                                      "long-clickable": false,
+                                      "checkable": false,
+                                      "checked": false,
+                                      "enabled": true,
+                                      "focusable": false,
+                                      "focused": false,
+                                      "scrollable-horizontal": false,
+                                      "scrollable-vertical": false,
+                                      "password": false,
+                                      "selected": false,
+                                      "visible-to-user": true,
+                                      "bounds": [
+                                        47,
+                                        1,
+                                        130,
+                                        118
+                                      ],
+                                      "rel-bounds": [
+                                        0,
+                                        0,
+                                        83,
+                                        117
+                                      ],
+                                      "content-desc": [
+                                        "3:02 PM"
+                                      ],
+                                      "visibility": "visible",
+                                      "pressed": "not_pressed",
+                                      "draw": true,
+                                      "adapter-view": false,
+                                      "abs-pos": true,
+                                      "children": []
+                                    },
+                                    {
+                                      "ancestors": [
+                                        "android.widget.FrameLayout",
+                                        "android.view.ViewGroup",
+                                        "android.view.View",
+                                        "java.lang.Object"
+                                      ],
+                                      "class": "android.widget.FrameLayout",
+                                      "package": "com.android.systemui",
+                                      "resource-id": "com.android.systemui:id/notification_icon_area",
+                                      "text": "",
+                                      "clickable": false,
+                                      "long-clickable": false,
+                                      "checkable": false,
+                                      "checked": false,
+                                      "enabled": true,
+                                      "focusable": false,
+                                      "focused": false,
+                                      "scrollable-horizontal": false,
+                                      "scrollable-vertical": false,
+                                      "password": false,
+                                      "selected": false,
+                                      "visible-to-user": true,
+                                      "bounds": [
+                                        130,
+                                        1,
+                                        188,
+                                        118
+                                      ],
+                                      "rel-bounds": [
+                                        83,
+                                        0,
+                                        141,
+                                        117
+                                      ],
+                                      "content-desc": [
+                                        null
+                                      ],
+                                      "visibility": "visible",
+                                      "pressed": "not_pressed",
+                                      "draw": true,
+                                      "adapter-view": false,
+                                      "abs-pos": true,
+                                      "children": [
+                                        {
+                                          "ancestors": [
+                                            "android.view.ViewGroup",
+                                            "android.view.View",
+                                            "java.lang.Object"
+                                          ],
+                                          "class": "android.view.ViewGroup",
+                                          "package": "com.android.systemui",
+                                          "resource-id": "com.android.systemui:id/notificationIcons",
+                                          "text": "",
+                                          "clickable": false,
+                                          "long-clickable": false,
+                                          "checkable": false,
+                                          "checked": false,
+                                          "enabled": true,
+                                          "focusable": false,
+                                          "focused": false,
+                                          "scrollable-horizontal": false,
+                                          "scrollable-vertical": false,
+                                          "password": false,
+                                          "selected": false,
+                                          "visible-to-user": true,
+                                          "bounds": [
+                                            130,
+                                            1,
+                                            188,
+                                            118
+                                          ],
+                                          "rel-bounds": [
+                                            0,
+                                            0,
+                                            58,
+                                            117
+                                          ],
+                                          "content-desc": [
+                                            null
+                                          ],
+                                          "visibility": "visible",
+                                          "pressed": "not_pressed",
+                                          "draw": true,
+                                          "adapter-view": false,
+                                          "abs-pos": true,
+                                          "children": [
+                                            {
+                                              "ancestors": [
+                                                "android.widget.ImageView",
+                                                "android.view.View",
+                                                "java.lang.Object"
+                                              ],
+                                              "class": "android.widget.ImageView",
+                                              "package": "com.android.systemui",
+                                              "resource-id": "",
+                                              "text": "",
+                                              "clickable": false,
+                                              "long-clickable": false,
+                                              "checkable": false,
+                                              "checked": false,
+                                              "enabled": true,
+                                              "focusable": false,
+                                              "focused": false,
+                                              "scrollable-horizontal": false,
+                                              "scrollable-vertical": false,
+                                              "password": false,
+                                              "selected": false,
+                                              "visible-to-user": true,
+                                              "bounds": [
+                                                130,
+                                                1,
+                                                188,
+                                                118
+                                              ],
+                                              "rel-bounds": [
+                                                0,
+                                                0,
+                                                58,
+                                                117
+                                              ],
+                                              "content-desc": [
+                                                "Google notification: DNA India"
+                                              ],
+                                              "visibility": "visible",
+                                              "pressed": "not_pressed",
+                                              "draw": true,
+                                              "adapter-view": false,
+                                              "abs-pos": true,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ancestors": [
+                            "android.view.View",
+                            "java.lang.Object"
+                          ],
+                          "class": "android.view.View",
+                          "package": "com.android.systemui",
+                          "resource-id": "com.android.systemui:id/cutout_space_view",
+                          "text": "",
+                          "clickable": false,
+                          "long-clickable": false,
+                          "checkable": false,
+                          "checked": false,
+                          "enabled": true,
+                          "focusable": false,
+                          "focused": false,
+                          "scrollable-horizontal": false,
+                          "scrollable-vertical": false,
+                          "password": false,
+                          "selected": false,
+                          "visible-to-user": true,
+                          "bounds": [
+                            454,
+                            1,
+                            599,
+                            118
+                          ],
+                          "rel-bounds": [
+                            407,
+                            1,
+                            552,
+                            118
+                          ],
+                          "content-desc": [
+                            null
+                          ],
+                          "visibility": "visible",
+                          "pressed": "not_pressed",
+                          "draw": true,
+                          "adapter-view": false,
+                          "abs-pos": true,
+                          "children": []
+                        },
+                        {
+                          "ancestors": [
+                            "android.widget.FrameLayout",
+                            "android.view.ViewGroup",
+                            "android.view.View",
+                            "java.lang.Object"
+                          ],
+                          "class": "android.widget.FrameLayout",
+                          "package": "com.android.systemui",
+                          "resource-id": "com.android.systemui:id/status_bar_end_side_container",
+                          "text": "",
+                          "clickable": false,
+                          "long-clickable": false,
+                          "checkable": false,
+                          "checked": false,
+                          "enabled": true,
+                          "focusable": false,
+                          "focused": false,
+                          "scrollable-horizontal": false,
+                          "scrollable-vertical": false,
+                          "password": false,
+                          "selected": false,
+                          "visible-to-user": true,
+                          "bounds": [
+                            599,
+                            1,
+                            1006,
+                            118
+                          ],
+                          "rel-bounds": [
+                            552,
+                            1,
+                            959,
+                            118
+                          ],
+                          "content-desc": [
+                            null
+                          ],
+                          "visibility": "visible",
+                          "pressed": "not_pressed",
+                          "draw": true,
+                          "adapter-view": false,
+                          "abs-pos": true,
+                          "children": [
+                            {
+                              "ancestors": [
+                                "android.widget.LinearLayout",
+                                "android.view.ViewGroup",
+                                "android.view.View",
+                                "java.lang.Object"
+                              ],
+                              "class": "android.widget.LinearLayout",
+                              "package": "com.android.systemui",
+                              "resource-id": "com.android.systemui:id/status_bar_end_side_content",
+                              "text": "",
+                              "clickable": false,
+                              "long-clickable": false,
+                              "checkable": false,
+                              "checked": false,
+                              "enabled": true,
+                              "focusable": false,
+                              "focused": false,
+                              "scrollable-horizontal": false,
+                              "scrollable-vertical": false,
+                              "password": false,
+                              "selected": false,
+                              "visible-to-user": true,
+                              "bounds": [
+                                924,
+                                1,
+                                1006,
+                                118
+                              ],
+                              "rel-bounds": [
+                                325,
+                                0,
+                                407,
+                                117
+                              ],
+                              "content-desc": [
+                                null
+                              ],
+                              "visibility": "visible",
+                              "pressed": "not_pressed",
+                              "draw": true,
+                              "adapter-view": false,
+                              "abs-pos": true,
+                              "children": [
+                                {
+                                  "ancestors": [
+                                    "android.widget.LinearLayout",
+                                    "android.view.ViewGroup",
+                                    "android.view.View",
+                                    "java.lang.Object"
+                                  ],
+                                  "class": "android.widget.LinearLayout",
+                                  "package": "com.android.systemui",
+                                  "resource-id": "com.android.systemui:id/system_icons",
+                                  "text": "",
+                                  "clickable": false,
+                                  "long-clickable": false,
+                                  "checkable": false,
+                                  "checked": false,
+                                  "enabled": true,
+                                  "focusable": false,
+                                  "focused": false,
+                                  "scrollable-horizontal": false,
+                                  "scrollable-vertical": false,
+                                  "password": false,
+                                  "selected": false,
+                                  "visible-to-user": true,
+                                  "bounds": [
+                                    924,
+                                    1,
+                                    1006,
+                                    118
+                                  ],
+                                  "rel-bounds": [
+                                    0,
+                                    0,
+                                    82,
+                                    117
+                                  ],
+                                  "content-desc": [
+                                    null
+                                  ],
+                                  "visibility": "visible",
+                                  "pressed": "not_pressed",
+                                  "draw": true,
+                                  "adapter-view": false,
+                                  "abs-pos": true,
+                                  "children": [
+                                    {
+                                      "ancestors": [
+                                        "android.widget.LinearLayout",
+                                        "android.view.ViewGroup",
+                                        "android.view.View",
+                                        "java.lang.Object"
+                                      ],
+                                      "class": "android.widget.LinearLayout",
+                                      "package": "com.android.systemui",
+                                      "resource-id": "com.android.systemui:id/statusIcons",
+                                      "text": "",
+                                      "clickable": false,
+                                      "long-clickable": false,
+                                      "checkable": false,
+                                      "checked": false,
+                                      "enabled": true,
+                                      "focusable": false,
+                                      "focused": false,
+                                      "scrollable-horizontal": false,
+                                      "scrollable-vertical": false,
+                                      "password": false,
+                                      "selected": false,
+                                      "visible-to-user": true,
+                                      "bounds": [
+                                        924,
+                                        1,
+                                        986,
+                                        118
+                                      ],
+                                      "rel-bounds": [
+                                        0,
+                                        0,
+                                        62,
+                                        117
+                                      ],
+                                      "content-desc": [
+                                        null
+                                      ],
+                                      "visibility": "visible",
+                                      "pressed": "not_pressed",
+                                      "draw": true,
+                                      "adapter-view": false,
+                                      "abs-pos": true,
+                                      "children": [
+                                        {
+                                          "ancestors": [
+                                            "android.widget.FrameLayout",
+                                            "android.view.ViewGroup",
+                                            "android.view.View",
+                                            "java.lang.Object"
+                                          ],
+                                          "class": "android.widget.FrameLayout",
+                                          "package": "com.android.systemui",
+                                          "resource-id": "com.android.systemui:id/wifi_combo",
+                                          "text": "",
+                                          "clickable": false,
+                                          "long-clickable": false,
+                                          "checkable": false,
+                                          "checked": false,
+                                          "enabled": true,
+                                          "focusable": false,
+                                          "focused": false,
+                                          "scrollable-horizontal": false,
+                                          "scrollable-vertical": false,
+                                          "password": false,
+                                          "selected": false,
+                                          "visible-to-user": true,
+                                          "bounds": [
+                                            924,
+                                            30,
+                                            970,
+                                            88
+                                          ],
+                                          "rel-bounds": [
+                                            0,
+                                            29,
+                                            46,
+                                            87
+                                          ],
+                                          "content-desc": [
+                                            "Wifi three bars."
+                                          ],
+                                          "visibility": "visible",
+                                          "pressed": "not_pressed",
+                                          "draw": true,
+                                          "adapter-view": false,
+                                          "abs-pos": true,
+                                          "children": [
+                                            {
+                                              "ancestors": [
+                                                "android.widget.LinearLayout",
+                                                "android.view.ViewGroup",
+                                                "android.view.View",
+                                                "java.lang.Object"
+                                              ],
+                                              "class": "android.widget.LinearLayout",
+                                              "package": "com.android.systemui",
+                                              "resource-id": "com.android.systemui:id/wifi_group",
+                                              "text": "",
+                                              "clickable": false,
+                                              "long-clickable": false,
+                                              "checkable": false,
+                                              "checked": false,
+                                              "enabled": true,
+                                              "focusable": false,
+                                              "focused": false,
+                                              "scrollable-horizontal": false,
+                                              "scrollable-vertical": false,
+                                              "password": false,
+                                              "selected": false,
+                                              "visible-to-user": true,
+                                              "bounds": [
+                                                931,
+                                                30,
+                                                970,
+                                                88
+                                              ],
+                                              "rel-bounds": [
+                                                7,
+                                                0,
+                                                46,
+                                                58
+                                              ],
+                                              "content-desc": [
+                                                null
+                                              ],
+                                              "visibility": "visible",
+                                              "pressed": "not_pressed",
+                                              "draw": true,
+                                              "adapter-view": false,
+                                              "abs-pos": true,
+                                              "children": [
+                                                {
+                                                  "ancestors": [
+                                                    "android.widget.FrameLayout",
+                                                    "android.view.ViewGroup",
+                                                    "android.view.View",
+                                                    "java.lang.Object"
+                                                  ],
+                                                  "class": "android.widget.FrameLayout",
+                                                  "package": "com.android.systemui",
+                                                  "resource-id": "com.android.systemui:id/wifi_combo",
+                                                  "text": "",
+                                                  "clickable": false,
+                                                  "long-clickable": false,
+                                                  "checkable": false,
+                                                  "checked": false,
+                                                  "enabled": true,
+                                                  "focusable": false,
+                                                  "focused": false,
+                                                  "scrollable-horizontal": false,
+                                                  "scrollable-vertical": false,
+                                                  "password": false,
+                                                  "selected": false,
+                                                  "visible-to-user": true,
+                                                  "bounds": [
+                                                    931,
+                                                    39,
+                                                    970,
+                                                    78
+                                                  ],
+                                                  "rel-bounds": [
+                                                    0,
+                                                    9,
+                                                    39,
+                                                    48
+                                                  ],
+                                                  "content-desc": [
+                                                    null
+                                                  ],
+                                                  "visibility": "visible",
+                                                  "pressed": "not_pressed",
+                                                  "draw": true,
+                                                  "adapter-view": false,
+                                                  "abs-pos": true,
+                                                  "children": [
+                                                    {
+                                                      "ancestors": [
+                                                        "android.widget.ImageView",
+                                                        "android.view.View",
+                                                        "java.lang.Object"
+                                                      ],
+                                                      "class": "android.widget.ImageView",
+                                                      "package": "com.android.systemui",
+                                                      "resource-id": "com.android.systemui:id/wifi_signal",
+                                                      "text": "",
+                                                      "clickable": false,
+                                                      "long-clickable": false,
+                                                      "checkable": false,
+                                                      "checked": false,
+                                                      "enabled": true,
+                                                      "focusable": false,
+                                                      "focused": false,
+                                                      "scrollable-horizontal": false,
+                                                      "scrollable-vertical": false,
+                                                      "password": false,
+                                                      "selected": false,
+                                                      "visible-to-user": true,
+                                                      "bounds": [
+                                                        931,
+                                                        39,
+                                                        970,
+                                                        78
+                                                      ],
+                                                      "rel-bounds": [
+                                                        0,
+                                                        0,
+                                                        39,
+                                                        39
+                                                      ],
+                                                      "content-desc": [
+                                                        null
+                                                      ],
+                                                      "visibility": "visible",
+                                                      "pressed": "not_pressed",
+                                                      "draw": true,
+                                                      "adapter-view": false,
+                                                      "abs-pos": true,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "ancestors": [
+                                        "android.widget.LinearLayout",
+                                        "android.view.ViewGroup",
+                                        "android.view.View",
+                                        "java.lang.Object"
+                                      ],
+                                      "class": "android.widget.LinearLayout",
+                                      "package": "com.android.systemui",
+                                      "resource-id": "com.android.systemui:id/battery",
+                                      "text": "",
+                                      "clickable": false,
+                                      "long-clickable": false,
+                                      "checkable": false,
+                                      "checked": false,
+                                      "enabled": true,
+                                      "focusable": false,
+                                      "focused": false,
+                                      "scrollable-horizontal": false,
+                                      "scrollable-vertical": false,
+                                      "password": false,
+                                      "selected": false,
+                                      "visible-to-user": true,
+                                      "bounds": [
+                                        986,
+                                        1,
+                                        1006,
+                                        118
+                                      ],
+                                      "rel-bounds": [
+                                        62,
+                                        0,
+                                        82,
+                                        117
+                                      ],
+                                      "content-desc": [
+                                        "Battery charging, 100 percent."
+                                      ],
+                                      "visibility": "visible",
+                                      "pressed": "not_pressed",
+                                      "draw": true,
+                                      "adapter-view": false,
+                                      "abs-pos": true,
+                                      "children": [
+                                        {
+                                          "ancestors": [
+                                            "android.widget.ImageView",
+                                            "android.view.View",
+                                            "java.lang.Object"
+                                          ],
+                                          "class": "android.widget.ImageView",
+                                          "package": "com.android.systemui",
+                                          "resource-id": "",
+                                          "text": "",
+                                          "clickable": false,
+                                          "long-clickable": false,
+                                          "checkable": false,
+                                          "checked": false,
+                                          "enabled": true,
+                                          "focusable": false,
+                                          "focused": false,
+                                          "scrollable-horizontal": false,
+                                          "scrollable-vertical": false,
+                                          "password": false,
+                                          "selected": false,
+                                          "visible-to-user": true,
+                                          "bounds": [
+                                            986,
+                                            42,
+                                            1006,
+                                            76
+                                          ],
+                                          "rel-bounds": [
+                                            0,
+                                            41,
+                                            20,
+                                            75
+                                          ],
+                                          "content-desc": [
+                                            null
+                                          ],
+                                          "visibility": "visible",
+                                          "pressed": "not_pressed",
+                                          "draw": true,
+                                          "adapter-view": false,
+                                          "abs-pos": true,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ancestors": [
+            "android.widget.FrameLayout",
+            "android.view.ViewGroup",
+            "android.view.View",
+            "java.lang.Object"
+          ],
+          "class": "android.widget.FrameLayout",
+          "package": "com.rtistiq.app",
+          "resource-id": "",
+          "text": "",
+          "clickable": false,
+          "long-clickable": false,
+          "checkable": false,
+          "checked": false,
+          "enabled": true,
+          "focusable": false,
+          "focused": false,
+          "scrollable-horizontal": false,
+          "scrollable-vertical": false,
+          "password": false,
+          "selected": false,
+          "visible-to-user": true,
+          "bounds": [
+            0,
+            0,
+            1080,
+            2400
+          ],
+          "rel-bounds": [
+            0,
+            0,
+            1080,
+            2400
+          ],
+          "content-desc": [
+            null
+          ],
+          "visibility": "visible",
+          "pressed": "not_pressed",
+          "draw": true,
+          "adapter-view": false,
+          "abs-pos": true,
+          "children": [
+            {
+              "ancestors": [
+                "android.widget.LinearLayout",
+                "android.view.ViewGroup",
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.widget.LinearLayout",
+              "package": "com.rtistiq.app",
+              "resource-id": "",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                0,
+                1080,
+                2337
+              ],
+              "rel-bounds": [
+                0,
+                0,
+                1080,
+                2337
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": [
+                {
+                  "ancestors": [
+                    "android.widget.FrameLayout",
+                    "android.view.ViewGroup",
+                    "android.view.View",
+                    "java.lang.Object"
+                  ],
+                  "class": "android.widget.FrameLayout",
+                  "package": "com.rtistiq.app",
+                  "resource-id": "",
+                  "text": "",
+                  "clickable": false,
+                  "long-clickable": false,
+                  "checkable": false,
+                  "checked": false,
+                  "enabled": true,
+                  "focusable": false,
+                  "focused": false,
+                  "scrollable-horizontal": false,
+                  "scrollable-vertical": false,
+                  "password": false,
+                  "selected": false,
+                  "visible-to-user": true,
+                  "bounds": [
+                    0,
+                    118,
+                    1080,
+                    2337
+                  ],
+                  "rel-bounds": [
+                    0,
+                    118,
+                    1080,
+                    2337
+                  ],
+                  "content-desc": [
+                    null
+                  ],
+                  "visibility": "visible",
+                  "pressed": "not_pressed",
+                  "draw": true,
+                  "adapter-view": false,
+                  "abs-pos": true,
+                  "children": [
+                    {
+                      "ancestors": [
+                        "android.widget.LinearLayout",
+                        "android.view.ViewGroup",
+                        "android.view.View",
+                        "java.lang.Object"
+                      ],
+                      "class": "android.widget.LinearLayout",
+                      "package": "com.rtistiq.app",
+                      "resource-id": "com.rtistiq.app:id/action_bar_root",
+                      "text": "",
+                      "clickable": false,
+                      "long-clickable": false,
+                      "checkable": false,
+                      "checked": false,
+                      "enabled": true,
+                      "focusable": false,
+                      "focused": false,
+                      "scrollable-horizontal": false,
+                      "scrollable-vertical": false,
+                      "password": false,
+                      "selected": false,
+                      "visible-to-user": true,
+                      "bounds": [
+                        0,
+                        118,
+                        1080,
+                        2337
+                      ],
+                      "rel-bounds": [
+                        0,
+                        0,
+                        1080,
+                        2219
+                      ],
+                      "content-desc": [
+                        null
+                      ],
+                      "visibility": "visible",
+                      "pressed": "not_pressed",
+                      "draw": true,
+                      "adapter-view": false,
+                      "abs-pos": true,
+                      "children": [
+                        {
+                          "ancestors": [
+                            "android.widget.FrameLayout",
+                            "android.view.ViewGroup",
+                            "android.view.View",
+                            "java.lang.Object"
+                          ],
+                          "class": "android.widget.FrameLayout",
+                          "package": "com.rtistiq.app",
+                          "resource-id": "android:id/content",
+                          "text": "",
+                          "clickable": false,
+                          "long-clickable": false,
+                          "checkable": false,
+                          "checked": false,
+                          "enabled": true,
+                          "focusable": false,
+                          "focused": false,
+                          "scrollable-horizontal": false,
+                          "scrollable-vertical": false,
+                          "password": false,
+                          "selected": false,
+                          "visible-to-user": true,
+                          "bounds": [
+                            0,
+                            118,
+                            1080,
+                            2337
+                          ],
+                          "rel-bounds": [
+                            0,
+                            0,
+                            1080,
+                            2219
+                          ],
+                          "content-desc": [
+                            null
+                          ],
+                          "visibility": "visible",
+                          "pressed": "not_pressed",
+                          "draw": true,
+                          "adapter-view": false,
+                          "abs-pos": true,
+                          "children": [
+                            {
+                              "ancestors": [
+                                "android.widget.FrameLayout",
+                                "android.view.ViewGroup",
+                                "android.view.View",
+                                "java.lang.Object"
+                              ],
+                              "class": "android.widget.FrameLayout",
+                              "package": "com.rtistiq.app",
+                              "resource-id": "",
+                              "text": "",
+                              "clickable": false,
+                              "long-clickable": false,
+                              "checkable": false,
+                              "checked": false,
+                              "enabled": true,
+                              "focusable": false,
+                              "focused": false,
+                              "scrollable-horizontal": false,
+                              "scrollable-vertical": false,
+                              "password": false,
+                              "selected": false,
+                              "visible-to-user": true,
+                              "bounds": [
+                                0,
+                                118,
+                                1080,
+                                2337
+                              ],
+                              "rel-bounds": [
+                                0,
+                                0,
+                                1080,
+                                2219
+                              ],
+                              "content-desc": [
+                                null
+                              ],
+                              "visibility": "visible",
+                              "pressed": "not_pressed",
+                              "draw": true,
+                              "adapter-view": false,
+                              "abs-pos": true,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ancestors": [
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.view.View",
+              "package": "com.rtistiq.app",
+              "resource-id": "android:id/statusBarBackground",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "rel-bounds": [
+                0,
+                0,
+                1080,
+                118
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": []
+            },
+            {
+              "ancestors": [
+                "android.view.View",
+                "java.lang.Object"
+              ],
+              "class": "android.view.View",
+              "package": "com.rtistiq.app",
+              "resource-id": "android:id/navigationBarBackground",
+              "text": "",
+              "clickable": false,
+              "long-clickable": false,
+              "checkable": false,
+              "checked": false,
+              "enabled": true,
+              "focusable": false,
+              "focused": false,
+              "scrollable-horizontal": false,
+              "scrollable-vertical": false,
+              "password": false,
+              "selected": false,
+              "visible-to-user": true,
+              "bounds": [
+                0,
+                2337,
+                1080,
+                2400
+              ],
+              "rel-bounds": [
+                0,
+                2337,
+                1080,
+                2400
+              ],
+              "content-desc": [
+                null
+              ],
+              "visibility": "visible",
+              "pressed": "not_pressed",
+              "draw": true,
+              "adapter-view": false,
+              "abs-pos": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "added_fragments": [],
+    "active_fragments": []
+  }
+}

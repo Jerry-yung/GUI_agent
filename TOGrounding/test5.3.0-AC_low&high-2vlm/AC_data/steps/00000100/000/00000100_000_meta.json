@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000100_000",
+  "episode_id": "00000100",
+  "step_idx": 0,
+  "action_type": "click",
+  "episode_goal": "If I lose connection to the internet, I want to make the agents.txt file accessible offline in Google Drive so that I can readily access it.",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 2
+}

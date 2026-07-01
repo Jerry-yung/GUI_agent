@@ -1,0 +1,191 @@
+{
+  "stem": "00000140_008",
+  "gt_node_ids": [
+    1,
+    0,
+    2,
+    5,
+    6
+  ],
+  "total_tos": 13,
+  "hit_tos": 5,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 9,
+      "TO_string": "Send icon",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 1,
+      "pred_score": 0.664475,
+      "margin": 0.179682,
+      "gt_max_sim": 0.664475
+    },
+    {
+      "rank": 2,
+      "TO_id": 11,
+      "TO_string": "Send arrow",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 1,
+      "pred_score": 0.654491,
+      "margin": 0.080422,
+      "gt_max_sim": 0.654491
+    },
+    {
+      "rank": 3,
+      "TO_id": 0,
+      "TO_string": "send icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 1,
+      "pred_score": 0.583793,
+      "margin": 0.061934,
+      "gt_max_sim": 0.583793
+    },
+    {
+      "rank": 4,
+      "TO_id": 2,
+      "TO_string": "submit arrow",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.524016,
+      "margin": 0.004964,
+      "gt_max_sim": 0.524016
+    },
+    {
+      "rank": 5,
+      "TO_id": 7,
+      "TO_string": "paper plane",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 1,
+      "pred_score": 0.329852,
+      "margin": 0.04331,
+      "gt_max_sim": 0.329852
+    },
+    {
+      "rank": 6,
+      "TO_id": 6,
+      "TO_string": "forward symbol",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 50,
+      "pred_score": 0.540306,
+      "margin": 0.025914,
+      "gt_max_sim": 0.500867
+    },
+    {
+      "rank": 7,
+      "TO_id": 3,
+      "TO_string": "send button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 15,
+      "pred_score": 0.517075,
+      "margin": 0.019875,
+      "gt_max_sim": 0.497201
+    },
+    {
+      "rank": 8,
+      "TO_id": 12,
+      "TO_string": "forward arrow",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 50,
+      "pred_score": 0.57823,
+      "margin": 0.001979,
+      "gt_max_sim": 0.479981
+    },
+    {
+      "rank": 9,
+      "TO_id": 5,
+      "TO_string": "share icon",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 36,
+      "pred_score": 0.510042,
+      "margin": 0.035739,
+      "gt_max_sim": 0.474303
+    },
+    {
+      "rank": 10,
+      "TO_id": 8,
+      "TO_string": "send message",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 15,
+      "pred_score": 0.51824,
+      "margin": 0.044633,
+      "gt_max_sim": 0.473607
+    },
+    {
+      "rank": 11,
+      "TO_id": 1,
+      "TO_string": "share button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 36,
+      "pred_score": 0.509687,
+      "margin": 0.022454,
+      "gt_max_sim": 0.457006
+    },
+    {
+      "rank": 12,
+      "TO_id": 4,
+      "TO_string": "paper plane icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 9,
+      "pred_score": 0.454834,
+      "margin": 0.0387,
+      "gt_max_sim": 0.416133
+    },
+    {
+      "rank": 13,
+      "TO_id": 10,
+      "TO_string": "Share button",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 47,
+      "pred_score": 0.493487,
+      "margin": 0.011137,
+      "gt_max_sim": 0.409376
+    }
+  ]
+}

@@ -1,0 +1,774 @@
+[
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "",
+    "text": "Book info",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      189,
+      170,
+      426,
+      248
+    ],
+    "rel-bounds": [
+      189,
+      34,
+      426,
+      112
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 0,
+    "ager_label": "Book info"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": true,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      975,
+      146,
+      1080,
+      272
+    ],
+    "rel-bounds": [
+      254,
+      10,
+      359,
+      136
+    ],
+    "content-desc": [
+      "More options"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 1,
+    "ager_label": "More options"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageButton",
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageButton",
+    "package": "com.obreey.reader",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      147,
+      283
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      147,
+      147
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 2,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.ViewGroup",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/toolbar",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      1080,
+      283
+    ],
+    "rel-bounds": [
+      0,
+      136,
+      1080,
+      283
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 3,
+    "ager_label": "toolbar"
+  },
+  {
+    "ancestors": [
+      "android.widget.Button",
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Button",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/book_menu_edit",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      721,
+      136,
+      848,
+      283
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      127,
+      147
+    ],
+    "content-desc": [
+      "Edit"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 4,
+    "ager_label": "Edit"
+  },
+  {
+    "ancestors": [
+      "android.widget.Button",
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Button",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/menu_shortcut",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      848,
+      136,
+      975,
+      283
+    ],
+    "rel-bounds": [
+      127,
+      0,
+      254,
+      147
+    ],
+    "content-desc": [
+      "Create shortcut"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 5,
+    "ager_label": "Create shortcut"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/thumbnail",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      343,
+      283,
+      763,
+      939
+    ],
+    "rel-bounds": [
+      343,
+      0,
+      763,
+      656
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 6,
+    "ager_label": "thumbnail"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/iv_location",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      626,
+      802,
+      752,
+      928
+    ],
+    "rel-bounds": [
+      272,
+      519,
+      398,
+      645
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 7,
+    "ager_label": "iv_location"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/bookinfo",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      283,
+      1080,
+      1457
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      1174
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 8,
+    "ager_label": "bookinfo"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/tv_title",
+    "text": "The Queen's Gambit",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": true,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      47,
+      965,
+      1059,
+      1062
+    ],
+    "rel-bounds": [
+      47,
+      682,
+      1059,
+      779
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 9,
+    "ager_label": "The Queen's Gambit"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/tv_authors",
+    "text": "Walter Tevis",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      47,
+      1083,
+      1059,
+      1161
+    ],
+    "rel-bounds": [
+      47,
+      800,
+      1059,
+      878
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 10,
+    "ager_label": "Walter Tevis"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/action_bar_root",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      0,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      2337
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 11,
+    "ager_label": "action_bar_root"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/tv_filename",
+    "text": " The Queen's Gambit.pdf",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      376,
+      1197,
+      816,
+      1252
+    ],
+    "rel-bounds": [
+      107,
+      20,
+      547,
+      75
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 12,
+    "ager_label": "The Queen's Gambit.pdf"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/imageView",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      280,
+      1188,
+      354,
+      1262
+    ],
+    "rel-bounds": [
+      11,
+      11,
+      85,
+      85
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 13,
+    "ager_label": "imageView"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "com.obreey.reader",
+    "resource-id": "com.obreey.reader:id/ll_files",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      243,
+      1177,
+      853,
+      1273
+    ],
+    "rel-bounds": [
+      243,
+      894,
+      853,
+      990
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 14,
+    "ager_label": "ll_files"
+  },
+  {
+    "ancestors": [
+      "android.widget.Button",
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Button",
+    "package": "com.obreey.reader",
+    "resource-id": "",
+    "text": "Open",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      68,
+      1305,
+      1038,
+      1441
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      970,
+      136
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 15,
+    "ager_label": "Open"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "com.obreey.reader",
+    "resource-id": "android:id/navigationBarBackground",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "rel-bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 16,
+    "ager_label": "navigationBarBackground"
+  }
+]

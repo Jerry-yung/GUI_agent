@@ -1,0 +1,113 @@
+{
+  "stem": "00000020_001",
+  "gt_node_ids": [
+    2,
+    13,
+    3,
+    14,
+    4
+  ],
+  "total_tos": 7,
+  "hit_tos": 6,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 1,
+      "TO_string": "Mobile category",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.594524,
+      "margin": 0.090923,
+      "gt_max_sim": 0.594524
+    },
+    {
+      "rank": 2,
+      "TO_id": 3,
+      "TO_string": "Mobile Category",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.583844,
+      "margin": 0.082136,
+      "gt_max_sim": 0.583844
+    },
+    {
+      "rank": 3,
+      "TO_id": 0,
+      "TO_string": "Mobile",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.567195,
+      "margin": 0.12673,
+      "gt_max_sim": 0.567195
+    },
+    {
+      "rank": 4,
+      "TO_id": 5,
+      "TO_string": "Mobile link",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.564452,
+      "margin": 0.07491,
+      "gt_max_sim": 0.564452
+    },
+    {
+      "rank": 5,
+      "TO_id": 4,
+      "TO_string": "top left Mobile",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.498413,
+      "margin": 0.07949,
+      "gt_max_sim": 0.498413
+    },
+    {
+      "rank": 6,
+      "TO_id": 2,
+      "TO_string": "Mobile tab",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 13,
+      "pred_score": 0.490536,
+      "margin": 0.044559,
+      "gt_max_sim": 0.490536
+    },
+    {
+      "rank": 7,
+      "TO_id": 6,
+      "TO_string": "Category link",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 26,
+      "pred_score": 0.435125,
+      "margin": 0.006775,
+      "gt_max_sim": 0.354786
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000160_001",
+  "episode_id": "00000160",
+  "step_idx": 1,
+  "action_type": "click",
+  "episode_goal": "I want to share ''Oscar and the wolf -somebody wants '' music to my friend karin.iversen@example.com via gmail ",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 7
+}

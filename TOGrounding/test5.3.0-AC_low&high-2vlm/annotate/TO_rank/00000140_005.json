@@ -1,0 +1,133 @@
+{
+  "stem": "00000140_005",
+  "gt_node_ids": [
+    0
+  ],
+  "total_tos": 9,
+  "hit_tos": 9,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 8,
+      "TO_string": "Email service option",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.424503,
+      "margin": 0.424503,
+      "gt_max_sim": 0.424503
+    },
+    {
+      "rank": 2,
+      "TO_id": 1,
+      "TO_string": "Gmail link",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.414982,
+      "margin": 0.414982,
+      "gt_max_sim": 0.414982
+    },
+    {
+      "rank": 3,
+      "TO_id": 5,
+      "TO_string": "Mail app",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.409451,
+      "margin": 0.409451,
+      "gt_max_sim": 0.409451
+    },
+    {
+      "rank": 4,
+      "TO_id": 4,
+      "TO_string": "Email option",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.403657,
+      "margin": 0.403657,
+      "gt_max_sim": 0.403657
+    },
+    {
+      "rank": 5,
+      "TO_id": 3,
+      "TO_string": "Google Mail",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.387342,
+      "margin": 0.387342,
+      "gt_max_sim": 0.387342
+    },
+    {
+      "rank": 6,
+      "TO_id": 0,
+      "TO_string": "Gmail",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.37741,
+      "margin": 0.37741,
+      "gt_max_sim": 0.37741
+    },
+    {
+      "rank": 7,
+      "TO_id": 7,
+      "TO_string": "Email service",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.364126,
+      "margin": 0.364126,
+      "gt_max_sim": 0.364126
+    },
+    {
+      "rank": 8,
+      "TO_id": 2,
+      "TO_string": "Gmail icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.361941,
+      "margin": 0.361941,
+      "gt_max_sim": 0.361941
+    },
+    {
+      "rank": 9,
+      "TO_id": 6,
+      "TO_string": "Email",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 0,
+      "pred_score": 0.322452,
+      "margin": 0.322452,
+      "gt_max_sim": 0.322452
+    }
+  ]
+}

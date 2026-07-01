@@ -1,0 +1,36 @@
+{
+  "schema_version": "4.1.0-eval",
+  "run_path": "/Users/yangyuntian/Desktop/My doc/华东师范大学各类活动与事情/S4/GUI/GUI_agent/test4.1.0-AC_high/runs/ac_high_step0_qwen-vl-max.json",
+  "ac_mode": "high",
+  "vlm_model": "qwen-vl-max",
+  "top_k": 3,
+  "evaluated_at": "2026-06-12T16:38:58",
+  "total_steps": 1,
+  "type_correct": 0,
+  "step_correct": 0,
+  "type_acc": 0.0,
+  "step_acc": 0.0,
+  "by_action_type": {
+    "navigate_back": {
+      "count": 1,
+      "type_acc": 0.0,
+      "step_acc": 0.0
+    }
+  },
+  "steps": [
+    {
+      "episode_id": "00000020",
+      "stem": "00000020_000",
+      "step_idx": 0,
+      "step_status": "ok",
+      "has_annotated_nodes": null,
+      "type_correct": false,
+      "step_correct": false,
+      "gt_action_type": "navigate_back",
+      "pred_action_type": "click",
+      "detail": {
+        "reason": "type_mismatch"
+      }
+    }
+  ]
+}

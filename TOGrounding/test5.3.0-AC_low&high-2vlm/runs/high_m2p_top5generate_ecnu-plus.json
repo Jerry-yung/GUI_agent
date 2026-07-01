@@ -1,0 +1,81 @@
+[
+  {
+    "episode_id": "00000000",
+    "ac_mode": "high",
+    "goal": "Open the Zoho Meet app , view the scheduled meetings .",
+    "num_steps": 2,
+    "status": "ok",
+    "steps": [
+      {
+        "step_idx": 0,
+        "stem": "00000000_000",
+        "status": "skipped",
+        "skip_reason": "open_app_gt",
+        "gt": {
+          "action_type": "open_app",
+          "app_name": "Zoho Meeting"
+        },
+        "gt_action_type": "open_app"
+      },
+      {
+        "step_idx": 1,
+        "stem": "00000000_001",
+        "status": "ok",
+        "goal": "Open the Zoho Meet app , view the scheduled meetings .",
+        "display_instruction": "wait for the app to load",
+        "to_prompt_text": "wait for the app to load",
+        "target_object": "",
+        "has_annotated_nodes": false,
+        "top_k_nodes": [],
+        "annotated_screenshot": "annotate/annotated_screenshots/top_5/00000000/001.png",
+        "annotation_fallback_reason": "no_grounding",
+        "planner_decision": {
+          "thought": "The screen is currently blank with a blue background, indicating that the Zoho Meet app might be loading or there is no visible UI to interact with. Since the task goal is to view scheduled meetings and no interactive elements are visible, waiting for the app to load further is appropriate.",
+          "task_completed": false,
+          "need_back": false,
+          "needs_grounding": false,
+          "step_instruction": "wait for the app to load",
+          "target_object": "",
+          "step_summary": "The screen shows a solid blue background, suggesting the Zoho Meet app is still loading; wait for the interface to appear."
+        },
+        "planner_raw": "{\n  \"thought\": \"The screen is currently blank with a blue background, indicating that the Zoho Meet app might be loading or there is no visible UI to interact with. Since the task goal is to view scheduled meetings and no interactive elements are visible, waiting for the app to load further is appropriate.\",\n  \"task_completed\": false,\n  \"need_back\": false,\n  \"needs_grounding\": false,\n  \"step_instruction\": \"wait for the app to load\",\n  \"target_object\": \"\",\n  \"step_summary\": \"The screen shows a solid blue background, suggesting the Zoho Meet app is still loading; wait for the interface to appear.\"\n}",
+        "vlm_to_tokens": {
+          "input": 2070,
+          "output": 136
+        },
+        "vlm_action_tokens": {
+          "input": 2182,
+          "output": 7
+        },
+        "vlm_tokens": {
+          "input": 4252,
+          "output": 143
+        },
+        "gt": {
+          "action_type": "wait"
+        },
+        "gt_action_type": "wait",
+        "pred_action": {
+          "thought": "",
+          "action_type": "wait"
+        },
+        "vlm_action_raw": "{\"action_type\":\"wait\"}",
+        "type_correct": true,
+        "step_correct": true,
+        "eval_detail": {
+          "reason": "type_only_action"
+        },
+        "retrieval_hit": null
+      }
+    ],
+    "eval": {
+      "eval_steps": 1,
+      "skipped_open_app": 1,
+      "type_correct": 1,
+      "step_correct": 1,
+      "type_acc": 1.0,
+      "step_acc": 1.0,
+      "sr": true
+    }
+  }
+]

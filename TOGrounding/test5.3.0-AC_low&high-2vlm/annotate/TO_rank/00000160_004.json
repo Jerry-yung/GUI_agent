@@ -1,0 +1,202 @@
+{
+  "stem": "00000160_004",
+  "gt_node_ids": [
+    5,
+    9,
+    6,
+    3,
+    10
+  ],
+  "total_tos": 14,
+  "hit_tos": 11,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 1,
+      "TO_string": "Gmail icon",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.703698,
+      "margin": 0.221274,
+      "gt_max_sim": 0.703698
+    },
+    {
+      "rank": 2,
+      "TO_id": 8,
+      "TO_string": "Gmail button",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.646268,
+      "margin": 0.2106,
+      "gt_max_sim": 0.646268
+    },
+    {
+      "rank": 3,
+      "TO_id": 0,
+      "TO_string": "Gmail",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.614548,
+      "margin": 0.211045,
+      "gt_max_sim": 0.614548
+    },
+    {
+      "rank": 4,
+      "TO_id": 5,
+      "TO_string": "gmail",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.603695,
+      "margin": 0.200721,
+      "gt_max_sim": 0.603695
+    },
+    {
+      "rank": 5,
+      "TO_id": 12,
+      "TO_string": "Gmail option",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.599515,
+      "margin": 0.155286,
+      "gt_max_sim": 0.599515
+    },
+    {
+      "rank": 6,
+      "TO_id": 6,
+      "TO_string": "Google Mail",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.594904,
+      "margin": 0.177583,
+      "gt_max_sim": 0.594904
+    },
+    {
+      "rank": 7,
+      "TO_id": 2,
+      "TO_string": "Gmail link",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.567173,
+      "margin": 0.089643,
+      "gt_max_sim": 0.567173
+    },
+    {
+      "rank": 8,
+      "TO_id": 13,
+      "TO_string": "Bottom left Gmail",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.532504,
+      "margin": 0.117498,
+      "gt_max_sim": 0.532504
+    },
+    {
+      "rank": 9,
+      "TO_id": 3,
+      "TO_string": "Mail app",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.460802,
+      "margin": 0.0057,
+      "gt_max_sim": 0.460802
+    },
+    {
+      "rank": 10,
+      "TO_id": 10,
+      "TO_string": "email app",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 5,
+      "pred_score": 0.450884,
+      "margin": 0.01733,
+      "gt_max_sim": 0.450884
+    },
+    {
+      "rank": 11,
+      "TO_id": 7,
+      "TO_string": "Email",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 3,
+      "pred_score": 0.395184,
+      "margin": 0.005646,
+      "gt_max_sim": 0.395184
+    },
+    {
+      "rank": 12,
+      "TO_id": 11,
+      "TO_string": "email link",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 4,
+      "pred_score": 0.408509,
+      "margin": 0.018108,
+      "gt_max_sim": 0.364543
+    },
+    {
+      "rank": 13,
+      "TO_id": 9,
+      "TO_string": "bottom left",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 2,
+      "pred_score": 0.352945,
+      "margin": 0.080663,
+      "gt_max_sim": 0.272282
+    },
+    {
+      "rank": 14,
+      "TO_id": 4,
+      "TO_string": "Bottom left corner",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 2,
+      "pred_score": 0.340977,
+      "margin": 0.10264,
+      "gt_max_sim": 0.238337
+    }
+  ]
+}

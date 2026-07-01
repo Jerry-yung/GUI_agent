@@ -1,0 +1,142 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      700,
+      156,
+      827,
+      282
+    ],
+    "text_for_emb": "Attach file"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      827,
+      156,
+      954,
+      282
+    ],
+    "text_for_emb": "Send"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      954,
+      156,
+      1080,
+      282
+    ],
+    "text_for_emb": "More options"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      0,
+      146,
+      147,
+      293
+    ],
+    "text_for_emb": "Navigate up"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      42,
+      304,
+      189,
+      451
+    ],
+    "text_for_emb": "From From"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      933,
+      452,
+      1080,
+      599
+    ],
+    "text_for_emb": "Add Cc/Bcc"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      189,
+      463,
+      954,
+      589
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      42,
+      590,
+      1038,
+      742
+    ],
+    "text_for_emb": "Subject"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      42,
+      785,
+      1042,
+      842
+    ],
+    "text_for_emb": "Compose email"
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      42,
+      743,
+      1042,
+      885
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      32,
+      953,
+      883,
+      1123
+    ],
+    "text_for_emb": "PDF,  The Queen's Gambit.pdf, Remove attachment  The Queen's Gambit.pdf button"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      735,
+      975,
+      861,
+      1101
+    ],
+    "text_for_emb": "Remove attachment  The Queen's Gambit.pdf"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      0,
+      953,
+      1080,
+      1144
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      0,
+      1207,
+      1080,
+      2326
+    ],
+    "text_for_emb": ""
+  }
+]

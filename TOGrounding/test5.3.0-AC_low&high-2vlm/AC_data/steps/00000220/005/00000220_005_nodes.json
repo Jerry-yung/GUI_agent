@@ -1,0 +1,152 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      975,
+      146,
+      1080,
+      272
+    ],
+    "text_for_emb": "More options"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      0,
+      136,
+      147,
+      283
+    ],
+    "text_for_emb": "Navigate up"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      189,
+      174,
+      396,
+      245
+    ],
+    "text_for_emb": "Today"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      828,
+      136,
+      975,
+      283
+    ],
+    "text_for_emb": "Share"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      806,
+      336,
+      932,
+      462
+    ],
+    "text_for_emb": "Insights"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      943,
+      336,
+      1069,
+      462
+    ],
+    "text_for_emb": "Add Workout"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      42,
+      525,
+      1038,
+      693
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      0,
+      735,
+      1080,
+      903
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      943,
+      756,
+      1069,
+      882
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      855,
+      987,
+      1059,
+      1080
+    ],
+    "text_for_emb": "VIEW ALL"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      0,
+      283,
+      1080,
+      2211
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      29,
+      1107,
+      579,
+      1442
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      595,
+      1107,
+      1080,
+      1442
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      0,
+      1107,
+      1080,
+      1479
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      0,
+      2211,
+      1080,
+      2337
+    ],
+    "text_for_emb": "HOME"
+  }
+]

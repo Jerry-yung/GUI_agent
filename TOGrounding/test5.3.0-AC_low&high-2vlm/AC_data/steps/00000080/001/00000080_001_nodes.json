@@ -1,0 +1,542 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      828,
+      144,
+      933,
+      249
+    ],
+    "text_for_emb": "Compose"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      954,
+      144,
+      1059,
+      249
+    ],
+    "text_for_emb": "Search mail"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      29,
+      139,
+      155,
+      265
+    ],
+    "text_for_emb": "Sidebar button. Double tap or slide two fingers from the left of the screen to expand."
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      0,
+      139,
+      339,
+      265
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      171,
+      204,
+      339,
+      250
+    ],
+    "text_for_emb": "243 unread"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      53,
+      265,
+      261,
+      391
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      282,
+      265,
+      598,
+      391
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      619,
+      265,
+      856,
+      391
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      877,
+      265,
+      1080,
+      391
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      0,
+      412,
+      1080,
+      429
+    ],
+    "text_for_emb": "Unread Email\nMail Delivery Subsystem\nDelivery Status Notification (Failure)"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      977,
+      462,
+      1033,
+      508
+    ],
+    "text_for_emb": "20 hours ago 20h"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      0,
+      432,
+      1080,
+      643
+    ],
+    "text_for_emb": "Unread Email\ndbwscratch.test.id4@gmail.com, Me & Cerebra Research\nRe: Fwd: OFFICIAL WEEKEND PARTY"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      42,
+      490,
+      147,
+      595
+    ],
+    "text_for_emb": "Profile\ndbwscratch.test.id4@gmail.com, Me & Cerebra Research"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      980,
+      558,
+      1033,
+      611
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      995,
+      676,
+      1033,
+      722
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      0,
+      646,
+      1080,
+      857
+    ],
+    "text_for_emb": "Unread Email\nMe & Cerebra Research\nFwd: Independence day celebration"
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      42,
+      704,
+      147,
+      809
+    ],
+    "text_for_emb": "Profile\nMe & Cerebra Research"
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      980,
+      772,
+      1033,
+      825
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      977,
+      890,
+      1033,
+      936
+    ],
+    "text_for_emb": "23 hours ago 23h"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      0,
+      860,
+      1080,
+      1071
+    ],
+    "text_for_emb": "Unread Email\nMail Delivery Subsystem\nDelivery Status Notification (Failure)"
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      42,
+      918,
+      147,
+      1023
+    ],
+    "text_for_emb": "Profile\nMail Delivery Subsystem"
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      980,
+      986,
+      1033,
+      1039
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      995,
+      1104,
+      1033,
+      1150
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      0,
+      1074,
+      1080,
+      1286
+    ],
+    "text_for_emb": "Email\nMe & Strava\nControl what others see on Strava"
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      42,
+      1132,
+      147,
+      1237
+    ],
+    "text_for_emb": "Profile\nMe & Strava"
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      980,
+      1200,
+      1033,
+      1253
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      995,
+      1319,
+      1033,
+      1365
+    ],
+    "text_for_emb": "1 day ago 1d"
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      0,
+      1289,
+      1080,
+      1500
+    ],
+    "text_for_emb": "Unread Email\nNimbus\nNimbus Note: Confirm Your Nimbus Account"
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      42,
+      1347,
+      147,
+      1452
+    ],
+    "text_for_emb": "Profile\nNimbus"
+  },
+  {
+    "node_id": 29,
+    "bounds": [
+      980,
+      1415,
+      1033,
+      1468
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 30,
+    "bounds": [
+      0,
+      1503,
+      1080,
+      1608
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 31,
+    "bounds": [
+      63,
+      1514,
+      147,
+      1598
+    ],
+    "text_for_emb": "Multi-select checkbox. Not checked. For emails from START_OF_THIS_WEEK"
+  },
+  {
+    "node_id": 32,
+    "bounds": [
+      210,
+      1522,
+      1080,
+      1590
+    ],
+    "text_for_emb": "THIS WEEK"
+  },
+  {
+    "node_id": 33,
+    "bounds": [
+      995,
+      1641,
+      1033,
+      1687
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 34,
+    "bounds": [
+      0,
+      1611,
+      1080,
+      1822
+    ],
+    "text_for_emb": "Unread Email\nEvernote\nFind the information you need when you need it"
+  },
+  {
+    "node_id": 35,
+    "bounds": [
+      42,
+      1669,
+      147,
+      1774
+    ],
+    "text_for_emb": "Profile\nEvernote"
+  },
+  {
+    "node_id": 36,
+    "bounds": [
+      980,
+      1737,
+      1033,
+      1790
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 37,
+    "bounds": [
+      995,
+      1855,
+      1033,
+      1901
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 38,
+    "bounds": [
+      0,
+      1825,
+      1080,
+      2036
+    ],
+    "text_for_emb": "Unread Email\nCoursera\nEarn your degree online from leading universities"
+  },
+  {
+    "node_id": 39,
+    "bounds": [
+      42,
+      1883,
+      147,
+      1988
+    ],
+    "text_for_emb": "Profile\nCoursera"
+  },
+  {
+    "node_id": 40,
+    "bounds": [
+      980,
+      1951,
+      1033,
+      2004
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 41,
+    "bounds": [
+      995,
+      2069,
+      1033,
+      2115
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 42,
+    "bounds": [
+      0,
+      2039,
+      1080,
+      2250
+    ],
+    "text_for_emb": "Unread Email\nEvernote\n💻 Add Evernote to your computer"
+  },
+  {
+    "node_id": 43,
+    "bounds": [
+      42,
+      2097,
+      147,
+      2202
+    ],
+    "text_for_emb": "Profile\nEvernote"
+  },
+  {
+    "node_id": 44,
+    "bounds": [
+      980,
+      2165,
+      1033,
+      2218
+    ],
+    "text_for_emb": "Mark as starred."
+  },
+  {
+    "node_id": 45,
+    "bounds": [
+      0,
+      2190,
+      216,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 46,
+    "bounds": [
+      216,
+      2190,
+      432,
+      2337
+    ],
+    "text_for_emb": "Shopping"
+  },
+  {
+    "node_id": 47,
+    "bounds": [
+      432,
+      2190,
+      648,
+      2337
+    ],
+    "text_for_emb": "Receipts"
+  },
+  {
+    "node_id": 48,
+    "bounds": [
+      0,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 49,
+    "bounds": [
+      648,
+      2190,
+      864,
+      2337
+    ],
+    "text_for_emb": "Subscriptions"
+  },
+  {
+    "node_id": 50,
+    "bounds": [
+      864,
+      2190,
+      1080,
+      2337
+    ],
+    "text_for_emb": "More"
+  },
+  {
+    "node_id": 51,
+    "bounds": [
+      0,
+      2253,
+      1080,
+      2337
+    ],
+    "text_for_emb": "Unread Email\nGoogle\nSecurity alert"
+  },
+  {
+    "node_id": 52,
+    "bounds": [
+      995,
+      2283,
+      1033,
+      2329
+    ],
+    "text_for_emb": "2 days ago 2d"
+  },
+  {
+    "node_id": 53,
+    "bounds": [
+      42,
+      2311,
+      147,
+      2337
+    ],
+    "text_for_emb": "Profile\nGoogle"
+  }
+]

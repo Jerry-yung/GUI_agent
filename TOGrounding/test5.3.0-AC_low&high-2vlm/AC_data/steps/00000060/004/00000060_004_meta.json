@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000060_004",
+  "episode_id": "00000060",
+  "step_idx": 4,
+  "action_type": "input_text",
+  "episode_goal": " I want to view the recipe for Welsh Cakes in the kitchen stories app.",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 6
+}

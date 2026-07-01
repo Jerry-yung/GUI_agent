@@ -1,0 +1,41 @@
+{
+  "schema_version": "4.1.0-eval",
+  "run_path": "/Users/yangyuntian/Desktop/My doc/华东师范大学各类活动与事情/S4/GUI/GUI_agent/test5.3.0-AC_low&high_mem/runs/high_m2p_top5generate_ecnu-plus.json",
+  "ac_mode": "high",
+  "agent": "m2p",
+  "vlm_model": "ecnu-plus",
+  "top_k": 5,
+  "evaluated_at": "2026-06-30T23:45:34",
+  "total_steps": 1,
+  "type_correct": 1,
+  "step_correct": 1,
+  "type_acc": 1.0,
+  "step_acc": 1.0,
+  "retrieval_eligible_steps": 0,
+  "retrieval_correct": 0,
+  "retrieval_hit_rate": 0.0,
+  "by_action_type": {
+    "wait": {
+      "count": 1,
+      "type_acc": 1.0,
+      "step_acc": 1.0
+    }
+  },
+  "steps": [
+    {
+      "episode_id": "00000000",
+      "stem": "00000000_001",
+      "step_idx": 1,
+      "step_status": "ok",
+      "has_annotated_nodes": false,
+      "type_correct": true,
+      "step_correct": true,
+      "retrieval_hit": null,
+      "gt_action_type": "wait",
+      "pred_action_type": "wait",
+      "detail": {
+        "reason": "type_only_action"
+      }
+    }
+  ]
+}

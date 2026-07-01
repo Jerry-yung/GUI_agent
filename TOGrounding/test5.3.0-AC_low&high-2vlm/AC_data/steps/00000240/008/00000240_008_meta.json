@@ -1,0 +1,13 @@
+{
+  "schema_version": "4.1.0",
+  "stem": "00000240_008",
+  "episode_id": "00000240",
+  "step_idx": 8,
+  "action_type": "click",
+  "episode_goal": "Add paintings to cart on the Rtistiq app.",
+  "screenshot_size": {
+    "width": 1080,
+    "height": 2400
+  },
+  "num_steps_in_episode": 10
+}

@@ -1,0 +1,10 @@
+{
+  "total": 300,
+  "oracle_hit_count": 278,
+  "oracle_hit_rate": 0.9267,
+  "rank1_hit_count": 278,
+  "rank1_hit_rate": 0.9267,
+  "mrr": 0.9267,
+  "avg_hit_tos": 9.0667,
+  "errors": []
+}

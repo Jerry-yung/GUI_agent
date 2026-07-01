@@ -1,0 +1,5331 @@
+[
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_action_bar_search_disabled",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      58,
+      183,
+      121,
+      246
+    ],
+    "rel-bounds": [
+      26,
+      29,
+      89,
+      92
+    ],
+    "content-desc": [
+      "Search"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 0,
+    "ager_label": "Search"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_search_hint_view",
+    "text": "milton duo dlx 1000",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      142,
+      157,
+      956,
+      272
+    ],
+    "rel-bounds": [
+      110,
+      3,
+      924,
+      118
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 1,
+    "ager_label": "milton duo dlx 1000"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_action_bar_camera_icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      982,
+      183,
+      1045,
+      246
+    ],
+    "rel-bounds": [
+      26,
+      26,
+      89,
+      89
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 2,
+    "ager_label": "chrome_action_bar_camera_icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_camera_icon_cxi_inside",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      956,
+      157,
+      1072,
+      272
+    ],
+    "rel-bounds": [
+      924,
+      3,
+      1040,
+      118
+    ],
+    "content-desc": [
+      "scan it"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 3,
+    "ager_label": "scan it"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_search_box",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      136,
+      1080,
+      294
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      158
+    ],
+    "content-desc": [
+      "Search"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 4,
+    "ager_label": "Search"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/chrome_search_edit_frame",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      32,
+      154,
+      1080,
+      285
+    ],
+    "rel-bounds": [
+      32,
+      18,
+      1080,
+      149
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 5,
+    "ager_label": "chrome_search_edit_frame"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/glow_subnav_icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      26,
+      325,
+      79,
+      378
+    ],
+    "rel-bounds": [
+      26,
+      31,
+      79,
+      84
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 6,
+    "ager_label": "glow_subnav_icon"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/glow_subnav_label",
+    "text": "Select delivery location",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      79,
+      330,
+      454,
+      374
+    ],
+    "rel-bounds": [
+      79,
+      36,
+      454,
+      80
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 7,
+    "ager_label": "Select delivery location"
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/glow_sub_nav_bar_view",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      294,
+      1080,
+      410
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      116
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 8,
+    "ager_label": "glow_sub_nav_bar_view"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Mobiles",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      42,
+      438,
+      178,
+      575
+    ],
+    "rel-bounds": [
+      32,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 9,
+    "ager_label": "Mobiles"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Electronics",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      238,
+      438,
+      372,
+      575
+    ],
+    "rel-bounds": [
+      34,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 10,
+    "ager_label": "Electronics"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Fresh",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      433,
+      438,
+      567,
+      575
+    ],
+    "rel-bounds": [
+      32,
+      0,
+      166,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 11,
+    "ager_label": "Fresh"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Fashion",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      627,
+      438,
+      761,
+      575
+    ],
+    "rel-bounds": [
+      32,
+      0,
+      166,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 12,
+    "ager_label": "Fashion"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "miniTV",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      821,
+      438,
+      958,
+      575
+    ],
+    "rel-bounds": [
+      31,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 13,
+    "ager_label": "miniTV"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Home",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1015,
+      438,
+      1152,
+      575
+    ],
+    "rel-bounds": [
+      31,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 14,
+    "ager_label": "Home"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Deals",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1212,
+      438,
+      1346,
+      575
+    ],
+    "rel-bounds": [
+      34,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 15,
+    "ager_label": "Deals"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Beauty",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1407,
+      438,
+      1540,
+      575
+    ],
+    "rel-bounds": [
+      32,
+      0,
+      165,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 16,
+    "ager_label": "Beauty"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Books, Toys",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1601,
+      438,
+      1735,
+      575
+    ],
+    "rel-bounds": [
+      32,
+      0,
+      166,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 17,
+    "ager_label": "Books, Toys"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Appliances",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1795,
+      438,
+      1929,
+      575
+    ],
+    "rel-bounds": [
+      31,
+      0,
+      165,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 18,
+    "ager_label": "Appliances"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Essentials",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1989,
+      438,
+      2126,
+      575
+    ],
+    "rel-bounds": [
+      31,
+      0,
+      168,
+      137
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 19,
+    "ager_label": "Essentials"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-1",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      10,
+      438,
+      210,
+      588
+    ],
+    "rel-bounds": [
+      10,
+      26,
+      210,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 20,
+    "ager_label": "icon-1"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-2",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      204,
+      438,
+      404,
+      588
+    ],
+    "rel-bounds": [
+      204,
+      26,
+      404,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 21,
+    "ager_label": "icon-2"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-3",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      401,
+      438,
+      598,
+      588
+    ],
+    "rel-bounds": [
+      401,
+      26,
+      598,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 22,
+    "ager_label": "icon-3"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-4",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      595,
+      438,
+      795,
+      588
+    ],
+    "rel-bounds": [
+      595,
+      26,
+      795,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 23,
+    "ager_label": "icon-4"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-5",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      790,
+      438,
+      987,
+      588
+    ],
+    "rel-bounds": [
+      790,
+      26,
+      987,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 24,
+    "ager_label": "icon-5"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-6",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      984,
+      438,
+      1183,
+      588
+    ],
+    "rel-bounds": [
+      984,
+      26,
+      1183,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 25,
+    "ager_label": "icon-6"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-7",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1178,
+      438,
+      1378,
+      588
+    ],
+    "rel-bounds": [
+      1178,
+      26,
+      1378,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 26,
+    "ager_label": "icon-7"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-8",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1375,
+      438,
+      1572,
+      588
+    ],
+    "rel-bounds": [
+      1375,
+      26,
+      1572,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 27,
+    "ager_label": "icon-8"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-9",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1569,
+      438,
+      1766,
+      588
+    ],
+    "rel-bounds": [
+      1569,
+      26,
+      1766,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 28,
+    "ager_label": "icon-9"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-10",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1764,
+      438,
+      1963,
+      588
+    ],
+    "rel-bounds": [
+      1764,
+      26,
+      1963,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 29,
+    "ager_label": "icon-10"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "icon-11",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1958,
+      438,
+      2157,
+      588
+    ],
+    "rel-bounds": [
+      1958,
+      26,
+      2157,
+      176
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 30,
+    "ager_label": "icon-11"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      10,
+      438,
+      210,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      200,
+      192
+    ],
+    "content-desc": [
+      "Mobiles Mobiles"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 31,
+    "ager_label": "Mobiles Mobiles"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      204,
+      438,
+      404,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      200,
+      192
+    ],
+    "content-desc": [
+      "Electronics Electronics"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 32,
+    "ager_label": "Electronics Electronics"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      401,
+      438,
+      598,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      197,
+      192
+    ],
+    "content-desc": [
+      "Fresh Fresh"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 33,
+    "ager_label": "Fresh Fresh"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      595,
+      438,
+      795,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      200,
+      192
+    ],
+    "content-desc": [
+      "Fashion Fashion"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 34,
+    "ager_label": "Fashion Fashion"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      790,
+      438,
+      987,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      197,
+      192
+    ],
+    "content-desc": [
+      "miniTV miniTV"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 35,
+    "ager_label": "miniTV miniTV"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      984,
+      438,
+      1183,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      199,
+      192
+    ],
+    "content-desc": [
+      "Home Home"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 36,
+    "ager_label": "Home Home"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1178,
+      438,
+      1378,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      200,
+      192
+    ],
+    "content-desc": [
+      "Deals Deals"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 37,
+    "ager_label": "Deals Deals"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1375,
+      438,
+      1572,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      197,
+      192
+    ],
+    "content-desc": [
+      "Beauty Beauty"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 38,
+    "ager_label": "Beauty Beauty"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1569,
+      438,
+      1766,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      197,
+      192
+    ],
+    "content-desc": [
+      "Books, Toys Books, Toys"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 39,
+    "ager_label": "Books, Toys Books, Toys"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1764,
+      438,
+      1963,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      199,
+      192
+    ],
+    "content-desc": [
+      "Appliances Appliances"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 40,
+    "ager_label": "Appliances Appliances"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1958,
+      438,
+      2157,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      199,
+      192
+    ],
+    "content-desc": [
+      "Essentials Essentials"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 41,
+    "ager_label": "Essentials Essentials"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "grid-top-1",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      412,
+      1084,
+      662
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      250
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 42,
+    "ager_label": "grid-top-1"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Mobiles",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      10,
+      585,
+      210,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      200,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 43,
+    "ager_label": "Mobiles"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Electronics",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      204,
+      585,
+      404,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      200,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 44,
+    "ager_label": "Electronics"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Fresh",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      401,
+      585,
+      598,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      197,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 45,
+    "ager_label": "Fresh"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Fashion",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      595,
+      585,
+      795,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      200,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 46,
+    "ager_label": "Fashion"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "miniTV",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      790,
+      585,
+      987,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      197,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 47,
+    "ager_label": "miniTV"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Home",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      984,
+      585,
+      1183,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      199,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 48,
+    "ager_label": "Home"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Deals",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1178,
+      585,
+      1378,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      200,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 49,
+    "ager_label": "Deals"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Beauty",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1375,
+      585,
+      1572,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      197,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 50,
+    "ager_label": "Beauty"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Books, Toys",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1569,
+      585,
+      1766,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      197,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 51,
+    "ager_label": "Books, Toys"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Appliances",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1764,
+      585,
+      1963,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      199,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 52,
+    "ager_label": "Appliances"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Essentials",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1958,
+      585,
+      2157,
+      630
+    ],
+    "rel-bounds": [
+      0,
+      147,
+      199,
+      192
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 53,
+    "ager_label": "Essentials"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "mobile-hero-order",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      662,
+      1084,
+      1347
+    ],
+    "rel-bounds": [
+      0,
+      250,
+      1084,
+      935
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 54,
+    "ager_label": "mobile-hero-order"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ListView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      662,
+      9736,
+      1509
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      9736,
+      847
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 55,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceT1ZeCI-1GoWy7BWjaUMQ-g",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      662,
+      1084,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      950
+    ],
+    "content-desc": [
+      "Outdoor toys"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 56,
+    "ager_label": "Outdoor toys"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceLm9UaaSGo6vGQdunmc08TQ",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1078,
+      662,
+      2163,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1085,
+      950
+    ],
+    "content-desc": [
+      "Shoes Unrec Dec"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 57,
+    "ager_label": "Shoes Unrec Dec"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceoG4vpV5QWvLqYC_2bTGH6w",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      2163,
+      662,
+      3247,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      950
+    ],
+    "content-desc": [
+      "Summer appliances"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 58,
+    "ager_label": "Summer appliances"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceCyT9gnimau6m5aqEH_T-Nw",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      3241,
+      662,
+      4326,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1085,
+      950
+    ],
+    "content-desc": [
+      "tshirt under 249"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 59,
+    "ager_label": "tshirt under 249"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstancekrGJXvkqQ3E5qr21KE5u8Q",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      4326,
+      662,
+      5410,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      950
+    ],
+    "content-desc": [
+      "Chess & carrom"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 60,
+    "ager_label": "Chess & carrom"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceeo6qm7QDdQbgwyKTYOFZsA",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      5404,
+      662,
+      6489,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1085,
+      950
+    ],
+    "content-desc": [
+      "Bluetooth Calling Smartwatches Under ₹1,999"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 61,
+    "ager_label": "Bluetooth Calling Smartwatches Under ₹1,999"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceXWauPRGTvXsuBWJXeI3QFA",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      6489,
+      662,
+      7573,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      950
+    ],
+    "content-desc": [
+      "Shop now"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 62,
+    "ager_label": "Shop now"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstanceWY-S_2s5XTcLK8HkR_QVDg",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      7567,
+      662,
+      8652,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1085,
+      950
+    ],
+    "content-desc": [
+      "Shoes Unrec Dec"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 63,
+    "ager_label": "Shoes Unrec Dec"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "CardInstancefjVtTycgU_DXqBsvj_DNsA",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      8652,
+      662,
+      9736,
+      1612
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      950
+    ],
+    "content-desc": [
+      "Water bottles & lunch boxes under 499"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 64,
+    "ager_label": "Water bottles & lunch boxes under 499"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "android:id/content",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      0,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      2337
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 65,
+    "ager_label": "content"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/mshop_webView_container",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      294,
+      1080,
+      2211
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1080,
+      1917
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 66,
+    "ager_label": "mshop_webView_container"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "gw-hero-pagination",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1299,
+      1084,
+      1326
+    ],
+    "rel-bounds": [
+      0,
+      637,
+      1084,
+      664
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 67,
+    "ager_label": "gw-hero-pagination"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.webkit.WebView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": true,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": true,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      410,
+      1084,
+      2329
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      1919
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 68,
+    "ager_label": "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Keep shopping for",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      490,
+      1373,
+      821,
+      1423
+    ],
+    "rel-bounds": [
+      0,
+      5,
+      331,
+      55
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 69,
+    "ager_label": "Keep shopping for"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "11YgrZMCywL._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      63,
+      1357,
+      202,
+      1541
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      181,
+      184
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 70,
+    "ager_label": "11YgrZMCywL._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "01svdZVyPBL._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      280,
+      1357,
+      420,
+      1541
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      182,
+      184
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 71,
+    "ager_label": "01svdZVyPBL._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "11T9rWZcO5L._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1648,
+      1357,
+      1790,
+      1541
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      184,
+      184
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 72,
+    "ager_label": "11T9rWZcO5L._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "31zb7T0DT4L._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1869,
+      1357,
+      2010,
+      1541
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      183,
+      184
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 73,
+    "ager_label": "31zb7T0DT4L._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1357,
+      244,
+      1588
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      223,
+      231
+    ],
+    "content-desc": [
+      "Amazon Pay"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 74,
+    "ager_label": "Amazon Pay"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      238,
+      1357,
+      462,
+      1588
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      224,
+      231
+    ],
+    "content-desc": [
+      "Send Money"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 75,
+    "ager_label": "Send Money"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1606,
+      1357,
+      1832,
+      1588
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      226,
+      231
+    ],
+    "content-desc": [
+      "Starting ₹299"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 76,
+    "ager_label": "Starting ₹299"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1827,
+      1357,
+      2052,
+      1588
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      225,
+      231
+    ],
+    "content-desc": [
+      "Under ₹499"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 77,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Amazon Pay",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1536,
+      244,
+      1575
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      223,
+      218
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 78,
+    "ager_label": "Amazon Pay"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Send Money",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      238,
+      1536,
+      462,
+      1575
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      224,
+      218
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 79,
+    "ager_label": "Send Money"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Starting ₹299",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1606,
+      1536,
+      1832,
+      1575
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      226,
+      218
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 80,
+    "ager_label": "Starting ₹299"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Under ₹499",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1827,
+      1536,
+      2052,
+      1575
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      225,
+      218
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 81,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      490,
+      1368,
+      829,
+      1817
+    ],
+    "rel-bounds": [
+      7,
+      11,
+      346,
+      460
+    ],
+    "content-desc": [
+      "Keep shopping for realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 82,
+    "ager_label": "Keep shopping for realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "md-grid-1",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1357,
+      462,
+      1835
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      441,
+      478
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 83,
+    "ager_label": "md-grid-1"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "gwm-dashboard-container",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": true,
+    "scrollable-vertical": true,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1344,
+      1084,
+      1848
+    ],
+    "rel-bounds": [
+      0,
+      932,
+      1084,
+      1436
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 84,
+    "ager_label": "gwm-dashboard-container"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "md-grid-2",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      483,
+      1357,
+      840,
+      1835
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      357,
+      478
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 85,
+    "ager_label": "md-grid-2"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      855,
+      1357,
+      1215,
+      1835
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      360,
+      478
+    ],
+    "content-desc": [
+      "Watches unrec "
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 86,
+    "ager_label": "Watches unrec"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "gwm-dashboard",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1357,
+      2073,
+      1835
+    ],
+    "rel-bounds": [
+      21,
+      13,
+      2073,
+      491
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 87,
+    "ager_label": "gwm-dashboard"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1231,
+      1357,
+      1590,
+      1835
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      359,
+      478
+    ],
+    "content-desc": [
+      "Comfort wear "
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 88,
+    "ager_label": "Comfort wear"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "md-grid-5",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1606,
+      1357,
+      2052,
+      1835
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      446,
+      478
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 89,
+    "ager_label": "md-grid-5"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      493,
+      1441,
+      826,
+      1772
+    ],
+    "rel-bounds": [
+      3,
+      73,
+      336,
+      404
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 90,
+    "ager_label": "realme narzo N53 (Feather Gold, 4GB+64GB) 33W Segment Fastest Charging | Slimmest Phone in Segment | 90 Hz Smooth Display"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "01kfWi91fNL._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      63,
+      1593,
+      202,
+      1775
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      181,
+      182
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 91,
+    "ager_label": "01kfWi91fNL._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "11+QX0Lvt2L._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      280,
+      1593,
+      420,
+      1775
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      182,
+      182
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 92,
+    "ager_label": "11+QX0Lvt2L._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "11phjoW9OIL._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1648,
+      1593,
+      1790,
+      1775
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      184,
+      182
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 93,
+    "ager_label": "11phjoW9OIL._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.widget.Image",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.Image",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "11k5jMe20cL._SS70_",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1869,
+      1593,
+      2010,
+      1775
+    ],
+    "rel-bounds": [
+      42,
+      0,
+      183,
+      182
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 94,
+    "ager_label": "11k5jMe20cL._SS70_"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1593,
+      244,
+      1827
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      223,
+      234
+    ],
+    "content-desc": [
+      "Scan any QR"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 95,
+    "ager_label": "Scan any QR"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      238,
+      1593,
+      462,
+      1827
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      224,
+      234
+    ],
+    "content-desc": [
+      "Pay Bills"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 96,
+    "ager_label": "Pay Bills"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1606,
+      1593,
+      1832,
+      1827
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      226,
+      234
+    ],
+    "content-desc": [
+      "Under ₹499"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 97,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1827,
+      1593,
+      2052,
+      1827
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      225,
+      234
+    ],
+    "content-desc": [
+      "Under ₹499"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 98,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Scan any QR",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      21,
+      1772,
+      244,
+      1809
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      223,
+      216
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 99,
+    "ager_label": "Scan any QR"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Pay Bills",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      238,
+      1772,
+      462,
+      1809
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      224,
+      216
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 100,
+    "ager_label": "Pay Bills"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Under ₹499",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1606,
+      1772,
+      1832,
+      1809
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      226,
+      216
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 101,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "Under ₹499",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      1827,
+      1772,
+      2052,
+      1809
+    ],
+    "rel-bounds": [
+      0,
+      179,
+      225,
+      216
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 102,
+    "ager_label": "Under ₹499"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      -5,
+      1856,
+      1086,
+      1987
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1091,
+      131
+    ],
+    "content-desc": [
+      "Pay on delivery"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 103,
+    "ager_label": "Pay on delivery"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "ad-feedback-text-c50169321647458088777c523681af4d",
+    "text": "Leave feedback on Sponsored advertisement",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1995,
+      1084,
+      2008
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      13
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 104,
+    "ager_label": "Leave feedback on Sponsored advertisement"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "gwm-Deck-atf",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1856,
+      1084,
+      2329
+    ],
+    "rel-bounds": [
+      0,
+      1444,
+      1084,
+      1917
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 105,
+    "ager_label": "gwm-Deck-atf"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      1995,
+      1084,
+      2329
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      1084,
+      334
+    ],
+    "content-desc": [
+      "cab88d39-4769-4a48-8d54-26e07bf6ccd1?aaxitk=3f24bd1a1f096f5a71b2a3724aadeb36&pd_rd_plhdr=t&dplnk=mIngress&mtv_pt=gateway&refMarker=avod_in_gw_ad_matf_Unrec_Gutargu"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 106,
+    "ager_label": "cab88d39-4769-4a48-8d54-26e07bf6ccd1?aaxitk=3f24bd1a1f096f5a71b2a3724aadeb36&pd_rd_plhdr=t&dplnk=mIngress&mtv_pt=gateway&refMarker=avod_in_gw_ad_matf_Unrec_Gutargu"
+  },
+  {
+    "ancestors": [
+      "android.widget.TextView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.TextView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/cart_count",
+    "text": "0",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      751,
+      2237,
+      774,
+      2287
+    ],
+    "rel-bounds": [
+      51,
+      24,
+      74,
+      74
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 107,
+    "ager_label": "0"
+  },
+  {
+    "ancestors": [
+      "androidx.appcompat.app.ActionBar$Tab",
+      "java.lang.Object"
+    ],
+    "class": "androidx.appcompat.app.ActionBar$Tab",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": true,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2211,
+      213,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      0,
+      213,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 108,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "androidx.appcompat.app.ActionBar$Tab",
+      "java.lang.Object"
+    ],
+    "class": "androidx.appcompat.app.ActionBar$Tab",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      213,
+      2211,
+      431,
+      2337
+    ],
+    "rel-bounds": [
+      213,
+      0,
+      431,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 109,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "android.widget.LinearLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.LinearLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/bottom_overlay_bar_container",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2211,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      0,
+      2075,
+      1080,
+      2201
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 110,
+    "ager_label": "bottom_overlay_bar_container"
+  },
+  {
+    "ancestors": [
+      "androidx.appcompat.app.ActionBar$Tab",
+      "java.lang.Object"
+    ],
+    "class": "androidx.appcompat.app.ActionBar$Tab",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      431,
+      2211,
+      649,
+      2337
+    ],
+    "rel-bounds": [
+      431,
+      0,
+      649,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 111,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "androidx.appcompat.app.ActionBar$Tab",
+      "java.lang.Object"
+    ],
+    "class": "androidx.appcompat.app.ActionBar$Tab",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      649,
+      2211,
+      867,
+      2337
+    ],
+    "rel-bounds": [
+      649,
+      0,
+      867,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 112,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "androidx.appcompat.app.ActionBar$Tab",
+      "java.lang.Object"
+    ],
+    "class": "androidx.appcompat.app.ActionBar$Tab",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": true,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": true,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      867,
+      2211,
+      1080,
+      2337
+    ],
+    "rel-bounds": [
+      867,
+      0,
+      1080,
+      126
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 113,
+    "ager_label": ""
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/bottom_tab_button_icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": true,
+    "visible-to-user": true,
+    "bounds": [
+      46,
+      2213,
+      162,
+      2337
+    ],
+    "rel-bounds": [
+      46,
+      2,
+      162,
+      126
+    ],
+    "content-desc": [
+      "Home Tab 1 of 5"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 114,
+    "ager_label": "Home Tab 1 of 5"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      264,
+      2213,
+      380,
+      2337
+    ],
+    "rel-bounds": [
+      51,
+      2,
+      167,
+      126
+    ],
+    "content-desc": [
+      "Your Amazon.com Tab 2 of 5"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 115,
+    "ager_label": "Your Amazon.com Tab 2 of 5"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/bottom_tab_button_icon_cs",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      482,
+      2213,
+      598,
+      2337
+    ],
+    "rel-bounds": [
+      51,
+      2,
+      167,
+      126
+    ],
+    "content-desc": [
+      "Context switcher. Switch between various contexts like Amazon Pay, miniTV, etc. Tab 3 of 5"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 116,
+    "ager_label": "Context switcher. Switch between various contexts like Amazon Pay, miniTV, etc. Tab 3 of 5"
+  },
+  {
+    "ancestors": [
+      "android.widget.FrameLayout",
+      "android.view.ViewGroup",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.FrameLayout",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      700,
+      2213,
+      816,
+      2337
+    ],
+    "rel-bounds": [
+      51,
+      2,
+      167,
+      126
+    ],
+    "content-desc": [
+      "Cart 0 item Tab 4 of 5"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 117,
+    "ager_label": "Cart 0 item Tab 4 of 5"
+  },
+  {
+    "ancestors": [
+      "android.widget.ImageView",
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.widget.ImageView",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "in.amazon.mShop.android.shopping:id/bottom_tab_button_icon",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      918,
+      2213,
+      1034,
+      2337
+    ],
+    "rel-bounds": [
+      51,
+      2,
+      167,
+      126
+    ],
+    "content-desc": [
+      "Menu. Contains your orders, your account, shop by department, programmes and features, settings and customer service Tab 5 of 5"
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 118,
+    "ager_label": "Menu. Contains your orders, your account, shop by department, programmes and features, settings and customer service Tab 5 of 5"
+  },
+  {
+    "ancestors": [
+      "android.view.View",
+      "java.lang.Object"
+    ],
+    "class": "android.view.View",
+    "package": "in.amazon.mShop.android.shopping",
+    "resource-id": "android:id/navigationBarBackground",
+    "text": "",
+    "clickable": false,
+    "long-clickable": false,
+    "checkable": false,
+    "checked": false,
+    "enabled": true,
+    "focusable": false,
+    "focused": false,
+    "scrollable-horizontal": false,
+    "scrollable-vertical": false,
+    "password": false,
+    "selected": false,
+    "visible-to-user": true,
+    "bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "rel-bounds": [
+      0,
+      2337,
+      1080,
+      2400
+    ],
+    "content-desc": [
+      null
+    ],
+    "visibility": "visible",
+    "pressed": "not_pressed",
+    "draw": true,
+    "adapter-view": false,
+    "abs-pos": true,
+    "ager_id": 119,
+    "ager_label": "navigationBarBackground"
+  }
+]

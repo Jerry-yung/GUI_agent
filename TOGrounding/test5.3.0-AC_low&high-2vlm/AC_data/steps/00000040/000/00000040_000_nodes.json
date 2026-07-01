@@ -1,0 +1,392 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      919,
+      144,
+      993,
+      218
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      993,
+      144,
+      1067,
+      218
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      749,
+      146,
+      854,
+      272
+    ],
+    "text_for_emb": "Wishlist"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      854,
+      146,
+      959,
+      272
+    ],
+    "text_for_emb": "Cart"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      959,
+      146,
+      1064,
+      272
+    ],
+    "text_for_emb": "SHARE"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      0,
+      136,
+      74,
+      283
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      74,
+      157,
+      717,
+      262
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      100,
+      164,
+      717,
+      256
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      37,
+      244,
+      1054,
+      354
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      943,
+      244,
+      1054,
+      354
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      42,
+      301,
+      588,
+      354
+    ],
+    "text_for_emb": "Showing 630 results for 3 seater sofa"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      0,
+      285,
+      1080,
+      373
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      102,
+      394,
+      980,
+      446
+    ],
+    "text_for_emb": "Enter your Pincode"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      42,
+      397,
+      89,
+      444
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      0,
+      373,
+      1080,
+      468
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      980,
+      389,
+      1043,
+      452
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      32,
+      382,
+      266,
+      714
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      266,
+      382,
+      500,
+      714
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      500,
+      382,
+      734,
+      714
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      734,
+      382,
+      968,
+      714
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      968,
+      382,
+      1080,
+      714
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      0,
+      382,
+      1080,
+      730
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      5,
+      473,
+      538,
+      1251
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      542,
+      473,
+      1075,
+      1251
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      931,
+      1006,
+      1054,
+      1069
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      0,
+      730,
+      1080,
+      1384
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      815,
+      1235,
+      1080,
+      1342
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      0,
+      1418,
+      1080,
+      1664
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      5,
+      1256,
+      538,
+      2034
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 29,
+    "bounds": [
+      542,
+      1256,
+      1075,
+      2034
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 30,
+    "bounds": [
+      861,
+      1706,
+      1038,
+      1772
+    ],
+    "text_for_emb": "View All"
+  },
+  {
+    "node_id": 31,
+    "bounds": [
+      0,
+      1664,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 32,
+    "bounds": [
+      42,
+      1814,
+      352,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 33,
+    "bounds": [
+      384,
+      1814,
+      694,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 34,
+    "bounds": [
+      0,
+      1814,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 35,
+    "bounds": [
+      5,
+      2039,
+      538,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 36,
+    "bounds": [
+      542,
+      2039,
+      1075,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 37,
+    "bounds": [
+      0,
+      2214,
+      540,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 38,
+    "bounds": [
+      540,
+      2214,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  }
+]

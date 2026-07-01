@@ -1,0 +1,132 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      99,
+      382,
+      259,
+      445
+    ],
+    "text_for_emb": "Cloudy, 33°C 33°C"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      57,
+      1469,
+      267,
+      1741
+    ],
+    "text_for_emb": "Play Store Play Store"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      309,
+      1469,
+      519,
+      1741
+    ],
+    "text_for_emb": "Gmail Gmail"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      561,
+      1469,
+      771,
+      1741
+    ],
+    "text_for_emb": "Photos Photos"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      813,
+      1469,
+      1023,
+      1741
+    ],
+    "text_for_emb": "YouTube YouTube"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      76,
+      1873,
+      249,
+      2068
+    ],
+    "text_for_emb": "Phone Phone"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      328,
+      1873,
+      501,
+      2068
+    ],
+    "text_for_emb": "Messages Messages"
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      580,
+      1873,
+      753,
+      2068
+    ],
+    "text_for_emb": "Chrome Chrome"
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      832,
+      1873,
+      1004,
+      2068
+    ],
+    "text_for_emb": "Camera Camera"
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      86,
+      2144,
+      212,
+      2270
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      75,
+      2125,
+      1004,
+      2290
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      741,
+      2125,
+      867,
+      2290
+    ],
+    "text_for_emb": "Voice search"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      867,
+      2125,
+      993,
+      2290
+    ],
+    "text_for_emb": "Google Lens"
+  }
+]

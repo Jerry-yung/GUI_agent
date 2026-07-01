@@ -1,0 +1,163 @@
+{
+  "stem": "00000240_008",
+  "gt_node_ids": [
+    36,
+    37,
+    38,
+    41,
+    34
+  ],
+  "total_tos": 11,
+  "hit_tos": 11,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 1,
+      "TO_string": "Add to Cart button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": true,
+      "pred_node_id": 36,
+      "pred_score": 0.578132,
+      "margin": 0.031388,
+      "gt_max_sim": 0.578132
+    },
+    {
+      "rank": 2,
+      "TO_id": 0,
+      "TO_string": "Add to Cart",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 36,
+      "pred_score": 0.545818,
+      "margin": 0.045011,
+      "gt_max_sim": 0.545818
+    },
+    {
+      "rank": 3,
+      "TO_id": 2,
+      "TO_string": "Cart button",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.478708,
+      "margin": 0.010073,
+      "gt_max_sim": 0.478708
+    },
+    {
+      "rank": 4,
+      "TO_id": 3,
+      "TO_string": "Cart Button",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 36,
+      "pred_score": 0.467433,
+      "margin": 0.002122,
+      "gt_max_sim": 0.467433
+    },
+    {
+      "rank": 5,
+      "TO_id": 6,
+      "TO_string": "cart icon",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.424321,
+      "margin": 0.05136,
+      "gt_max_sim": 0.424321
+    },
+    {
+      "rank": 6,
+      "TO_id": 4,
+      "TO_string": "Add Button",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 36,
+      "pred_score": 0.404299,
+      "margin": 0.007989,
+      "gt_max_sim": 0.404299
+    },
+    {
+      "rank": 7,
+      "TO_id": 9,
+      "TO_string": "Add item",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.39962,
+      "margin": 0.019746,
+      "gt_max_sim": 0.39962
+    },
+    {
+      "rank": 8,
+      "TO_id": 5,
+      "TO_string": "Add Item",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.39833,
+      "margin": 0.011645,
+      "gt_max_sim": 0.39833
+    },
+    {
+      "rank": 9,
+      "TO_id": 10,
+      "TO_string": "Bottom right add",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.389691,
+      "margin": 0.046243,
+      "gt_max_sim": 0.389691
+    },
+    {
+      "rank": 10,
+      "TO_id": 7,
+      "TO_string": "buy button",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 36,
+      "pred_score": 0.387401,
+      "margin": 0.00777,
+      "gt_max_sim": 0.387401
+    },
+    {
+      "rank": 11,
+      "TO_id": 8,
+      "TO_string": "Bottom-right add",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": true,
+      "pred_node_id": 34,
+      "pred_score": 0.377758,
+      "margin": 0.027916,
+      "gt_max_sim": 0.377758
+    }
+  ]
+}

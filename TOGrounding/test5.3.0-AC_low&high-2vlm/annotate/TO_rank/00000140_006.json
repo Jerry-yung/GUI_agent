@@ -1,0 +1,214 @@
+{
+  "stem": "00000140_006",
+  "gt_node_ids": [
+    4,
+    3,
+    7,
+    6,
+    8
+  ],
+  "total_tos": 15,
+  "hit_tos": 2,
+  "oracle_hit": true,
+  "rank1_hit": true,
+  "first_hit_rank": 1,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 6,
+      "TO_string": "text entry area",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 8,
+      "pred_score": 0.456797,
+      "margin": 0.041809,
+      "gt_max_sim": 0.456797
+    },
+    {
+      "rank": 2,
+      "TO_id": 7,
+      "TO_string": "second input",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": true,
+      "pred_node_id": 7,
+      "pred_score": 0.387566,
+      "margin": 0.008871,
+      "gt_max_sim": 0.387566
+    },
+    {
+      "rank": 3,
+      "TO_id": 3,
+      "TO_string": "next text box",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.468834,
+      "margin": 0.033421,
+      "gt_max_sim": 0.435413
+    },
+    {
+      "rank": 4,
+      "TO_id": 14,
+      "TO_string": "second text field",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.40774,
+      "margin": 0.023751,
+      "gt_max_sim": 0.383989
+    },
+    {
+      "rank": 5,
+      "TO_id": 0,
+      "TO_string": "second input field",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.410889,
+      "margin": 0.040547,
+      "gt_max_sim": 0.370342
+    },
+    {
+      "rank": 6,
+      "TO_id": 2,
+      "TO_string": "text field 2",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.378468,
+      "margin": 0.021488,
+      "gt_max_sim": 0.356979
+    },
+    {
+      "rank": 7,
+      "TO_id": 4,
+      "TO_string": "second textbox",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.39819,
+      "margin": 0.042159,
+      "gt_max_sim": 0.356031
+    },
+    {
+      "rank": 8,
+      "TO_id": 9,
+      "TO_string": "second text box",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.403904,
+      "margin": 0.039176,
+      "gt_max_sim": 0.355407
+    },
+    {
+      "rank": 9,
+      "TO_id": 13,
+      "TO_string": "second input box",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.396041,
+      "margin": 0.048061,
+      "gt_max_sim": 0.347418
+    },
+    {
+      "rank": 10,
+      "TO_id": 8,
+      "TO_string": "input field 2",
+      "TO_LLM": [
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.363602,
+      "margin": 0.021639,
+      "gt_max_sim": 0.341963
+    },
+    {
+      "rank": 11,
+      "TO_id": 12,
+      "TO_string": "Second text field",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.38087,
+      "margin": 0.039582,
+      "gt_max_sim": 0.341288
+    },
+    {
+      "rank": 12,
+      "TO_id": 11,
+      "TO_string": "Input field 2",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.358468,
+      "margin": 0.020229,
+      "gt_max_sim": 0.338239
+    },
+    {
+      "rank": 13,
+      "TO_id": 1,
+      "TO_string": "input box two",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.379944,
+      "margin": 0.030615,
+      "gt_max_sim": 0.326859
+    },
+    {
+      "rank": 14,
+      "TO_id": 5,
+      "TO_string": "input box 2",
+      "TO_LLM": [
+        "qwen3.6-plus"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.352007,
+      "margin": 0.029001,
+      "gt_max_sim": 0.323006
+    },
+    {
+      "rank": 15,
+      "TO_id": 10,
+      "TO_string": "Second input box",
+      "TO_LLM": [
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 5,
+      "pred_score": 0.370307,
+      "margin": 0.051174,
+      "gt_max_sim": 0.319134
+    }
+  ]
+}

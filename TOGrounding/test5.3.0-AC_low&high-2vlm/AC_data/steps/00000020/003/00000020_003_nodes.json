@@ -1,0 +1,292 @@
+[
+  {
+    "node_id": 0,
+    "bounds": [
+      956,
+      157,
+      1072,
+      272
+    ],
+    "text_for_emb": "scan it"
+  },
+  {
+    "node_id": 1,
+    "bounds": [
+      0,
+      136,
+      116,
+      294
+    ],
+    "text_for_emb": "Back"
+  },
+  {
+    "node_id": 2,
+    "bounds": [
+      116,
+      136,
+      1080,
+      294
+    ],
+    "text_for_emb": "Search"
+  },
+  {
+    "node_id": 3,
+    "bounds": [
+      0,
+      294,
+      1047,
+      420
+    ],
+    "text_for_emb": "Electronics"
+  },
+  {
+    "node_id": 4,
+    "bounds": [
+      385,
+      483,
+      682,
+      551
+    ],
+    "text_for_emb": "Accessories"
+  },
+  {
+    "node_id": 5,
+    "bounds": [
+      687,
+      483,
+      1097,
+      551
+    ],
+    "text_for_emb": "iQOO Quest Days"
+  },
+  {
+    "node_id": 6,
+    "bounds": [
+      34,
+      485,
+      378,
+      559
+    ],
+    "text_for_emb": "Smartphones"
+  },
+  {
+    "node_id": 7,
+    "bounds": [
+      0,
+      448,
+      1084,
+      611
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 8,
+    "bounds": [
+      34,
+      829,
+      543,
+      1338
+    ],
+    "text_for_emb": "NCEMI"
+  },
+  {
+    "node_id": 9,
+    "bounds": [
+      538,
+      829,
+      1044,
+      1338
+    ],
+    "text_for_emb": "exchange"
+  },
+  {
+    "node_id": 10,
+    "bounds": [
+      0,
+      294,
+      1084,
+      2213
+    ],
+    "text_for_emb": "Mobile Phones: Buy New Mobiles Online at Best Prices in India | Buy Cell Phones Online - Amazon.in"
+  },
+  {
+    "node_id": 11,
+    "bounds": [
+      34,
+      1333,
+      543,
+      1842
+    ],
+    "text_for_emb": "EW"
+  },
+  {
+    "node_id": 12,
+    "bounds": [
+      538,
+      1333,
+      1044,
+      1842
+    ],
+    "text_for_emb": "AJFP"
+  },
+  {
+    "node_id": 13,
+    "bounds": [
+      -4328,
+      1900,
+      -3244,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_9?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&node=82594227031&ref_=CLP_MH3_Cathero9_AJFP"
+  },
+  {
+    "node_id": 14,
+    "bounds": [
+      -3247,
+      1900,
+      -2163,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_1?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&ie=UTF8&ref_=CLP_MH3_Cathero2_iqoo11"
+  },
+  {
+    "node_id": 15,
+    "bounds": [
+      -2165,
+      1900,
+      -1081,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_2?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&ie=UTF8&ref_=CLP_MH3_Cathero3_SSGM14"
+  },
+  {
+    "node_id": 16,
+    "bounds": [
+      -1084,
+      1900,
+      0,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_3?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&node=84642364031&ref_=CLP_MH3_Cathero3_itelS23"
+  },
+  {
+    "node_id": 17,
+    "bounds": [
+      0,
+      1900,
+      1084,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_4?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&ie=UTF8&ref_=CLP_MH3_Cathero5_realmeN55"
+  },
+  {
+    "node_id": 18,
+    "bounds": [
+      1081,
+      1900,
+      2165,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_5?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&ie=UTF8&ref_=CLP_MH3_Cathero7_Redmi12C"
+  },
+  {
+    "node_id": 19,
+    "bounds": [
+      2163,
+      1900,
+      3247,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_6?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&node=84732872031&ref_=CLP_MH3_Cathero1_Moto53"
+  },
+  {
+    "node_id": 20,
+    "bounds": [
+      3244,
+      1900,
+      4328,
+      2213
+    ],
+    "text_for_emb": "browse?_encoding=UTF8&node=1389401031&ref_=in_cat_halo_android_bau_mobiles&pd_rd_w=Ghz7I&content-id=amzn1.sym"
+  },
+  {
+    "node_id": 21,
+    "bounds": [
+      4326,
+      1900,
+      5410,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_8?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&node=84454749031&ref_=CLP_MH3_Cathero8_WLA"
+  },
+  {
+    "node_id": 22,
+    "bounds": [
+      5407,
+      1900,
+      6494,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_9?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&node=82594227031&ref_=CLP_MH3_Cathero9_AJFP"
+  },
+  {
+    "node_id": 23,
+    "bounds": [
+      6491,
+      1900,
+      7575,
+      2213
+    ],
+    "text_for_emb": "ref=QAHzEditorial_en_IN_1?pf_rd_r=RKEGBY6YHTR5FXZHXZ8D&pf_rd_p=1ddd5f63-46b2-4b61-bcec-3cdcd8c26c31&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=mobile-hybrid-6&pf_rd_t=30901&pf_rd_i=1389401031&ie=UTF8&ref_=CLP_MH3_Cathero2_iqoo11"
+  },
+  {
+    "node_id": 24,
+    "bounds": [
+      0,
+      2211,
+      213,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 25,
+    "bounds": [
+      213,
+      2211,
+      431,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 26,
+    "bounds": [
+      431,
+      2211,
+      649,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 27,
+    "bounds": [
+      649,
+      2211,
+      867,
+      2337
+    ],
+    "text_for_emb": ""
+  },
+  {
+    "node_id": 28,
+    "bounds": [
+      867,
+      2211,
+      1080,
+      2337
+    ],
+    "text_for_emb": ""
+  }
+]

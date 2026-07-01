@@ -1,0 +1,90 @@
+{
+  "stem": "00000240_006",
+  "gt_node_ids": [
+    21,
+    20,
+    23,
+    22,
+    24
+  ],
+  "total_tos": 5,
+  "hit_tos": 0,
+  "oracle_hit": false,
+  "rank1_hit": false,
+  "first_hit_rank": null,
+  "ranking": [
+    {
+      "rank": 1,
+      "TO_id": 0,
+      "TO_string": "painting",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 6,
+      "pred_score": 0.421301,
+      "margin": 0.040216,
+      "gt_max_sim": 0.355972
+    },
+    {
+      "rank": 2,
+      "TO_id": 1,
+      "TO_string": "artwork",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 6,
+      "pred_score": 0.503912,
+      "margin": 0.112218,
+      "gt_max_sim": 0.342669
+    },
+    {
+      "rank": 3,
+      "TO_id": 4,
+      "TO_string": "image",
+      "TO_LLM": [
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 28,
+      "pred_score": 0.341902,
+      "margin": 0.0,
+      "gt_max_sim": 0.188529
+    },
+    {
+      "rank": 4,
+      "TO_id": 3,
+      "TO_string": "picture",
+      "TO_LLM": [
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 28,
+      "pred_score": 0.35166,
+      "margin": 0.0,
+      "gt_max_sim": 0.17845
+    },
+    {
+      "rank": 5,
+      "TO_id": 2,
+      "TO_string": "canvas",
+      "TO_LLM": [
+        "deepseek-ai/DeepSeek-V4-Pro",
+        "qwen3.6-plus",
+        "qwen3.7-max"
+      ],
+      "hit": false,
+      "pred_node_id": 3,
+      "pred_score": 0.275891,
+      "margin": 0.0,
+      "gt_max_sim": 0.173114
+    }
+  ]
+}
